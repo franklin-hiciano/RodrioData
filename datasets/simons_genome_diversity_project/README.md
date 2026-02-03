@@ -3,7 +3,9 @@
 This is dataset information for the Simons Genome Diversity Project.
 
 TODO: Include information about how the script stores and gets data once the functionality is done. 
+
 [ERP010710](https://www.ebi.ac.uk/ena/browser/view/ERP010710)
+
 [PRJEB9586](https://www.ebi.ac.uk/ena/browser/view/PRJEB9586)
 
 Note, when you download the .tsv file (see image below), if for some reason it is missing data, run the below with your preferred columns, which you can find information on in [readFields.tsv](RodrioData/datasets/simons_diversity_genome_project/readFields.tsv). Examples include `fastq_ftp`, `fastq_md5`, `sra_ftp`, `fastq_md5`, `bam_ftp`, etc.
