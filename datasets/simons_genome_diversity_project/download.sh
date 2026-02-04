@@ -15,7 +15,7 @@ function readFields_ERP010710 {
 }
 
 function ERP010710_metadata {
-	curl "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERP010710&result=analysis&fields=analysis_accession,study_accession,sample_accession,analysis_type,tax_id,scientific_name,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera" > ERP010710_metadata.tsv
+	curl "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERP010710&result=analysis&fields=analysis_accession,study_accession,sample_accession,experiment_accession,tax_id,scientific_name,analysis_type,reference_genome,pipeline_name,pipeline_version,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,generated_ftp,generated_md5,generated_bytes,generated_aspera" > ERP010710_metadata.tsv
 }
 # TODO: test these on Minerva. These functions just to show where the files are from.
 #readFields_PRJEB9586.tsv
