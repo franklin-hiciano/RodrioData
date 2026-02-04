@@ -2,7 +2,7 @@
 set -e -x
 set -euo pipefail
 
-function readFields_PRJEB9586.tsv {
+function readFields_PRJEB9586 {
 	curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?dataPortal=ena&format=tsv&result=read_run" -o readFields_PRJEB9586.tsv
 }
 
