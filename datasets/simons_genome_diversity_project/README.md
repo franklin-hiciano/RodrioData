@@ -8,7 +8,7 @@ TODO: Include information about how the script stores and gets data once the fun
 
 [PRJEB9586](https://www.ebi.ac.uk/ena/browser/view/PRJEB9586)
 
-Note, when you download the .tsv file from the website, if for some reason it is missing data, run the below with your preferred columns, which you can find information on in [readFields.tsv](RodrioData/datasets/simons_diversity_genome_project/readFields.tsv). Examples include `fastq_ftp`, `fastq_md5`, `sra_ftp`, `fastq_md5`, `bam_ftp`, etc. Experiencing this problem, the commands we used are in `commands.sh`.
+Note, when you download the .tsv file from the website, if for some reason it is missing data, run the below with your preferred columns, which you can find information on in [readFields.tsv](RodrioData/datasets/simons_diversity_genome_project/readFields.tsv). Examples include `fastq_ftp`, `fastq_md5`, `sra_ftp`, `fastq_md5`, `bam_ftp`, etc. Experiencing this problem, the commands we used are in `run.sh`.
 ```
 curl "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes" > PRJEB9586_metadata.tsv
 ```
