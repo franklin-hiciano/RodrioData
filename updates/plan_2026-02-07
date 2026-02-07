@@ -1,0 +1,199 @@
+DATASET RETRIEVER PROJECT
+Created: 2026-02-07
+================================================================================
+
+Dataset retriever project/
+│
+├── Database/
+│   ├── Created: 2026-02-03
+│   │
+│   ├── Make a readme for the `datasets` folder
+│   │   ├── Created: 2026-02-07
+│   │   ├── Due: 2026-02-09 6:00 PM
+│   │   └── Description:
+│   │         In the datasets folder:
+│   │         1. Put a quick summary overview of each dataset
+│   │         2. Note the IGK_ONT and the ATAC-seq_LCL_100 contain the same 
+│   │            100 samples the same information
+│   │         
+│   │         In each dataset folder:
+│   │         3. Go through the description for each dataset, do some research on:
+│   │            - Where the samples are from, what they come from (pacbio?)
+│   │            - What kind of information it has
+│   │            - What kind of bioinformatics data it has
+│   │         4. Any links to documentation (REST/getting, dataset viewers) one 
+│   │            would use? What available platforms are supported within your 
+│   │            software (Aspera, Globus, etc.? this will inform your 
+│   │            documentation)
+│   │         5. Put a summary overview of each dataset within each one (just 
+│   │            put a readme or something that links to the documentation)
+│   │            - Make a readme that links to the documentation
+│   │            - Describe what it is
+│   │            - What we're using it for in the lab (will help with your 
+│   │              manuscript!)
+│   │            - What the sample column is made from
+│   │            - A checklist in each dataset for whether it has the necessary 
+│   │              columns:
+│   │                * The dataset sample id
+│   │                * The file size for each acceptable sample
+│   │            - Mention the t2t and hg38 parameters in the 1KG readme
+│   │
+│   └── Get index files/
+│       ├── Created: 2026-02-07
+│       ├── Due: 2026-02-10 12:00 AM
+│       │
+│       ├── ATAC-seq_LCL_100
+│       │   ├── Created: 2026-02-07
+│       │   └── Description:
+│       │         1. Get the index file for it, make the ATAC-seq_LCL_100 folder 
+│       │            with the study_PRJEB28318 in it
+│       │         2. Put simons_genome_diversity_project in the ena folder
+│       │         3. Rename all the column descriptors files to something generic 
+│       │            that works across ENA datasets so it's clear that they're 
+│       │            generic. Make clear how that works in the readme
+│       │
+│       ├── Get platinum pedigree
+│       │   ├── Created: 2026-02-07
+│       │   └── Description:
+│       │         1. Find out how it works
+│       │            - Ask Oscar to help you understand platinum pedigree
+│       │            - Put one file (the index file that's on the readme) into 
+│       │              the indexes for now (long task)
+│       │            - Look through the repo and find out what the repo contains
+│       │
+│       ├── Simplify dataset index files
+│       │   ├── Created: 2026-02-07
+│       │   └── Notes: Later
+│       │
+│       ├── put the dataset index files for simons
+│       │   ├── Created: 2026-02-03
+│       │   └── Last Modified: 2026-02-07
+│       │
+│       └── put the dataset index files for 1000g
+│           ├── Created: 2026-02-03
+│           └── Last Modified: 2026-02-07
+│
+├── Test each method (just Globus for now)
+│   ├── Created: 2026-02-07
+│   ├── Due: 2026-02-12 12:00 AM
+│   └── Description:
+│         2. Have only one bash file, and in it make sections with the 
+│            following sets of functions using the following conventions:
+│            - A setup section, with a run section at the bottom to setup 
+│              the repo
+│                * The downloading code for the file and metadata regarding 
+│                  the column names. Everything in the repo by default should 
+│                  have coded-in documentation about how you got it
+│            - A callable section
+│                * Gettable from knowing the names of the python arguments: 
+│                  information about where each file is (same folder and 
+│                  function name as the argument)
+│                * Callable from python: download_x, a test function
+│                * Stay away from generic functions for now until you have it 
+│                  working non-generically.
+│            - A testing interface for each dataset
+│
+├── Basic class that we can work with/
+│   ├── Created: 2026-02-07
+│   ├── Due: 2026-02-10 12:00 AM
+│   │
+│   ├── (Empty task - being worked on)
+│   │   ├── Created: 2026-02-07
+│   │   └── Last Modified: 2026-02-07
+│   │
+│   ├── Skeleton of a class
+│   │   ├── Created: 2026-02-07
+│   │   └── Description:
+│   │         1. Implement a dataset class with empty capabilities for 
+│   │            downloading under each protocol (globus, etc.)
+│   │         2. Implement subclasses that explicitly enable or disable these 
+│   │            features.
+│   │            https://claude.ai/chat/a8f9daf1-fb97-42ad-9d4c-2eab0f2d2030
+│   │
+│   └── Make skeleton child functions that load the files
+│       └── Created: 2026-02-07
+│
+├── Add options functionality
+│   ├── Created: 2026-02-07
+│   ├── Due: 2026-02-16 12:00 AM
+│   └── Description:
+│         1. Take outputs (bam, etc.) and add an option for them.
+│         2. Make a function that tells you in how many batches it will 
+│            download a dataset given a certain size, and vice versa 
+│            (batches -> min size)
+│         3. Make the error for which samples are too big for the max size set
+│
+├── Add subsetting functionality to the dataset getters/
+│   ├── Created: 2026-02-07
+│   ├── Due: 2026-02-27 12:00 AM
+│   ├── Notes: Later
+│   │
+│   ├── Add a sample column that combines elements to make a unique ID for 
+│   │   each sample in the dataset
+│   │   ├── Created: 2026-02-07
+│   │   └── Description:
+│   │         don't worry about making an algorithm for each dataset to make 
+│   │         sure it's unique, just bring it up to Oscar and write it in the 
+│   │         readme to tell the implementer that each value should be unique.
+│   │
+│   └── Create flags for accessing a list of samples
+│       ├── Created: 2026-02-04
+│       └── Description:
+│             You don't have to implement something to take care of getting x 
+│             sample. The user should filter it and then provide the fofn that 
+│             they want downloaded in the method that they want to use. Then the 
+│             downloader will take care of everything for them.
+│             Alternatively, the script does this for them. But I don't think 
+│             making a fofn is very hard.
+│             
+│             python RodrioData.py --dataset 1KG_ONT_VIENNA --sample HG00106 
+│                    -outdir out
+│
+├── Implement the batching/
+│   ├── Created: 2026-02-07
+│   ├── Due: 2026-03-06 12:00 AM
+│   │
+│   ├── Check if the user has enough space
+│   │   ├── Created: 2026-02-07
+│   │   ├── Description:
+│   │   │     1. Make a function that checks their available space in scratch
+│   │   │     2. Make a function that checks if the space they provided - 
+│   │   │        default is no specification function and using the size they 
+│   │   │        proposed (work, home, projects, calculate cost, or scratch) - 
+│   │   │        is enough for the maximum sample size.
+│   │   │     3. Add a --keep_previous_batch parameter for keeping the most 
+│   │   │        recent batch that uses the deleted column in the logs tsv. 
+│   │   │        Write in the documentation this is useful for downloading 5 
+│   │   │        batches at a time, for example.
+│   │   │
+│   │   └── Make this a utility script
+│   │       └── Created: 2026-02-07
+│   │
+│   └── Make batches
+│       ├── Created: 2026-02-07
+│       └── Description:
+│             Get all the rows under one sample label and download them. Make 
+│             these explicit files
+│             
+│             Make logging, one tsv for each run, and each download adds to 
+│             the file
+│             1. A .tsv with sample, file, location, size, available space at 
+│                the time, completed or incompleted, checksum match, deleted 
+│                yes or no, out and err file paths, and logs from the 
+│                downloading software, and time completed. One row per file, 
+│                not per sample
+│
+└── Options schema
+    ├── Created: 2026-02-03
+    └── Description:
+          --sample: HG... (read the readme to understand how the sample names 
+                    are formed)! should be explicit
+          --out_dir: if the above is used
+          --sample_list
+          --action: get_index, download
+          --max_space: should be greater than the max file size in the column
+          --location
+          
+          Make another function that tells you whether you have enough space 
+          to download the dataset, and how many chunks it's going to take you 
+          (using the existing chunking algorithm!) to download it, estimated.
