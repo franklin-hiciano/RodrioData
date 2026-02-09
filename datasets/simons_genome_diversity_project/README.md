@@ -23,3 +23,7 @@ The table containing download links on the ENA website may be missing some cells
 TODO: Include information about how the script stores and gets data once the functionality is done. 
 
 
+The most powerful way to study population history and natural selection is to analyze whole genome sequences, which contain all the variation that exists in each individual. To date, genome-wide studies of history and selection have primarily analyzed data from single nucleotide polymorphism (SNP) arrays which are biased by the choice of which SNPs to include. Alternatively they have analyzed sequence data that have been generated as part of medical genetic studies from populations with large census sizes, and thus do not capture the full scope of human genetic variation. Here we supply high quality genome sequences (~40x average) from 301 individuals from 146 worldwide populations. All samples were sequenced using an identical protocol at the same facility (Illumina Ltd.). We modified standard pipelines to eliminate biases that might confound population genetic studies, to produce a unique alignment and genotype dataset.
+
+# Links:
+[ENA](https://www.ebi.ac.uk/ena/browser/view/ERP010710)
