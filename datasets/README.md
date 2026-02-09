@@ -9,10 +9,10 @@ These are index files containing links and metadata for all the files in each da
 | Dataset | Type | Methods available | Notes |
 |---|---|---|---|
 | 1000G_2504_high_coverage | Short reads |  | 1000 genomes |
-| 1KG_ONT_VIENNA | SV analysis |  | 1000 genomes |
-| Platinum Pedigree Consortium | |  |  |
-| Simons Genome Diversity Project | Sequencing - method? |  | ENA |
-| ATAC-seq_LCL_100 | Sequencing - method? |  | ENA |
+| [1KG_ONT_VIENNA](https://github.com/1kg-ont-vienna/sv-analysis) | SV analysis |  | 1000 genomes |
+| [Platinum Pedigree Consortium](https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets) | |  |  |
+| [Simons Genome Diversity Project](https://www.nature.com/articles/nature18964) | Sequencing - method? |  | ENA |
+| [ATAC-seq_LCL_100](https://www.nature.com/articles/s41588-018-0278-6) | Sequencing - method? |  | ENA |
 
 ### Notes on the datasets
 1. The combination of both 1KG_ONT_VIENNA (Structural variants) and ATAC-seq_LCL_100 (3D chromatin data) allow us to perform studies on chromatin structure and genetic variants at the same time. 
