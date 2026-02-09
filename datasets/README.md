@@ -1,3 +1,9 @@
+# Index files
+
+## Description
+
+These are index files containing links and metadata for all the files in each dataset. Note that some samples have multiple files. [TODO] To solve this, for each index file we will add a column that serves as the unique identifier for the file. This is what goes into the `sample` argument.
+
 # Datasets
 
 1.  1000G_2504_high_coverage 
