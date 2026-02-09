@@ -4,7 +4,7 @@
 
 These are index files containing links and metadata for all the files in each dataset. Note that some samples have multiple files. [TODO] To solve this, for each index file we will add a column that serves as the unique identifier for the file. This is what goes into the `sample` argument.
 
-# Datasets
+## Datasets
 
 1.  1000G_2504_high_coverage 
 2.  1KG_ONT_VIENNA
@@ -12,10 +12,10 @@ These are index files containing links and metadata for all the files in each da
 4.  Simons Genome Diversity Project
 5.  ATAC-seq_LCL_100
 
-# Notes
+## Notes
 1. The combination of both 1KG_ONT_VIENNA (Structural variants) and ATAC-seq_LCL_100 (3D chromatin data) allow us to perform studies on chromatin structure and genetic variants at the same time. 
 
-# Notes on European Nucleotide Archive (ENA) datasets
+## Notes on European Nucleotide Archive (ENA) datasets
 
 The table containing download links on the ENA website may be missing some cells (no value, N/A, etc.), and unfortunately if you download the table, then you might not have links for the samples you want. We suspect it might be because the website pre-filters the data shown. 
 
