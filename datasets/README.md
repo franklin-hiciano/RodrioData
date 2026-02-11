@@ -6,13 +6,17 @@ These are index files containing links and metadata for all the files in each da
 
 ## Datasets
 
-| Dataset | Type | Methods available | Notes |
-|---|---|---|---|
-| 1000G_2504_high_coverage | Short reads |  | 1000 genomes |
-| 1KG_ONT_VIENNA | SV analysis |  | 1000 genomes |
-| Platinum Pedigree Consortium | |  |  |
-| Simons Genome Diversity Project | Sequencing - method? |  | ENA |
-| ATAC-seq_LCL_100 | Sequencing - method? |  | ENA |
+| Dataset | Type | Methods available | Notes | Status |
+|---|---|---|---| --- |
+| 1000G_2504_high_coverage | Short reads | Globus | 1000 genomes | Not implemented |
+| 1KG_ONT_VIENNA | SV analysis | Globus | 1000 genomes | Not implemented |
+| Platinum Pedigree Consortium | | AWS |  | Not implemented |
+| Simons Genome Diversity Project | Sequencing - method? | Globus | ENA | Not implemented |
+| ATAC-seq_LCL_100 | Sequencing - method? |  | ENA | Not implemented |
+| 2023_OLR_NATCOMM | RNA-seq, PacBio Hi-fi long reads | Globus (SRA) | | Not implemented |
+| 2026-Light_EE_NatComm | RNA-seq, PacBio Hi-fi long reads | Globus (SRA) | Not implemneted |
+
+Statuses: Not implemented, In progress, Implemented 
 
 ### Notes on the datasets
 1. The combination of both 1KG_ONT_VIENNA (Structural variants) and ATAC-seq_LCL_100 (3D chromatin data) allow us to perform studies on chromatin structure and genetic variants at the same time. 
