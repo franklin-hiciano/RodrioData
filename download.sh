@@ -28,21 +28,35 @@ function download_with_aspera {
 
 }
 
+function download_ENA_study_index_file() {
+	local study="${1}"
+	local result_data_type="${2}"
+	local out_dir="${3}"
 
+	local fields=""
 
+	case "${result_data_type}" in
+		"read_run")
+			fields="run_accession,study_accession,sample_accession,experiment_accession,tax_id,scientific_name,library_layout,library_strategy,library_source,library_selection,instrument_platform,instrument_model,read_count,base_count,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,fastq_ftp,fastq_md5,fastq_bytes,fastq_aspera,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,sra_ftp,sra_md5,sra_bytes,sra_aspera,bam_ftp,bam_md5,bam_bytes,bam_aspera"
+			;;
+		"analysis")
+			fields="analysis_accession,study_accession,sample_accession,experiment_accession,tax_id,scientific_name,analysis_type,reference_genome,pipeline_name,pipeline_version,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,generated_ftp,generated_md5,generated_bytes,generated_aspera"
+			;;
+		*)
+			echo "[ERROR] No type result data type provided."; exit 1
+			;;
+	esac
+	
+	
+	mkdir -p "${out_dir}/study_${study}/"
+        curl "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=${study}&result=${result_data_type}&fields=${fields}" -o "${out_dir}/study_${study}/study_${study}.index"
+        curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${out_dir}/study_${study}/schema_of_ENA_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
+}
 
 function simons_genome_diversity_project {
-	local datasets_with_result_data_types=( \
-		"PRJEB9586:read_run:https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,study_accession,sample_accession,experiment_accession,tax_id,scientific_name,library_layout,library_strategy,library_source,library_selection,instrument_platform,instrument_model,read_count,base_count,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,fastq_ftp,fastq_md5,fastq_bytes,fastq_aspera,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,sra_ftp,sra_md5,sra_bytes,sra_aspera,bam_ftp,bam_md5,bam_bytes,bam_aspera" \
-		"ERP010710:analysis:https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERP010710&result=analysis&fields=analysis_accession,study_accession,sample_accession,experiment_accession,tax_id,scientific_name,analysis_type,reference_genome,pipeline_name,pipeline_version,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,generated_ftp,generated_md5,generated_bytes,generated_aspera")
-	for ds in "${datasets_with_result_data_types[@]}"; do
-  		IFS=":" read -r dataset result_data_type url <<< "${ds}"
-		mkdir -p "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/"
-		curl "${url}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/study_${dataset}.index"
-		curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/schema_of_ENA_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
-	done
-}		
-
+	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/simons_genome_diversity_project/"
+	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/simons_genome_diversity_project/"
+}
 
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
