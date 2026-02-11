@@ -37,8 +37,9 @@ function simons_genome_diversity_project {
 		"ERP010710:analysis:https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERP010710&result=analysis&fields=analysis_accession,study_accession,sample_accession,experiment_accession,tax_id,scientific_name,analysis_type,reference_genome,pipeline_name,pipeline_version,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,generated_ftp,generated_md5,generated_bytes,generated_aspera")
 	for ds in "${datasets_with_result_data_types[@]}"; do
   		IFS=":" read -r dataset result_data_type url <<< "${ds}"
-		curl "${url}" -o "${SCRIPT_DIR}/simons_genome_diversity_project/study_${dataset}/${dataset}.index"
-		curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${out_dir}/${result_data_type}.txt" # Downloads schema
+		mkdir -p "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/"
+		curl "${url}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/study_${dataset}.index"
+		curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/schema_of_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
 	done
 }		
 
@@ -48,7 +49,7 @@ function simons_genome_diversity_project {
 simons_genome_diversity_project
 
 
-
+exit 0
 if [ -f "$2" ]; then
     if [ "$1" = "--with_globus" ]; then
         download_with_globus "$2"
