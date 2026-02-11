@@ -18,18 +18,12 @@ The following datasets are available to download:
 | 2026-Light_EE_NatComm | AIRR-seq, PacBio Hi-fi long reads | SRA | | Not implemneted |
 | Human Genome Diversity Project | Illumina short reads | IGSR | | Not implemented |
 
-
 The following download methods are supported by each database:
-
 | Database | Transfer solution |
 |---|---|
 | IGSR | Globus |
 | SRA | Globus |
 | S3 | S3 |
-
-https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index
-
-Statuses: Not implemented, In progress, Implemented 
 
 ### Notes on the datasets
 1. The combination of both 1KG_ONT_VIENNA (Structural variants) and ATAC-seq_LCL_100 (3D chromatin data) allow us to perform studies on chromatin structure and genetic variants at the same time. 
