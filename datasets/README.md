@@ -6,16 +6,16 @@ These are index files containing links and metadata for all the files in each da
 
 ## Datasets
 
-| Dataset | Type | Methods available | Notes | Status |
+| Dataset | Type | Database | Notes | Status |
 |---|---|---|---| --- |
-| 1000G_2504_high_coverage | Short reads | Globus (1KG) |  | Not implemented |
-| 1KG_ONT_VIENNA | SV analysis | Globus (1KG) | | Not implemented |
-| Platinum Pedigree Consortium | | AWS |  | Not implemented |
-| Simons Genome Diversity Project | Sequencing - method? | Globus | ENA | Not implemented |
-| ATAC-seq_LCL_100 | Sequencing - method? | Globus (1KG) | ENA | Not implemented |
-| 2023_OLR_NATCOMM | AIRR-seq, PacBio Hi-fi long reads | Globus (SRA) | | Not implemented |
-| 2026-Light_EE_NatComm | AIRR-seq, PacBio Hi-fi long reads | Globus (SRA) | | Not implemneted |
-| Human Genome Diversity Project | Illumina short reads | Globus (1KG) | | Not implemented |
+| 1000G_2504_high_coverage | Short reads | IGSR |  | Not implemented |
+| 1KG_ONT_VIENNA | SV analysis | IGSR | | Not implemented |
+| Platinum Pedigree Consortium | | S3 |  | Not implemented |
+| Simons Genome Diversity Project | Sequencing - method? | IGSR | ENA | Not implemented |
+| ATAC-seq_LCL_100 | Sequencing - method? | IGSR | ENA | Not implemented |
+| 2023_OLR_NATCOMM | AIRR-seq, PacBio Hi-fi long reads | SRA | | Not implemented |
+| 2026-Light_EE_NatComm | AIRR-seq, PacBio Hi-fi long reads | SRA | | Not implemneted |
+| Human Genome Diversity Project | Illumina short reads | IGSR | | Not implemented |
 
 https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index
 
