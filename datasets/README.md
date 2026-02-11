@@ -22,7 +22,7 @@ The following datasets are available to download:
 The following download methods are supported by each database:
 
 | Database | Transfer solution |
-|---|---|---|---| --- |
+|---|---|
 | IGSR | Globus |
 | SRA | Globus |
 | S3 | S3 |
