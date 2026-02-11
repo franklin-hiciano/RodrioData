@@ -6,6 +6,7 @@ These are index files containing links and metadata for all the files in each da
 
 ## Datasets
 
+### Available datasets
 The following datasets are available to download:
 | Dataset | Type | Database | Notes | Status |
 |---|---|---|---|---|
@@ -18,6 +19,8 @@ The following datasets are available to download:
 | 2026-Light_EE_NatComm | AIRR-seq, PacBio Hi-fi long reads | SRA | | Not implemneted |
 | Human Genome Diversity Project | Illumina short reads | IGSR | | Not implemented |
 
+
+### Downloading datasets
 The following download methods are supported by each database:
 | Database | Transfer solution |
 |---|---|
