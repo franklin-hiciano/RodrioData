@@ -39,7 +39,7 @@ function simons_genome_diversity_project {
   		IFS=":" read -r dataset result_data_type url <<< "${ds}"
 		mkdir -p "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/"
 		curl "${url}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/study_${dataset}.index"
-		curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/schema_of_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
+		curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_${dataset}/schema_of_ENA_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
 	done
 }		
 
