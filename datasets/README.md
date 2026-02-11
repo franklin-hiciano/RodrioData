@@ -6,8 +6,9 @@ These are index files containing links and metadata for all the files in each da
 
 ## Datasets
 
+The following datasets are available to download:
 | Dataset | Type | Database | Notes | Status |
-|---|---|---|---| --- |
+|---|---|---|---|---|
 | 1000G_2504_high_coverage | Short reads | IGSR |  | Not implemented |
 | 1KG_ONT_VIENNA | SV analysis | IGSR | | Not implemented |
 | Platinum Pedigree Consortium | | S3 |  | Not implemented |
@@ -16,6 +17,13 @@ These are index files containing links and metadata for all the files in each da
 | 2023_OLR_NATCOMM | AIRR-seq, PacBio Hi-fi long reads | SRA | | Not implemented |
 | 2026-Light_EE_NatComm | AIRR-seq, PacBio Hi-fi long reads | SRA | | Not implemneted |
 | Human Genome Diversity Project | Illumina short reads | IGSR | | Not implemented |
+
+The following download methods are supported by each database:
+| Database | Transfer solution |
+|---|---|---|---| --- |
+| IGSR | Globus |
+| SRA | Globus |
+| S3 | S3 |
 
 https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index
 
