@@ -13,8 +13,8 @@ These are index files containing links and metadata for all the files in each da
 | Platinum Pedigree Consortium | | AWS |  | Not implemented |
 | Simons Genome Diversity Project | Sequencing - method? | Globus | ENA | Not implemented |
 | ATAC-seq_LCL_100 | Sequencing - method? |  | ENA | Not implemented |
-| 2023_OLR_NATCOMM | RNA-seq, PacBio Hi-fi long reads | Globus (SRA) | | Not implemented |
-| 2026-Light_EE_NatComm | RNA-seq, PacBio Hi-fi long reads | Globus (SRA) | Not implemneted |
+| 2023_OLR_NATCOMM | AIRR-seq, PacBio Hi-fi long reads | Globus (SRA) | | Not implemented |
+| 2026-Light_EE_NatComm | AIRR-seq, PacBio Hi-fi long reads | Globus (SRA) | | Not implemneted |
 
 Statuses: Not implemented, In progress, Implemented 
 
