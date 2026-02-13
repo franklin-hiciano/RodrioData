@@ -62,48 +62,6 @@ function download_ATAC-seq_LCL_100 {
 	download_ENA_study_index_file PRJEB28318 analysis "${SCRIPT_DIR}/datasets/ATAC-seq_LCL_100/"
 }
 
-function turn_xlsx_sheet_into_tsv_files() {
-	# First make an environment named xlsx_processing from your terminal
-	# conda create -n xlsx_processing python=3.10 -y
-	# conda activate xlsx_processing
-	# pip install xlsx2csv
-	module load conda
-		
-    	xlsx_file="${1}"
-    shift
-    target_sheets=("$@") # Captures all arguments after the filename
-
-    # If no sheets are specified, get all sheet names from the file
-    if [ ${#target_sheets[@]} -eq 0 ]; then
-        mapfile -t target_sheets < <(xlsx2csv -l "${xlsx_file}" | sed 's/^[0-9]* - //')
-    fi
-
-    for name in "${target_sheets[@]}"; do
-        safe_name=$(echo "${name}" | tr ' ' '_')
-        output_file="${xlsx_file%.xlsx}_${safe_name}.tsv"
-
-        # Check if the sheet exists/convert
-        if xlsx2csv --sheet "${name}" -d $'\t' "${xlsx_file}" > "${output_file}" 2>/dev/null; then
-            echo "Created ${output_file}"
-        else
-            echo "Error: Sheet '${name}' not found in ${xlsx_file}"
-            rm -f "${output_file}"
-        fi
-    done
-}
-
-function download_2023_OLR_NATCOMM() {
-    mkdir -p "${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/"
-    
-    local xlsx_path="${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
-
-    curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${xlsx_path}"
-    
-    # Now you can just name the specific sheet you want. 
-    # No more 'find -delete' needed.
-    turn_xlsx_sheet_into_tsv_files "${xlsx_path}" "Supplementary Data 1"
-}
-
 function download_human_genome_diversity_project { 
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${SCRIPT_DIR}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
 }
