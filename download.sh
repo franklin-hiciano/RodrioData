@@ -58,6 +58,10 @@ function download_1000G_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
 }
 
+function download_1KG_ONT_VIENNA {
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${SCRIPT_DIR}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+}
+
 function download_simons_genome_diversity_project {
 	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
 	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
