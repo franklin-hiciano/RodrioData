@@ -62,6 +62,21 @@ function ATAC-seq_LCL_100 {
 	download_ENA_study_index_file PRJEB28318 analysis "${SCRIPT_DIR}/datasets/ATAC-seq_LCL_100/"
 }
 
+function turn_xlsx_sheet_into_tsv_files() {
+    xlsx_file="${1}"
+    sheet_names=$(xlsx2csv -l "${xlsx_file}")
+
+    for name in ${sheet_names}; do
+        safe_name=$(echo "${name}" | tr ' ' '_')
+        output_file="${xlsx_file%.xlsx}_${safe_name}.tsv"
+        
+        xlsx2csv --sheet "${name}" -d '\t' "${xlsx_file}" > "${output_file}"
+        echo "Created ${output_file}"
+    done
+}
+
+
+
 # TODO: test these on Minerva. These functions just to show where the files are from.
 #simons_genome_diversity_project
 ATAC-seq_LCL_100
