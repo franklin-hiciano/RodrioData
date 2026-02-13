@@ -108,11 +108,18 @@ function download_human_genome_diversity_project {
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${SCRIPT_DIR}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
 }
 
+function download_2026_Light_EE_NatComm {
+    out_path="${SCRIPT_DIR}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
+    python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
+}
+
+
 # TODO: test these on Minerva. These functions just to show where the files are from.
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM ON HOLD WHILE I UNDERSTAND THE DATASET
-download_human_genome_diversity_project
+#download_human_genome_diversity_project
+download_2026_Light_EE_NatComm
 
 
 exit 0
