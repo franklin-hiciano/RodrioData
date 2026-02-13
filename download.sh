@@ -53,6 +53,11 @@ function download_ENA_study_index_file() {
         curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${out_dir}/study_${study}/schema_of_ENA_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
 }
 
+function download_1000G_high_coverage {
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
+}
+
 function download_simons_genome_diversity_project {
 	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
 	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
@@ -78,11 +83,12 @@ function download_2026_Light_EE_NatComm {
 
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
+download_1000G_high_coverage
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM ON HOLD WHILE I UNDERSTAND THE DATASET
 #download_human_genome_diversity_project
-download_2023_OLR_NATCOMM
+#download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
 
 
