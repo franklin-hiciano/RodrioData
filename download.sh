@@ -54,16 +54,16 @@ function download_ENA_study_index_file() {
 }
 
 function simons_genome_diversity_project {
-	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/simons_genome_diversity_project/"
-	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/simons_genome_diversity_project/"
+	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
+	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
 }
 
 function ATAC-seq_LCL_100 {
-	download_ENA_study_index_file PRJEB28318 analysis "${SCRIPT_DIR}/ATAC-seq_LCL_100/"
+	download_ENA_study_index_file PRJEB28318 analysis "${SCRIPT_DIR}/datasets/ATAC-seq_LCL_100/"
 }
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
-simons_genome_diversity_project
+#simons_genome_diversity_project
 ATAC-seq_LCL_100
 
 exit 0
