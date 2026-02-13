@@ -108,6 +108,11 @@ function download_human_genome_diversity_project {
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${SCRIPT_DIR}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
 }
 
+function download_2023_OLR_NATCOMM {
+	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
+	python -c "from bash_utils import utils; utils.xlsx_to_tsv('${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx', output_prefix='${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM', sheets_to_extract=['Supplementary Data 1'])"
+}
+
 function download_2026_Light_EE_NatComm {
     out_path="${SCRIPT_DIR}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
     python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
@@ -119,7 +124,8 @@ function download_2026_Light_EE_NatComm {
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM ON HOLD WHILE I UNDERSTAND THE DATASET
 #download_human_genome_diversity_project
-download_2026_Light_EE_NatComm
+download_2023_OLR_NATCOMM
+#download_2026_Light_EE_NatComm
 
 
 exit 0
