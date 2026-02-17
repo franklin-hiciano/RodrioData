@@ -1,6 +1,6 @@
 # RodrioData
 
-Helps get Bioinformatics datasets quickly (Aspera, Globus, etc.).
+Helps get Bioinformatics datasets quickly (Aspera, Globus, etc.). With a focus on raw sequencing data.
 
 # Datasets
 
