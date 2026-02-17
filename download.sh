@@ -53,39 +53,23 @@ function download_ENA_study_index_file() {
         curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${out_dir}/study_${study}/schema_of_ENA_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
 }
 
-function prioritize_files {
+function prioritize_fastq_download_links {
     local input_file="$1"
-    local index_file="${input_file}.hashtag_removed"
-    local filtered_file="${input_file}.filtered"
 
-    grep -v '^#' "${input_file}" > "${index_file}" 
-    
-# Find the column index of "fastq_ftp" in the header
-    local fastq_bytes_column_index
-    fastq_bytes_column_index=$(head -n 1 "${index_file}" | awk '{
-        for (i = 1; i <= NF; i++) {
-            if ($i == "fastq_bytes") print i
-        }
+    grep -v '^#' "${input_file}" > "${input_file}.hashtag_removed"
+
+    local fastq_bytes_column_index=$(head -n 1 "${input_file}.hashtag_removed" | awk '{
+        for (i = 1; i <= NF; i++) if ($i == "fastq_bytes") print i
     }')
-    local read_run_file="$(dirname ${input_file})/schema_of_ENA_result_data_type_named_-read_run-.txt"
-    if [[ ! -f "${read_run_file}" ]]; then
-        echo "Paired read_run file not found: ${read_run_file}"
+
+    if [[ ! -f "$(dirname ${input_file})/schema_of_ENA_result_data_type_named_-read_run-.txt" ]] || [[ -z "${fastq_bytes_column_index}" ]]; then
+        echo "Paired read_run file not found or fastq_bytes column missing"
+        rm "${input_file}.hashtag_removed"
         return 1
     fi
 
-    if [[ -z "${fastq_bytes_column_index}" ]]; then
-        echo "fastq_ftp column not found"
-        rm "${index_file}"
-        return 1
-    fi
-
-    echo "fastq_ftp column index: ${fastq_bytes_column_index}"
-
-    local col_range="1-${fastq_bytes_column_index}"
-    cut -f"${col_range}" "${index_file}" > "${filtered_file}"
-
-    echo "Filtered file written to ${filtered_file}"
-    rm "${index_file}"
+    cut -f"1-${fastq_bytes_column_index}" "${input_file}.hashtag_removed" > "${input_file}.filtered"
+    rm "${input_file}.hashtag_removed"
 }
 
 function download_1000G_high_coverage {
@@ -100,6 +84,7 @@ function download_1KG_ONT_VIENNA {
 function download_simons_genome_diversity_project {
 	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
 	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
+	prioritize_fastq_download_links "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
 }
 
 function download_ATAC-seq_LCL_100 {
@@ -122,14 +107,13 @@ function download_2026_Light_EE_NatComm {
 
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
-download_1000G_high_coverage
+#download_1000G_high_coverage
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM ON HOLD WHILE I UNDERSTAND THE DATASET
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
-prioritize_files "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
 
 exit 0
 if [ -f "$2" ]; then
