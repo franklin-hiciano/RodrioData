@@ -53,6 +53,41 @@ function download_ENA_study_index_file() {
         curl "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=${result_data_type}" -o "${out_dir}/study_${study}/schema_of_ENA_result_data_type_named_-${result_data_type}-.txt" # Downloads schema
 }
 
+function prioritize_files {
+    local input_file="$1"
+    local index_file="${input_file}.hashtag_removed"
+    local filtered_file="${input_file}.filtered"
+
+    grep -v '^#' "${input_file}" > "${index_file}" 
+    
+# Find the column index of "fastq_ftp" in the header
+    local fastq_bytes_column_index
+    fastq_bytes_column_index=$(head -n 1 "${index_file}" | awk '{
+        for (i = 1; i <= NF; i++) {
+            if ($i == "fastq_bytes") print i
+        }
+    }')
+    local read_run_file="$(dirname ${input_file})/schema_of_ENA_result_data_type_named_-read_run-.txt"
+    if [[ ! -f "${read_run_file}" ]]; then
+        echo "Paired read_run file not found: ${read_run_file}"
+        return 1
+    fi
+
+    if [[ -z "${fastq_bytes_column_index}" ]]; then
+        echo "fastq_ftp column not found"
+        rm "${index_file}"
+        return 1
+    fi
+
+    echo "fastq_ftp column index: ${fastq_bytes_column_index}"
+
+    local col_range="1-${fastq_bytes_column_index}"
+    cut -f"${col_range}" "${index_file}" > "${filtered_file}"
+
+    echo "Filtered file written to ${filtered_file}"
+    rm "${index_file}"
+}
+
 function download_1000G_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
@@ -94,7 +129,7 @@ download_1000G_high_coverage
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
-
+prioritize_files "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
 
 exit 0
 if [ -f "$2" ]; then
