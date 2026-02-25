@@ -72,7 +72,7 @@ function prioritize_fastq_download_links {
     rm "${input_file}.hashtag_removed"
 }
 
-function download_1000G_high_coverage {
+function download_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
 }
@@ -105,6 +105,62 @@ function download_2026_Light_EE_NatComm {
     python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
 }
 
+# -------- Platinum Pedigree --------
+function make_index_file_with_basic_sample_information_for_platinum_pedigree {
+	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
+	# copied it into ./datasets/platinum_pedigree/base.index.tsv
+	:
+}
+
+function investigate_platinum_pedigree_file_structure {
+	# just assemblies for now
+	module load awscli
+	aws s3 ls s3://platinum-pedigree-datasets/assemblies/ --recursive | awk '{print $4}' > "${SCRIPT_DIR}/datasets/platinum_pedigree/assemblies_file_list.txt"
+	# found the following structure exists:
+	# hifiasm_ont: (hap1, hap2) x (.fa, .fai)
+	# verkko: (hap1, hap2, unassigned) x (.fa, .fai)
+}
+
+function get_assembly_file_paths_for_platinum_pedigree {
+    hifiasm_files_across_samples=()
+    verkko_files_across_samples=()
+
+    while read -r id primary_id; do
+        # hifiasm_ont: (hap1, hap2) x (.fa, .fai)
+        hifiasm_files=$( for hap in "hap1" "hap2"; do
+            for file_type in "fa" "fai"; do
+                echo "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${hap}.p_ctg.gfa.${file_type}"
+            done
+        done )
+        hifiasm_files_across_samples+=("$(paste -s -d'\t' <(echo "${hifiasm_files}"))")
+
+        # verkko: (hap1, hap2, unassigned) x (.fa, .fai)
+        verkko_files=$( for hap in "haplotype1" "haplotype2" "unassigned"; do
+            for file_type in "fasta" "fasta.fai"; do
+                echo "s3://platinum-pedigree-datasets/assemblies/${primary_id}/verkko/1.4.1/assembly.${hap}.${file_type}"
+            done
+        done )
+        verkko_files_across_samples+=("$(paste -s -d'\t' <(echo "${verkko_files}"))")
+
+    done < <(cut -f2,7 "${SCRIPT_DIR}/datasets/platinum_pedigree/base.index.tsv")
+	printf "%s\t" "hap1_fa" "hap1_fai" "hap2_fa" "hap2_fai" > "${SCRIPT_DIR}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
+	printf "%s\t" "haplotype1_fa" "haplotype1_fai" "haplotype2_fa" "haplotype2_fai" "unassigned_fa" "unassigned_fai" > "${SCRIPT_DIR}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
+    printf "%s\n" "${hifiasm_files_across_samples[@]}" >> "${SCRIPT_DIR}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
+    printf "%s\n" "${verkko_files_across_samples[@]}" >> "${SCRIPT_DIR}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
+}
+
+function get_
+
+
+function get_assembly_file_paths_for_platinum_pedigree_with_metadata {
+	:
+}
+
+#end goal right now
+function make_index_file_for_platinum_pedigree {
+	:
+}
+
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
 #download_1000G_high_coverage
@@ -114,6 +170,7 @@ function download_2026_Light_EE_NatComm {
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
+get_assembly_file_paths_for_platinum_pedigree
 
 exit 0
 if [ -f "$2" ]; then
