@@ -4,30 +4,6 @@ set -euo pipefail
 
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
-
-function download_with_globus {
-        batch_file="$1"
-	module load python
-
-        EMBL_EBI_ENDPOINT=47772002-3e5b-4fd3-b97c-18cee38d6df2   # EMBL-EBI Public Data
-        MINERVA_ARION_ENDPOINT=6621ca70-103f-4670-a5a7-a7d74d7efbb7
-
-        globus transfer ${EMBL_EBI_ENDPOINT} ${MINERVA_ARION_ENDPOINT} --label "HGSVC TSV transfer 0001" --batch  "${batch_file}" --verify-checksum --sync-level checksum
-	
-}
-
-function download_with_aspera {
-	fofn="$1"
-	module load aspera-connect
-
-	xargs -n1 -I{} /hpc/packages/minerva-centos7/aspera-connect/4.2.4/aspera/bin/ascp \
-		-i /hpc/packages/minerva-centos7/aspera-connect/3.9.6/etc/asperaweb_id_dsa.openssh \
-		-P33001 -O33001 -v -L- \
-		'era-fasp@fasp.sra.ebi.ac.uk:{}' \
-		'/sc/arion/scratch/hiciaf01/projects/imputation/data/2025-10-07_1KG_short_long'
-
-}
-
 function download_ENA_study_index_file() {
 	local study="${1}"
 	local result_data_type="${2}"
@@ -106,22 +82,62 @@ function download_2026_Light_EE_NatComm {
 }
 
 # -------- Platinum Pedigree --------
+
+# ---- Directory structure ------
+
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
 	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
-	# copied it into ./datasets/platinum_pedigree/base.index.tsv
+	# copied it into ./datasets/platinum_pedigree/partial_index_files/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
 	:
 }
 
-function investigate_platinum_pedigree_file_structure {
-	# just assemblies for now
+function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure {
+	# TODO:
+	# 1. Assemblies
+	# 2. Mapped sequencing data
 	module load awscli
-	aws s3 ls s3://platinum-pedigree-datasets/assemblies/ --recursive | awk '{print $4}' > "${SCRIPT_DIR}/datasets/platinum_pedigree/assemblies_file_list.txt"
+	# 1. assemblies	
+	aws s3 ls s3://platinum-pedigree-datasets/assemblies/ --recursive | awk '{print $4}' > "${SCRIPT_DIR}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv"
+	
 	# found the following structure exists:
 	# hifiasm_ont: (hap1, hap2) x (.fa, .fai)
 	# verkko: (hap1, hap2, unassigned) x (.fa, .fai)
 }
 
+function add_row_in_final_platinum_pedigree_index_file {
+	file_information="${1}"
+
+	
+	URL="${1}"
+	dataset_type="${2}"
+	file_information="${3}"	
+	
+}
+
 function get_assembly_file_paths_for_platinum_pedigree {
+	# for each sample, get its four files from the hifiasm_ont folder: (hap1, hap2) x (.fa, .fai)
+	cut -f2,7 "${SCRIPT_DIR}/datasets/platinum_pedigree/partial_index_files/investigate_platinum_pedigree_file_structure/assemblies_file_list.txt" | while read -r id primary_id; do
+		
+		for file_extension in ".fa" ".fai"; do
+			for haplotype in "hap1" "hap2"; do
+                		echo "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${haplotype}.p_ctg.gfa${file_extension}"
+            		done
+		done
+	done > 
+
+
+}	
+
+
+
+function   
+
+
+
+
+# hifiasm_ont: (hap1, hap2) x (.fa, .fai)
+        hifiasm_files_across_samples+=("$(paste -s -d'\t' <(echo "${hifiasm_files}"))")
+
     hifiasm_files_across_samples=()
     verkko_files_across_samples=()
 
