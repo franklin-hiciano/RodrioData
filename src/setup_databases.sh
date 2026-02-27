@@ -79,7 +79,7 @@ function download_2023_OLR_NATCOMM {
 function download_2026_Light_EE_NatComm {
     out_path="${SCRIPT_DIR}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
     python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
-}
+%}
 
 # -------- Platinum Pedigree --------
 
@@ -104,6 +104,9 @@ function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory
 	# verkko: (hap1, hap2, unassigned) x (.fa, .fai)
 }
 
+
+
+
 function add_row_in_final_platinum_pedigree_index_file {
 	file_information="${1}"
 
@@ -114,23 +117,21 @@ function add_row_in_final_platinum_pedigree_index_file {
 	
 }
 
+
+
 function get_assembly_file_paths_for_platinum_pedigree {
 	# for each sample, get its four files from the hifiasm_ont folder: (hap1, hap2) x (.fa, .fai)
 	cut -f2,7 "${SCRIPT_DIR}/datasets/platinum_pedigree/partial_index_files/investigate_platinum_pedigree_file_structure/assemblies_file_list.txt" | while read -r id primary_id; do
-		
 		for file_extension in ".fa" ".fai"; do
 			for haplotype in "hap1" "hap2"; do
-                		echo "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${haplotype}.p_ctg.gfa${file_extension}"
+                		printf "%s\t%s\t%s\t%s" "assembly" "" "" "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${haplotype}.p_ctg.gfa${file_extension}"
             		done
 		done
-	done > 
+	done >  
 
 
 }	
 
-
-
-function   
 
 
 
