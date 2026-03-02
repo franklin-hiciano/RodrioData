@@ -86,29 +86,45 @@ function download_2026_Light_EE_NatComm {
 HIFIASM_ONT="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
 VERKKO="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
 
-# reads
-ELEMENT="s3://platinum-pedigree-datasets/data/element/"
-HIFI="s3://platinum-pedigree-datasets/data/hifi/"
-ILLUMINA="s3://platinum-pedigree-datasets/data/illumina"
-ONT="s3://platinum-pedigree-datasets/data/ont"
-STRANDSEQ="s3://platinum-pedigree-datasets/data/strandseq"
+
+function make_index_file_with_basic_sample_information_for_platinum_pedigree {
+	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
+	# copied it into ./datasets/platinum_pedigree/partial_index_files/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
+	:
+}
+
+function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure {
+    module load awscli
+    local output="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_with_meta.tsv"
+    
+    aws s3api list-objects-v2 \
+        --bucket platinum-pedigree-data \
+        --no-sign-request \
+        --region us-west-1 \
+        --query 'Contents[].[Size, ETag, Key]' \
+        --output text | tr -d '"' > "$output"
+}
 
 function make_rows_for_platinum_pedigree {
+    local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_with_meta.tsv"
+    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/sequencing_reads_metadata.tsv"
+    local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
 
-}	
+    # Header updated with bytes and checksum
+    printf "%s\t%s\t%s\t%s\t%s\t%s\n" "primary_id" "data_type" "platform" "bytes" "checksum" "url" > "$output_file"
 
-
-function add_metadata_to_assembly_rows {
-    printf "%s\t%s\t%s\t%s\n" "primary.id" "data_type" "platform" "url" > "${PROJECT_ROOT}/datasets/platinum_pedigree/assign_assemblies_to_samples.tsv"
-    
-    tail -n +2 "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv" | cut -f7 | while read -r primary_id; do
-        awk -v id="${primary_id}" '$0 ~ "assemblies/"id {
-            if ($0 ~ "verkko") {
-                printf "%s\t%s\t%s\t%s\n", id, "assembly", "verkko", "s3://platinum-pedigree-data/"$0
-            } else if ($0 ~ "hifiasm") {
-                printf "%s\t%s\t%s\t%s\n", id, "assembly", "hifiasm", "s3://platinum-pedigree-data/"$0
-            }
-        }' "${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv" >> "${PROJECT_ROOT}/datasets/platinum_pedigree/assign_assemblies_to_samples.tsv"
+    tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do
+        
+        # Combined platforms into one list
+        for platform in "element" "hifi" "illumina" "ont" "strandseq" "hifiasm_ont" "verkko"; do
+            
+            # $1=Size, $2=ETag, $3=Path
+            awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
+                $3 ~ plat && ($3 ~ id || $3 ~ p_id) {
+                    type = ($3 ~ "assemblies/") ? "assembly" : "sequencing_reads"
+                    printf "%s\t%s\t%s\t%s\t%s\t%s\n", p_id, type, plat, $1, $2, "s3://platinum-pedigree-data/"$3
+                }' "$list_file" >> "$output_file"
+        done
     done
 }
 
@@ -131,8 +147,9 @@ function make_index_file_for_platinum_pedigree {
 #download_1000G_high_coverage
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
-#download_2023_OLR_NATCOMM ON HOLD WHILE I UNDERSTAND THE DATASET
+#download_2023_OLR_NATCOMM
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
-download_platinum_pedigree
+list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure
+make_rows_for_platinum_pedigree
