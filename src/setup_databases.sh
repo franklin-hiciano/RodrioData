@@ -80,95 +80,42 @@ function download_2023_OLR_NATCOMM {
 function download_2026_Light_EE_NatComm {
     out_path="${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
     python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
-%}
-
-# -------- Platinum Pedigree --------
-
-# ---- Directory structure ------
-
-function make_index_file_with_basic_sample_information_for_platinum_pedigree {
-	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
-	# copied it into RodrioData/datasets/platinum_pedigree/partial_index_files/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
-	:
 }
 
-function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure {
-	# TODO:
-	# 1. Assemblies
-	# 2. Mapped sequencing data
-	module load awscli
-	# 1. assemblies	
-	aws s3 ls s3://platinum-pedigree-datasets/assemblies/ --recursive | awk '{print $4}' > "${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv"
-	# found the following structure exists:
-	# hifiasm_ont: (hap1, hap2) x (.fa, .fai)
-	# verkko: (hap1, hap2, unassigned) x (.fa, .fai)
-}
+# assemblies
+HIFIASM_ONT="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
+VERKKO="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
 
-function assign_assemblies_to_samples {
-	cat base.index.tsv | cut -f7 | /datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv
-}
+# reads
+ELEMENT="s3://platinum-pedigree-datasets/data/element/"
+HIFI="s3://platinum-pedigree-datasets/data/hifi/"
+ILLUMINA="s3://platinum-pedigree-datasets/data/illumina"
+ONT="s3://platinum-pedigree-datasets/data/ont"
+STRANDSEQ="s3://platinum-pedigree-datasets/data/strandseq"
 
-
-function add_row_in_final_platinum_pedigree_index_file {
-	file_information="${1}"
-
-	
-	URL="${1}"
-	dataset_type="${2}"
-	file_information="${3}"	
-	
-}
-
-
-
-function get_assembly_file_paths_for_platinum_pedigree {
-	# for each sample, get its four files from the hifiasm_ont folder: (hap1, hap2) x (.fa, .fai)
-	cut -f2,7 "${PROJECT_ROOT}/datasets/platinum_pedigree/partial_index_files/investigate_platinum_pedigree_file_structure/assemblies_file_list.txt" | while read -r id primary_id; do
-		for file_extension in ".fa" ".fai"; do
-			for haplotype in "hap1" "hap2"; do
-                		printf "%s\t%s\t%s\t%s" "assembly" "" "" "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${haplotype}.p_ctg.gfa${file_extension}"
-            		done
-		done
-	done >  
-
+function make_rows_for_platinum_pedigree {
 
 }	
 
 
-
-
-
-# hifiasm_ont: (hap1, hap2) x (.fa, .fai)
-        hifiasm_files_across_samples+=("$(paste -s -d'\t' <(echo "${hifiasm_files}"))")
-
-    hifiasm_files_across_samples=()
-    verkko_files_across_samples=()
-
-    while read -r id primary_id; do
-        # hifiasm_ont: (hap1, hap2) x (.fa, .fai)
-        hifiasm_files=$( for hap in "hap1" "hap2"; do
-            for file_type in "fa" "fai"; do
-                echo "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${hap}.p_ctg.gfa.${file_type}"
-            done
-        done )
-        hifiasm_files_across_samples+=("$(paste -s -d'\t' <(echo "${hifiasm_files}"))")
-
-        # verkko: (hap1, hap2, unassigned) x (.fa, .fai)
-        verkko_files=$( for hap in "haplotype1" "haplotype2" "unassigned"; do
-            for file_type in "fasta" "fasta.fai"; do
-                echo "s3://platinum-pedigree-datasets/assemblies/${primary_id}/verkko/1.4.1/assembly.${hap}.${file_type}"
-            done
-        done )
-        verkko_files_across_samples+=("$(paste -s -d'\t' <(echo "${verkko_files}"))")
-
-    done < <(cut -f2,7 "${PROJECT_ROOT}/datasets/platinum_pedigree/base.index.tsv")
-	printf "%s\t" "hap1_fa" "hap1_fai" "hap2_fa" "hap2_fai" > "${PROJECT_ROOT}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
-	printf "%s\t" "haplotype1_fa" "haplotype1_fai" "haplotype2_fa" "haplotype2_fai" "unassigned_fa" "unassigned_fai" > "${PROJECT_ROOT}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
-    printf "%s\n" "${hifiasm_files_across_samples[@]}" >> "${PROJECT_ROOT}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
-    printf "%s\n" "${verkko_files_across_samples[@]}" >> "${PROJECT_ROOT}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
+function add_metadata_to_assembly_rows {
+    printf "%s\t%s\t%s\t%s\n" "primary.id" "data_type" "platform" "url" > "${PROJECT_ROOT}/datasets/platinum_pedigree/assign_assemblies_to_samples.tsv"
+    
+    tail -n +2 "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv" | cut -f7 | while read -r primary_id; do
+        awk -v id="${primary_id}" '$0 ~ "assemblies/"id {
+            if ($0 ~ "verkko") {
+                printf "%s\t%s\t%s\t%s\n", id, "assembly", "verkko", "s3://platinum-pedigree-data/"$0
+            } else if ($0 ~ "hifiasm") {
+                printf "%s\t%s\t%s\t%s\n", id, "assembly", "hifiasm", "s3://platinum-pedigree-data/"$0
+            }
+        }' "${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv" >> "${PROJECT_ROOT}/datasets/platinum_pedigree/assign_assemblies_to_samples.tsv"
+    done
 }
 
-function get_
+function download_platinum_pedigree {
+	curl -L "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/illumina_platinum_pedigree/illumina_platinum_ped.sequence.index" -o "${PROJECT_ROOT}/datasets/platinum_pedigree/illumina_platinum_ped.sequence.index"
+}
+
 
 
 function get_assembly_file_paths_for_platinum_pedigree_with_metadata {
@@ -180,7 +127,6 @@ function make_index_file_for_platinum_pedigree {
 	:
 }
 
-
 # TODO: test these on Minerva. These functions just to show where the files are from.
 #download_1000G_high_coverage
 #download_simons_genome_diversity_project
@@ -189,19 +135,4 @@ function make_index_file_for_platinum_pedigree {
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
-get_assembly_file_paths_for_platinum_pedigree
-
-exit 0
-if [ -f "$2" ]; then
-    if [ "$1" = "--with_globus" ]; then
-        download_with_globus "$2"
-    elif [ "$1" = "--with_aspera" ]; then
-        download_with_aspera "$2"
-    else
-        echo "Error: Unknown transfer method '$1'"
-        exit 1
-    fi
-else
-    echo "Error: File '$2' not found."
-    exit 1
-fi
+download_platinum_pedigree
