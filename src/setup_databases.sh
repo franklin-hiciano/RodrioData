@@ -88,7 +88,7 @@ function download_2026_Light_EE_NatComm {
 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
 	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
-	# copied it into ./datasets/platinum_pedigree/partial_index_files/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
+	# copied it into RodrioData/datasets/platinum_pedigree/partial_index_files/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
 	:
 }
 
@@ -105,7 +105,7 @@ function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory
 }
 
 function assign_assemblies_to_samples {
-	/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv
+	cat base.index.tsv | cut -f7 | /datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv
 }
 
 
