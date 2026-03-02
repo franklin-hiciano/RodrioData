@@ -2,7 +2,8 @@
 set -e -x
 set -euo pipefail
 
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
+DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+PROJECT_ROOT="${DIR%%RodrioData*}/RodrioData"
 
 function download_ENA_study_index_file() {
 	local study="${1}"
@@ -49,35 +50,35 @@ function prioritize_fastq_download_links {
 }
 
 function download_high_coverage {
-	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
-	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${SCRIPT_DIR}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
 }
 
 function download_1KG_ONT_VIENNA {
-	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${SCRIPT_DIR}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
 }
 
 function download_simons_genome_diversity_project {
-	download_ENA_study_index_file ERP010710 analysis "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
-	download_ENA_study_index_file PRJEB9586 read_run "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/"
-	prioritize_fastq_download_links "${SCRIPT_DIR}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
+	download_ENA_study_index_file ERP010710 analysis "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/"
+	download_ENA_study_index_file PRJEB9586 read_run "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/"
+	prioritize_fastq_download_links "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
 }
 
 function download_ATAC-seq_LCL_100 {
-	download_ENA_study_index_file PRJEB28318 analysis "${SCRIPT_DIR}/datasets/ATAC-seq_LCL_100/"
+	download_ENA_study_index_file PRJEB28318 analysis "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/"
 }
 
 function download_human_genome_diversity_project { 
-	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${SCRIPT_DIR}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
+	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
 }
 
 function download_2023_OLR_NATCOMM {
-	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
-	python -c "from bash_utils import utils; utils.xlsx_to_tsv('${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx', output_prefix='${SCRIPT_DIR}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM', sheets_to_extract=['Supplementary Data 1'])"
+	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
+	python -c "from bash_utils import utils; utils.xlsx_to_tsv('${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx', output_prefix='${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM', sheets_to_extract=['Supplementary Data 1'])"
 }
 
 function download_2026_Light_EE_NatComm {
-    out_path="${SCRIPT_DIR}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
+    out_path="${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
     python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
 %}
 
@@ -97,14 +98,15 @@ function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory
 	# 2. Mapped sequencing data
 	module load awscli
 	# 1. assemblies	
-	aws s3 ls s3://platinum-pedigree-datasets/assemblies/ --recursive | awk '{print $4}' > "${SCRIPT_DIR}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv"
-	
+	aws s3 ls s3://platinum-pedigree-datasets/assemblies/ --recursive | awk '{print $4}' > "${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv"
 	# found the following structure exists:
 	# hifiasm_ont: (hap1, hap2) x (.fa, .fai)
 	# verkko: (hap1, hap2, unassigned) x (.fa, .fai)
 }
 
-
+function assign_assemblies_to_samples {
+	/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure.tsv
+}
 
 
 function add_row_in_final_platinum_pedigree_index_file {
@@ -121,7 +123,7 @@ function add_row_in_final_platinum_pedigree_index_file {
 
 function get_assembly_file_paths_for_platinum_pedigree {
 	# for each sample, get its four files from the hifiasm_ont folder: (hap1, hap2) x (.fa, .fai)
-	cut -f2,7 "${SCRIPT_DIR}/datasets/platinum_pedigree/partial_index_files/investigate_platinum_pedigree_file_structure/assemblies_file_list.txt" | while read -r id primary_id; do
+	cut -f2,7 "${PROJECT_ROOT}/datasets/platinum_pedigree/partial_index_files/investigate_platinum_pedigree_file_structure/assemblies_file_list.txt" | while read -r id primary_id; do
 		for file_extension in ".fa" ".fai"; do
 			for haplotype in "hap1" "hap2"; do
                 		printf "%s\t%s\t%s\t%s" "assembly" "" "" "s3://platinum-pedigree-datasets/assemblies/${primary_id}/hifiasm_ont/0.19.5/K1463_${id}.hifiasm.dip.${haplotype}.p_ctg.gfa${file_extension}"
@@ -159,11 +161,11 @@ function get_assembly_file_paths_for_platinum_pedigree {
         done )
         verkko_files_across_samples+=("$(paste -s -d'\t' <(echo "${verkko_files}"))")
 
-    done < <(cut -f2,7 "${SCRIPT_DIR}/datasets/platinum_pedigree/base.index.tsv")
-	printf "%s\t" "hap1_fa" "hap1_fai" "hap2_fa" "hap2_fai" > "${SCRIPT_DIR}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
-	printf "%s\t" "haplotype1_fa" "haplotype1_fai" "haplotype2_fa" "haplotype2_fai" "unassigned_fa" "unassigned_fai" > "${SCRIPT_DIR}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
-    printf "%s\n" "${hifiasm_files_across_samples[@]}" >> "${SCRIPT_DIR}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
-    printf "%s\n" "${verkko_files_across_samples[@]}" >> "${SCRIPT_DIR}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
+    done < <(cut -f2,7 "${PROJECT_ROOT}/datasets/platinum_pedigree/base.index.tsv")
+	printf "%s\t" "hap1_fa" "hap1_fai" "hap2_fa" "hap2_fai" > "${PROJECT_ROOT}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
+	printf "%s\t" "haplotype1_fa" "haplotype1_fai" "haplotype2_fa" "haplotype2_fai" "unassigned_fa" "unassigned_fai" > "${PROJECT_ROOT}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
+    printf "%s\n" "${hifiasm_files_across_samples[@]}" >> "${PROJECT_ROOT}/datasets/platinum_pedigree/hifiasm_ont_assembly_file_paths.tsv"
+    printf "%s\n" "${verkko_files_across_samples[@]}" >> "${PROJECT_ROOT}/datasets/platinum_pedigree/verkko_assembly_file_paths.tsv"
 }
 
 function get_
