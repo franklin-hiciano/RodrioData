@@ -107,31 +107,32 @@ function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory
 
 function make_rows_for_platinum_pedigree {
     local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_with_meta.tsv"
-    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/sequencing_reads_metadata.tsv"
+    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/combined_metadata.tsv"
     local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
 
-    # Header updated with bytes and checksum
+    # Header with bytes and checksum columns
     printf "%s\t%s\t%s\t%s\t%s\t%s\n" "primary_id" "data_type" "platform" "bytes" "checksum" "url" > "$output_file"
 
     tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do
         
-        # Combined platforms into one list
-        for platform in "element" "hifi" "illumina" "ont" "strandseq" "hifiasm_ont" "verkko"; do
-            
-            # $1=Size, $2=ETag, $3=Path
+        # --- Loop 1: Sequencing Reads ---
+        for platform in "element" "hifi" "illumina" "ont" "strandseq"; do
             awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
-                $3 ~ plat && ($3 ~ id || $3 ~ p_id) {
-                    type = ($3 ~ "assemblies/") ? "assembly" : "sequencing_reads"
-                    printf "%s\t%s\t%s\t%s\t%s\t%s\n", p_id, type, plat, $1, $2, "s3://platinum-pedigree-data/"$3
+                $3 ~ "data/"plat && ($3 ~ id || $3 ~ p_id) {
+                    printf "%s\t%s\t%s\t%s\t%s\t%s\n", p_id, "sequencing_reads", plat, $1, $2, "s3://platinum-pedigree-data/"$3
                 }' "$list_file" >> "$output_file"
         done
+
+        # --- Loop 2: Assemblies ---
+        for platform in "hifiasm_ont" "verkko"; do
+            awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
+                $3 ~ "assemblies/" && $3 ~ plat && ($3 ~ id || $3 ~ p_id) {
+                    printf "%s\t%s\t%s\t%s\t%s\t%s\n", p_id, "assembly", plat, $1, $2, "s3://platinum-pedigree-data/"$3
+                }' "$list_file" >> "$output_file"
+        done
+
     done
 }
-
-function download_platinum_pedigree {
-	curl -L "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/illumina_platinum_pedigree/illumina_platinum_ped.sequence.index" -o "${PROJECT_ROOT}/datasets/platinum_pedigree/illumina_platinum_ped.sequence.index"
-}
-
 
 
 function get_assembly_file_paths_for_platinum_pedigree_with_metadata {
@@ -151,5 +152,5 @@ function make_index_file_for_platinum_pedigree {
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
-list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure
+#list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure
 make_rows_for_platinum_pedigree
