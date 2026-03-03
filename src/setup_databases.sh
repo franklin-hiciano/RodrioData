@@ -106,8 +106,8 @@ function list_all_files_in_platinum_pedigree {
 }
 
 function make_index_file_for_platinum_pedigree {
-    local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_with_meta.tsv"
-    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/combined_metadata.tsv"
+    local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree.tsv"
+    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv"
     local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
 
     # Header with bytes and checksum columns
@@ -132,17 +132,6 @@ function make_index_file_for_platinum_pedigree {
         done
 
     done
-}
-
-
-
-function get_assembly_file_paths_for_platinum_pedigree_with_metadata {
-	:
-}
-
-#end goal right now
-function make_index_file_for_platinum_pedigree {
-	:
 }
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
