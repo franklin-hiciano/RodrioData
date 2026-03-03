@@ -89,13 +89,13 @@ VERKKO="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
 	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
-	# copied it into ./datasets/platinum_pedigree/partial_index_files/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
+	# copied it into ../datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
 	:
 }
 
-function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure {
+function list_all_files_in_platinum_pedigree {
     module load awscli
-    local output="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_with_meta.tsv"
+    local output="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree.tsv"
     
     aws s3api list-objects-v2 \
         --bucket platinum-pedigree-data \
@@ -105,7 +105,7 @@ function list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory
         --output text | tr -d '"' > "$output"
 }
 
-function make_rows_for_platinum_pedigree {
+function make_index_file_for_platinum_pedigree {
     local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_with_meta.tsv"
     local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/combined_metadata.tsv"
     local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
@@ -135,6 +135,7 @@ function make_rows_for_platinum_pedigree {
 }
 
 
+
 function get_assembly_file_paths_for_platinum_pedigree_with_metadata {
 	:
 }
@@ -152,5 +153,6 @@ function make_index_file_for_platinum_pedigree {
 #download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
 #download_2026_Light_EE_NatComm
-#list_all_files_in_platinum_pedigree_dataset_to_understand_its_directory_structure
-make_rows_for_platinum_pedigree
+#make_index_file_with_basic_sample_information_for_platinum_pedigree 
+#list_all_files_in_platinum_pedigree
+make_index_file_for_platinum_pedigree
