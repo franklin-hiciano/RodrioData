@@ -134,6 +134,11 @@ function make_index_file_for_platinum_pedigree {
     done
 }
 
+function make_json_with_index_files {
+	module load python
+	
+}
+
 # TODO: test these on Minerva. These functions just to show where the files are from.
 #download_1000G_high_coverage
 #download_simons_genome_diversity_project

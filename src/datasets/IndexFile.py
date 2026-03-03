@@ -35,7 +35,7 @@ class IndexFile:
         self.dataframe_with_information_of_index_file = pd.concat([self.dataframe_with_information_of_index_file, new_row_as_dataframe], \
                 ignore_index=True)
 
-    def create_new_entry_in_json(*, file_path=None, dataset_name=None, sample_identifier_column=None, url_columns=None):
+    def add_new_index_file_to_json(*, file_path=None, dataset_name=None, sample_identifier_column=None, url_columns=None):
         self.file_path = file_path
         self.dataset_name = dataset_name
         self.sample_identifier_column = sample_identifier_column
@@ -58,23 +58,27 @@ class IndexFile:
 
      
 def main():
-    parser = argparse.ArgumentParser(description="Script description")
     
-    parser.add_argument("input")
-    parser.add_argument("-o", "--output", default="output.txt")
-    parser.add_argument("-n", "--number", type=int, default=10)
-    parser.add_argument("-v", "--verbose", action="store_true")
+    parser = argparse.ArgumentParser(prog="program", description="Script description")
+    subparsers = parser.add_subparsers(dest="command")
 
-    args = parser.parse_args()
+    # --------------- Adding a new index file to the json -----------------
+    add_new_index_file_to_json_subcommand = subparsers.add_parser("add_new_index_file_to_json", help="Adds a new entry to the json which stores information about the index files available in this program. Each entry corresponds to one index file.")  
+    add_new_index_file_to_json_subcommand.add_argument("--file_path", action="store_true", help="The file path of the index file. Also serves as the identifier for the index file in the json.")
+    add_new_index_file_to_json_subcommand.add_argument("--dataset_name", action="store_true", help="Name of the folder for a specific dataset. Examples include 1KG_ONT_VIENNA, platinum_pedigree, etc. Since one dataset can have multiple index files, you can use this dataset_name for multiple index files.")
+    add_new_index_file_to_json_subcommand.add_argument("--sample_identifier_column", action="store_true", help="The column that serves as an identifier for the sample, like sample_id. One sample id might have more than one downloadable file under it, but it should always correspond to that sample -- no two samples should have the same sample_id.") 
+    add_new_index_file_to_json_subcommand.add_argument("--url_columns", action="store_true", nargs="+", help="One or more names of columns containing urls.")
     
-    index_file = IndexFile(name = args.name, filepath = args.filepath, sample_identifier_column = args.sap)
-
-    filepath = 
-
-    print(f"Input: {args.input}")
-    if args.verbose:
-        print(f"Number: {args.number}")
-    print(f"Output: {args.output}")
+    sub.set_defaults(
+        func=lambda args: build_index(
+            file_path=args.file_path,
+            dataset_name=args.dataset_name,
+            sample_identifier_column=args.sample_identifier_column,
+            url_columns=args.url_columns
+        )
+    )
+    
+    args = parser.parse_args() 
 
 if __name__ == "__main__":
     main()
