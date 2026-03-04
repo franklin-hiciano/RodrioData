@@ -74,6 +74,11 @@ function download_1KG_ONT_VIENNA {
     } > "${PROJECT_ROOT}/tmp.txt"
 
     mv "${PROJECT_ROOT}/tmp.txt" "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+    python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
+                --file_path "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" \
+                --dataset_name "1KG_ONT_VIENNA" \
+                --sample_identifier_column "sample_id" \
+                --url_columns "file_path"
 }
 
 function download_simons_genome_diversity_project {

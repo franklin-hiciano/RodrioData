@@ -1,11 +1,1 @@
-[
-	{
-		"name": "Platinum Pedigree",
-		"url_columns": [
-			"url"
-		],
-		"file_path": 'RodrioData/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv',
-		"sample_column": "sample_id"
-	},
 
-]
