@@ -4,9 +4,8 @@ from pathlib import Path
 import os
 
 PROJECT_ROOT = next(p for p in Path(__file__).resolve().parents if p.name == "RodrioData")
-JSON_OF_INDEX_FILES = os.path.join(PROJECT_ROOT, "datasets", "dataset.json")
+JSON_OF_INDEX_FILES = os.path.join(PROJECT_ROOT, "datasets", "datasets.json")
 
-#interface for reading and interaxcting with the index fiels
 class IndexFile:
     def __init__(self, file_path):
         self.file_path = file_path
@@ -29,12 +28,17 @@ class IndexFile:
         new_row = {}
         for column in self.dataframe_with_information_of_index_file.columns:
             new_row[column] = kwargs.get(column, pd.NA)
-        new_row_as_dataframe = pd.DataFrame([row_data])
-        self.dataframe_with_information_of_index_file = pd.concat([self.dataframe_with_information_of_index_file, new_row_as_dataframe], \
-                ignore_index=True)
+
+        new_row_as_dataframe = pd.DataFrame([new_row])
+        self.dataframe_with_information_of_index_file = pd.concat(
+            [self.dataframe_with_information_of_index_file, new_row_as_dataframe],
+            ignore_index=True
+        )
+
     @classmethod
     def add_new_index_file_to_json(cls, **kwargs):
-        instance = cls.__new__(cls) 
+        print("HI!!!")
+        instance = cls.__new__(cls)
         instance.file_path = kwargs.get("file_path")
         instance.dataset_name = kwargs.get("dataset_name")
         instance.sample_identifier_column = kwargs.get("sample_identifier_column")
@@ -42,19 +46,27 @@ class IndexFile:
         instance.write_to_json()
 
     def write_to_json(self):
-        with open(JSON_OF_INDEX_FILES, 'r') as f:
-            index_files_in_json = json.load(f)
-        # file path is the identifier 
-        identifier = self.file_path
-        new_entry_in_json_file = {
-                "dataset_name": self.dataset_name,
-                "url_columns": self.url_columns,
-                "sample_identifier_columns": self.sample_identifier_column
-                }
-        index_files_in_json[identifier] = new_entry_in_json_file
-        with open(JSON_FILE, 'w') as f:
-            json.dump(index_files_in_json, f, indent=4)
+        if os.path.exists(JSON_OF_INDEX_FILES) and os.path.getsize(JSON_OF_INDEX_FILES) > 0:
+            with open(JSON_OF_INDEX_FILES, 'r') as f:
+                try:
+                    index_files_in_json = json.load(f)
+                except json.JSONDecodeError:
+                    # Fallback if the file contains garbage/invalid text
+                    index_files_in_json = {}
+        else:
+            # Create a new dictionary if file is missing or 0 bytes
+            index_files_in_json = {}
 
+        identifier = self.file_path
+        index_files_in_json[identifier] = {
+            "dataset_name": self.dataset_name,
+            "url_columns": self.url_columns,
+            "sample_identifier_column": self.sample_identifier_column # Match __init__
+        }
+        print(index_files_in_json)
+        with open(JSON_OF_INDEX_FILES, 'w') as f:
+            print("HI!!!")
+            json.dump(index_files_in_json, f, indent=4)
      
 def main():
     
@@ -67,9 +79,9 @@ def main():
     add_new_index_file_to_json_subcommand.add_argument("--dataset_name", help="Name of the folder for a specific dataset. Examples include 1KG_ONT_VIENNA, platinum_pedigree, etc. Since one dataset can have multiple index files, you can use this dataset_name for multiple index files.")
     add_new_index_file_to_json_subcommand.add_argument("--sample_identifier_column", help="The column that serves as an identifier for the sample, like sample_id. One sample id might have more than one downloadable file under it, but it should always correspond to that sample -- no two samples should have the same sample_id.") 
     add_new_index_file_to_json_subcommand.add_argument("--url_columns", nargs="+", help="One or more names of columns containing urls.")
-    
+
     add_new_index_file_to_json_subcommand.set_defaults(
-        func=lambda args: IndexFile.add_new_index_File_to_json(
+        func=lambda args: IndexFile.add_new_index_file_to_json(
             file_path=args.file_path,
             dataset_name=args.dataset_name,
             sample_identifier_column=args.sample_identifier_column,
@@ -78,6 +90,11 @@ def main():
     )
     
     args = parser.parse_args() 
+
+    if hasattr(args, 'func'):
+        args.func(args)
+    else:
+        parser.print_help()
 
 if __name__ == "__main__":
     main()
