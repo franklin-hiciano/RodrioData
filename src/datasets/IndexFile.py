@@ -44,6 +44,8 @@ class IndexFile:
         instance.dataset_name = kwargs.get("dataset_name")
         instance.sample_identifier_column = kwargs.get("sample_identifier_column")
         instance.url_columns = kwargs.get("url_columns")
+        instance.bytes_column = kwargs.get("bytes_column")
+        instance.estimated_file_size_in_bytes=kwargs.get("estimated_file_size_in_bytes")
         instance.write_to_json()
 
     def write_to_json(self):
@@ -60,7 +62,9 @@ class IndexFile:
         index_files_in_json[identifier] = {
             "dataset_name": self.dataset_name,
             "url_columns": self.url_columns,
-            "sample_identifier_column": self.sample_identifier_column
+            "sample_identifier_column": self.sample_identifier_column,
+            "bytes_column": self.bytes_column,
+            "estimated_file_size_in_bytes": self.estimated_file_size_in_bytes
         }
         with open(JSON_OF_INDEX_FILES, 'w') as f:
             json.dump(index_files_in_json, f, indent=4)
@@ -89,13 +93,18 @@ def main():
     add_new_index_file_to_json_subcommand.add_argument("--dataset_name", help="Name of the folder for a specific dataset. Examples include 1KG_ONT_VIENNA, platinum_pedigree, etc. Since one dataset can have multiple index files, you can use this dataset_name for multiple index files.")
     add_new_index_file_to_json_subcommand.add_argument("--sample_identifier_column", help="The column that serves as an identifier for the sample, like sample_id. One sample id might have more than one downloadable file under it, but it should always correspond to that sample -- no two samples should have the same sample_id.") 
     add_new_index_file_to_json_subcommand.add_argument("--url_columns", nargs="+", help="One or more names of columns containing urls.")
+    add_new_index_file_to_json_subcommand.add_argument("--bytes_column", help="Column with the file size, IN BYTES, of each file. If this is not provided, at least an estimate should be given.")
+    add_new_index_file_to_json_subcommand.add_argument("--estimated_file_size_in_bytes", help="For calculating how many files can be downloaded in one batch with the storage constraints. IN BYTES.")
+    
 
     add_new_index_file_to_json_subcommand.set_defaults(
         func=lambda args: IndexFile.add_new_index_file_to_json(
             file_path=args.file_path,
             dataset_name=args.dataset_name,
             sample_identifier_column=args.sample_identifier_column,
-            url_columns=args.url_columns
+            url_columns=args.url_columns,
+            bytes_column=args.bytes_column,
+            estimated_file_size_in_bytes=args.estimated_file_size_in_bytes
         )
     )
     

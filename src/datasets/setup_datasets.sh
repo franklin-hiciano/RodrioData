@@ -113,7 +113,7 @@ function download_ATAC-seq_LCL_100 {
                 --file_path "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index" \
                 --dataset_name "ATAC-seq_LCL_100" \
                 --sample_identifier_column "sample_accession" \
-                --url_columns "submitted_ftp" "submitted_aspera" "generated_ftp" "generated_aspera"	
+                --url_columns "submitted_ftp" "submitted_aspera" "generated_ftp" "generated_aspera" \
 }
 
 function download_human_genome_diversity_project { 
@@ -122,7 +122,9 @@ function download_human_genome_diversity_project {
                 --file_path "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" \
                 --dataset_name "human_genome_diversity_project" \
                 --sample_identifier_column "SAMPLE_NAME" \
-                --url_columns "ENA_FILE_PATH"
+                --url_columns "ENA_FILE_PATH" \
+		--bytes_column "N/A" \
+		--estimated_file_size_in_bytes	
 }
 
 function download_2023_OLR_NATCOMM {
@@ -133,7 +135,8 @@ function download_2023_OLR_NATCOMM {
                 --file_path "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv" \
                 --dataset_name "2023_OLR_NATCOMM" \
                 --sample_identifier_column "Sample" \
-                --url_columns "AIRR-seq Accession" "Pacific Biosciences Sequencing Data Accession"
+                --url_columns "AIRR-seq Accession" "Pacific Biosciences Sequencing Data Accession" \
+		--bytes_column "N/A"	
 }
 
 function download_2026_Light_EE_NatComm {
@@ -145,7 +148,8 @@ function download_2026_Light_EE_NatComm {
                 --file_path "${out_path}" \
                 --dataset_name "2026_Light_EE_NatComm" \
                 --sample_identifier_column "sample_name" \
-                --url_columns "filename"
+                --url_columns "filename" \
+		--bytes_column "N/A"
 }
 # ------- Platinum Pedigree has a couple functions --------- 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
