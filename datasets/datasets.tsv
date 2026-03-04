@@ -1,10 +1,11 @@
-source_path	dataset_name	url_columns	sample_identifier_column
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv	1KG_ONT_VIENNA	file_path	sample_id
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index	1000G_high_coverage	ENA_FILE_PATH	SAMPLE_NAME
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt	1000G_high_coverage	ENA_FILE_PATH	SAMPLE_NAME
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index	simons_genome_diversity_project	fastq_ftp	sample_accession
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index	ATAC-seq_LCL_100	submitted_ftp; submitted_aspera; generated_ftp; generated_aspera	sample_accession
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv	2023_OLR_NATCOMM	AIRR-seq Accession; Pacific Biosciences Sequencing Data Accession	Sample
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index	human_genome_diversity_project	ENA_FILE_PATH	SAMPLE_NAME
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv	2026_Light_EE_NatComm	filename	sample_name
-/sc/arion/work/hiciaf01/projects//RodrioData/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv	platinum_pedigree	url	sample_id
+dataset_name	sample_identifier_column	url_columns	bytes_columns	estimated_file_sizes_in_bytes	checksum_columns	source_path
+1KG_ONT_VIENNA	sample_id	file_path	bytes	N/A	md5sum	/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv
+1000G_high_coverage	SAMPLE_NAME	ENA_FILE_PATH	N/A	N/A	MD5SUM	/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index
+1000G_high_coverage	SAMPLE_NAME	ENA_FILE_PATH	N/A	N/A	MD5SUM	/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt
+simons_genome_diversity_project	sample_accession	fastq_ftp	fastq_bytes	N/A	fastq_md5	datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index.filtered
+simons_genome_diversity_project	sample_accession	submitted_ftp; submitted_aspera; generated_ftp; generated_aspera	submitted_bytes; generated_bytes	N/A	submitted_md5; generated_md5	datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index
+ATAC-seq_LCL_100	sample_accession	submitted_ftp; submitted_aspera; generated_ftp; generated_aspera	submitted_bytes; generated_bytes	N/A	submitted_md5; generated_md5	datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index
+2023_OLR_NATCOMM	Sample	AIRR-seq Accession; Pacific Biosciences Sequencing Data Accession	N/A	N/A	N/A	datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv
+human_genome_diversity_project	SAMPLE_NAME	ENA_FILE_PATH	N/A	N/A	MD5SUM	datasets/human_genome_diversity_project/hgdp_wgs.sequence.index
+2026_Light_EE_NatComm	sample_name	filename	N/A	N/A	N/A	datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv
+platinum_pedigree	primary_id	url	bytes	N/A	checksum	datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv
