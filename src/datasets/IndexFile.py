@@ -32,13 +32,14 @@ class IndexFile:
         new_row_as_dataframe = pd.DataFrame([row_data])
         self.dataframe_with_information_of_index_file = pd.concat([self.dataframe_with_information_of_index_file, new_row_as_dataframe], \
                 ignore_index=True)
-
-    def add_new_index_file_to_json(*, file_path=None, dataset_name=None, sample_identifier_column=None, url_columns=None):
-        self.file_path = file_path
-        self.dataset_name = dataset_name
-        self.sample_identifier_column = sample_identifier_column
-        self.url_column = url_column
-        self.write_to_json()
+    @classmethod
+    def add_new_index_file_to_json(cls, **kwargs):
+        instance = cls.__new__(cls) 
+        instance.file_path = kwargs.get("file_path")
+        instance.dataset_name = kwargs.get("dataset_name")
+        instance.sample_identifier_column = kwargs.get("sample_identifier_column")
+        instance.url_columns = kwargs.get("url_columns")
+        instance.write_to_json()
 
     def write_to_json(self):
         with open(JSON_OF_INDEX_FILES, 'r') as f:
@@ -50,7 +51,7 @@ class IndexFile:
                 "url_columns": self.url_columns,
                 "sample_identifier_columns": self.sample_identifier_column
                 }
-        index_files_in_json.append(identifier, new_entry_in_json_file)
+        index_files_in_json[identifier] = new_entry_in_json_file
         with open(JSON_FILE, 'w') as f:
             json.dump(index_files_in_json, f, indent=4)
 
