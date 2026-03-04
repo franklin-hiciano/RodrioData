@@ -58,8 +58,8 @@ function download_1KG_ONT_VIENNA {
     curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
 
     {
-        printf "sample_id\ttype\tfile_path\tbytes\tmd5sum\n"
-	awk '
+        printf "%s\t%s\t%s\t%s\t%s\n" "sample_id" "type" "file_path" "bytes" "md5sum"
+        awk '
         /hg38/ {
             split($0, parts_of_file_path, /hg38\/|\.hg38/); 
             printf "%s\t%s\t%s\t%s\t%s\n", parts_of_file_path[2], "hg38", $1, $2, $3 
@@ -70,10 +70,23 @@ function download_1KG_ONT_VIENNA {
         }
         /1KG_ONT_VIENNA\/reference/ {
             printf "%s\t%s\t%s\t%s\t%s\n", "N/A", "reference", $1, $2, $3
-        }' "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+        }' "${index_file}"
     } > "${PROJECT_ROOT}/tmp.txt"
 
     mv "${PROJECT_ROOT}/tmp.txt" "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+}
+
+function download_1KG_ONT_VIENNA {
+	index_file="${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${index_file}"
+	printf "%s\t%s\t%s\t%s\t%s" "sample_id" "type" "file_path" "bytes" "md5sum"  awk 'if ("hg38" ~ $1) {
+	split($0, parts_of_file_path, /hg38\/|\.hg38/); printf "%s\t%s\t%s", parts_of_file_path[2], "t2t", $0
+} else if ("t2t" ~ $1) {
+split($0, parts_of_file_path, /t2t\/|\.t2t/); printf "%s\t%s\t%s", parts_of_file_path[2], "t2t", $0
+} else if ("1KG_ONT_VIENNA/reference/1KG_ONT_VIENNA_" ~ $1) {
+printf "%s\t%s\t%s", "N/A", "reference", $0
+}'
+	
 }
 
 function download_simons_genome_diversity_project {
