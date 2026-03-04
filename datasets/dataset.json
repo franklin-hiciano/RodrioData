@@ -1,9 +1,0 @@
-{
-    "/sc/arion/work/hiciaf01/projects//RodrioData/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv": {
-        "dataset_name": "1KG_ONT_VIENNA",
-        "url_columns": [
-            "file_path"
-        ],
-        "sample_identifier_column": "sample_id"
-    }
-}
