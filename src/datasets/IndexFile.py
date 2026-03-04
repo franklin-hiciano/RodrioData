@@ -1,3 +1,5 @@
+import pandas as pd 
+import re
 import argparse
 import json
 from pathlib import Path
@@ -37,7 +39,6 @@ class IndexFile:
 
     @classmethod
     def add_new_index_file_to_json(cls, **kwargs):
-        print("HI!!!")
         instance = cls.__new__(cls)
         instance.file_path = kwargs.get("file_path")
         instance.dataset_name = kwargs.get("dataset_name")
@@ -51,23 +52,32 @@ class IndexFile:
                 try:
                     index_files_in_json = json.load(f)
                 except json.JSONDecodeError:
-                    # Fallback if the file contains garbage/invalid text
                     index_files_in_json = {}
         else:
-            # Create a new dictionary if file is missing or 0 bytes
             index_files_in_json = {}
 
         identifier = self.file_path
         index_files_in_json[identifier] = {
             "dataset_name": self.dataset_name,
             "url_columns": self.url_columns,
-            "sample_identifier_column": self.sample_identifier_column # Match __init__
+            "sample_identifier_column": self.sample_identifier_column
         }
-        print(index_files_in_json)
         with open(JSON_OF_INDEX_FILES, 'w') as f:
-            print("HI!!!")
             json.dump(index_files_in_json, f, indent=4)
      
+    @classmethod
+    def excel_to_tsv(cls, file_path, sheet_name):
+        df = pd.read_excel(file_path, sheet_name=sheet_name)
+        sheet_name_cleaned = re.sub(r'[^a-zA-Z0-9]', '_', sheet_name)
+        output_name = f"{file_path}.{sheet_name_cleaned}.tsv"
+        df.to_csv(output_name, sep='\t', index=False)
+
+    @classmethod
+    def download_from_drive(cls, drive_id, out_path):
+        import gdown
+        url = f'https://drive.google.com/uc?id={drive_id}'
+        gdown.download(url, out_path, quiet=False)
+
 def main():
     
     parser = argparse.ArgumentParser(prog="program", description="Script description")
@@ -86,6 +96,31 @@ def main():
             dataset_name=args.dataset_name,
             sample_identifier_column=args.sample_identifier_column,
             url_columns=args.url_columns
+        )
+    )
+    
+    # --------------- Excel to TSV Converter -----------------
+    excel_subcommand = subparsers.add_parser("excel_to_tsv", help="Convert an Excel sheet to a TSV file.")
+    excel_subcommand.add_argument("file_path", help="Path to the .xlsx file.")
+    excel_subcommand.add_argument("--sheet_name", required=True, help="Name of the sheet to convert.")
+
+    excel_subcommand.set_defaults(
+        func=lambda args: IndexFile.excel_to_tsv(
+            file_path=args.file_path,
+            sheet_name=args.sheet_name
+        )
+    )
+
+    # --------------- Google Drive Downloader -----------------
+    drive_sub = subparsers.add_parser("download_from_drive", help="Download a file from Google Drive.")
+
+    drive_sub.add_argument("--drive_id", required=True, help="The Google Drive file ID.")
+    drive_sub.add_argument("--out_path", required=True, help="The local path where the file should be saved.")
+
+    drive_sub.set_defaults(
+        func=lambda args: IndexFile.download_from_drive(
+            drive_id=args.drive_id,
+            out_path=args.out_path
         )
     )
     

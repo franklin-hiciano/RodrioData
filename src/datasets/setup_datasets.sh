@@ -49,9 +49,19 @@ function prioritize_fastq_download_links {
     rm "${input_file}.hashtag_removed"
 }
 
-function download_high_coverage {
+function download_1000G_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
+	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
+                --file_path "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" \
+                --dataset_name "1000G_high_coverage" \
+                --sample_identifier_column "SAMPLE_NAME" \
+                --url_columns "ENA_FILE_PATH"
+	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
+                --file_path "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt" \
+                --dataset_name "1000G_high_coverage" \
+                --sample_identifier_column "SAMPLE_NAME" \
+                --url_columns "ENA_FILE_PATH"
 }
 
 function download_1KG_ONT_VIENNA {
@@ -88,12 +98,12 @@ function download_simons_genome_diversity_project {
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index" \
                 --dataset_name "simons_genome_diversity_project" \
-                --sample_column "sample_accession" \
+                --sample_identifier_column "sample_accession" \
                 --url_columns "submitted_ftp" "submitted_aspera" "generated_ftp" "generated_aspera"
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index" \
                 --dataset_name "simons_genome_diversity_project" \
-                --sample_column "sample_accession" \
+                --sample_identifier_column "sample_accession" \
                 --url_columns "fastq_ftp" 
 }
 
@@ -102,7 +112,7 @@ function download_ATAC-seq_LCL_100 {
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index" \
                 --dataset_name "ATAC-seq_LCL_100" \
-                --sample_column "sample_accession" \
+                --sample_identifier_column "sample_accession" \
                 --url_columns "submitted_ftp" "submitted_aspera" "generated_ftp" "generated_aspera"	
 }
 
@@ -111,35 +121,33 @@ function download_human_genome_diversity_project {
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" \
                 --dataset_name "human_genome_diversity_project" \
-                --sample_column "SAMPLE_NAME" \
+                --sample_identifier_column "SAMPLE_NAME" \
                 --url_columns "ENA_FILE_PATH"
 }
 
 function download_2023_OLR_NATCOMM {
 	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
-	python -c "from bash_utils import utils; utils.xlsx_to_tsv('${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx', output_prefix='${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM', sheets_to_extract=['Supplementary Data 1'])"
+	python ${PROJECT_ROOT}/src/datasets/IndexFile.py excel_to_tsv "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx" \
+		--sheet_name "Supplementary Data 1"
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv" \
-                --dataset_name "2026_Light_EE_NatComm" \
-                --sample_column "Sample" \
-                --url_columns "url"
+                --dataset_name "2023_OLR_NATCOMM" \
+                --sample_identifier_column "Sample" \
+                --url_columns "AIRR-seq Accession" "Pacific Biosciences Sequencing Data Accession"
 }
 
 function download_2026_Light_EE_NatComm {
     out_path="${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
-    python -c "from bash_utils import utils; utils.download_from_google_drive('1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb', '${out_path}')"
+    python ${PROJECT_ROOT}/src/datasets/IndexFile.py download_from_drive \
+	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
+	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
     python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${out_path}" \
                 --dataset_name "2026_Light_EE_NatComm" \
-                --sample_column "sample_name" \
-                --url_columns "url"
+                --sample_identifier_column "sample_name" \
+                --url_columns "filename"
 }
-
-# assemblies
-HIFIASM_ONT="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
-VERKKO="s3://platinum-pedigree-datasets/assemblies/hifiasm_ont"
-
-
+# ------- Platinum Pedigree has a couple functions --------- 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
 	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
 	# copied it into ../datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv
@@ -189,7 +197,7 @@ function make_index_file_for_platinum_pedigree {
 	 python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
                 --file_path "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv" \
                 --dataset_name "platinum_pedigree" \
-                --sample_columns "sample_id" \
+                --sample_identifier_column "sample_id" \
                 --url_columns "url"
 }
 
@@ -200,7 +208,7 @@ function make_index_file_for_platinum_pedigree {
 #download_2023_OLR_NATCOMM
 #download_human_genome_diversity_project
 #download_2026_Light_EE_NatComm
-download_1KG_ONT_VIENNA
+#download_1KG_ONT_VIENNA
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
-#make_index_file_for_platinum_pedigree
+make_index_file_for_platinum_pedigree
