@@ -76,6 +76,37 @@ Returns just the index file for the dataset you want.
 --get_index
 ```
 
+# Adding datasets
+To add a bunch of datasets at once, it's more convenient to write while the metadata is in `.tsv` format. Convert it like this and edit in Google Sheets:
+```
+IN_TSV=in.tsv
+OUT_JSON=out.json
+cat "${IN_TSV}" | jq -R -s '
+  split("\n") | map(select(length > 0) | split("\t")) | .[0] as $keys 
+  | .[1:] | map(. as $row | reduce range(0; $keys|length) as $i ({}; 
+      if ($row[$i] | contains("|")) 
+      then .[$keys[$i]] = ($row[$i] | split("|")) 
+      else .[$keys[$i]] = $row[$i] 
+      end
+    ))' > "${OUT_JSON}"
+
+IN_JSON=in.json
+OUT_TSV=out.tsv
+cat "${IN_JSON}" | jq -R -s '
+  split("\n") | map(select(length > 0) | split("\t")) | .[0] as $keys 
+  | .[1:] | map(. as $row | reduce range(0; $keys|length) as $i ({}; 
+      if ($row[$i] | contains("|")) 
+      then .[$keys[$i]] = ($row[$i] | split("|")) 
+      else .[$keys[$i]] = $row[$i] 
+      end
+    ))' > "${OUT_TSV}"
+
+
+
+OUT_JSON=output.json
+jq -r '(map(keys) | add | unique) as $headers | $headers, (.[] | [.[$headers[]] | if type=="array" then join("|") else . // "N/A" end]) | @tsv' "${OUT_JSON}"
+
+OUT_TSV
 
 # Planning
 ## General idea:
