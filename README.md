@@ -79,20 +79,6 @@ Returns just the index file for the dataset you want.
 # Adding datasets
 To add a bunch of datasets at once, it's more convenient to write while the metadata is in `.tsv` format. Convert it like this and edit in Google Sheets:
 ```
-IN_TSV=in.tsv
-OUT_JSON=out.json
-cat "${IN_TSV}" | jq -R -s '
-  split("\n") | map(select(length > 0) | split("\t")) | .[0] as $keys 
-  | .[1:] | map(. as $row | reduce range(0; $keys|length) as $i ({}; 
-      if ($row[$i] | contains("|")) 
-      then .[$keys[$i]] = ($row[$i] | split("|")) 
-      else .[$keys[$i]] = $row[$i] 
-      end
-    ))' > "${OUT_JSON}"
-```
-And then convert it back when you're done:
-
-```
 IN_JSON=in.json
 OUT_TSV=out.tsv
 cat "${IN_JSON}" | jq -R -s '
@@ -103,6 +89,20 @@ cat "${IN_JSON}" | jq -R -s '
       else .[$keys[$i]] = $row[$i] 
       end
     ))' > "${OUT_TSV}"
+```
+And then convert it back when you're done:
+
+```
+IN_TSV=in.tsv
+OUT_JSON=out.json
+cat "${IN_TSV}" | jq -R -s '
+  split("\n") | map(select(length > 0) | split("\t")) | .[0] as $keys 
+  | .[1:] | map(. as $row | reduce range(0; $keys|length) as $i ({}; 
+      if ($row[$i] | contains("|")) 
+      then .[$keys[$i]] = ($row[$i] | split("|")) 
+      else .[$keys[$i]] = $row[$i] 
+      end
+    ))' > "${OUT_JSON}"
 ```
 
 # Planning
