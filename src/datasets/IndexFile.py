@@ -42,6 +42,9 @@ class IndexFile:
         url = f'https://drive.google.com/uc?id={drive_id}'
         gdown.download(url, out_path, quiet=False)
 
+    def run_function_declared_in_bash_utility_script(func_name, *args):
+        cmd = [self.PATH_TO_BASH_UTILITY_SCRIPT, func_name] + list(args)
+        return subprocess.run(cmd, capture_output=True, text=True, check=True)
 
 def main():
     

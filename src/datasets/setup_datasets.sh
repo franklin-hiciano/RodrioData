@@ -151,40 +151,52 @@ function make_index_file_for_platinum_pedigree {
 }    
 
 # Getting expected_size_of_one_file_in_bytes for the files without a bytes column: 1000G_high_coverage, 2023_OLR_NATCOMM, human_genome_diversity_project, 2026_Light_EE_NatComm
-function measure_expected_file_size_for_1000G {
-	file="$1"
-	function_for_downloading_one_file="${2}"
-	tail -n +100 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" | cut -f1 | shuf -n 20 > "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
-	observed_sizes_of_sample_files=()
-	while read -r url_of_current_sampled_file; do	
-		observed_sizes_of_sample_files+=("$(curl -sI $url_of_current_sampled_file | grep -i Content-Length | awk '{print $2}')")
-	done < "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
-	echo "${observed_sizes_of_sample_files[@]}"
-	mean_observed_file_size=$(printf "%s\n" "${observed_sizes_of_sample_files[@]}" | awk '{sum+=$1} END{printf "%.0f\n", sum/NR}')
-	echo "${mean_observed_file_size}"
-	rm "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"	
+function measure_expected_file_size_for_dataset {
+    local dataset_name=$1
+    local index_file=$2
+    source "${PROJECT_ROOT}/src/datasets/downloading_functions.sh"
+
+    local tmp_fofn="${dataset_name}_fofn_containing_samples_for_observing_expected_file_size.txt"
+
+    tail -n +100 "$index_file" | cut -f1 | shuf -n 20 > "$tmp_fofn"
+
+    file_transfer_method=$(awk -v ds="${dataset_name}" '$1==ds {print $8}' "${PROJECT_ROOT}/datasets/datasets.tsv")
+    name_of_url_column=$(awk -v ds="${dataset_name}" '$1==ds {print $3}' "${PROJECT_ROOT}/datasets/datasets.tsv" | sed 's/;.*//')
+    index_of_primary_url_column=$(tr '\t' '\n' < "${index_file}" | grep -nx "${name_of_url_column}" | cut -d: -f1)
+    
+    
+    observed_sizes_of_sample_files=()
+    while read -r ; do
+        if [[ "${method}" == "globus" ]]; then
+            size=$(GLOBUS_get_size_of_remote_file "${url_of_current_sampled_file}")
+        elif [[ "${method}" == "s3" ]]; then
+            size=$(S3_get_size_of_remote_file "${url_of_current_sampled_file}")
+        else
+            size=$(CURL_get_size_of_remote_file "${url_of_current_sampled_file}")
+        fi
+        observed_sizes_of_sample_files+=("$size")
+    done < "$tmp_fofn"
+
+    echo "${observed_sizes_of_sample_files[@]}"
+    mean_observed_file_size=$(printf "%s\n" "${observed_sizes_of_sample_files[@]}" | awk '{sum+=$1} END{printf "%.0f\n", sum/NR}')
+    echo "${mean_observed_file_size}"
+
+    rm "$tmp_fofn"
 }
 
-
-jj
+function measure_expected_file_size_for_1000G_high_coverage {
+	measure_expected_file_size_for_dataset "1000G_high_coverage" "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
+}
 
 function measure_expected_file_size_for_human_genome_diversity_project {
-	measure_expected_file_size "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" 'curl -L -O {}'
+	measure_expected_file_size_for_dataset "human_genome_diversity_project" "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
 }
 
-function measure_expected_file_size_for_1000G {
-        tail -n +100 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" | cut -f1 | shuf -n 20 > "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
-        observed_sizes_of_sample_files=()
-        while read -r url_of_current_sampled_file; do
-                observed_sizes_of_sample_files+=("$(curl -sI $url_of_current_sampled_file | grep -i Content-Length | awk '{print $2}')")
-        done < "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
-        echo "${observed_sizes_of_sample_files[@]}"
-        mean_observed_file_size=$(printf "%s\n" "${observed_sizes_of_sample_files[@]}" | awk '{sum+=$1} END{printf "%.0f\n", sum/NR}')
-        echo "${mean_observed_file_size}"
-        rm "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
+function measure_expected_file_size_for_platinum_pedigree {
+        measure_expected_file_size_for_dataset "platinum_pedigree" "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv"
 }
 
-# TODO: test these on Minerva. These functions just to show where the files are from.
+#TODO: test these on Minerva. These functions just to show where the files are from.
 #download_1000G_high_coverage
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
@@ -197,4 +209,6 @@ function measure_expected_file_size_for_1000G {
 #make_index_file_for_platinum_pedigree
 
 
-measure_expected_file_size_for_1000G
+#measure_expected_file_size_for_1000G
+#measure_expected_file_size_for_human_genome_diversity_project
+measure_expected_file_size_for_platinum_pedigree
