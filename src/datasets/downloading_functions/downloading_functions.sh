@@ -1,3 +1,7 @@
+#!/bin/bash
+set -e -x
+set -euo pipefail
+
 function download_with_globus {
         batch_file="$1"
         module load python

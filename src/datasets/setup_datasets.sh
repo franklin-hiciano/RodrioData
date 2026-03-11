@@ -52,16 +52,6 @@ function prioritize_fastq_download_links {
 function download_1000G_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" \
-                --dataset_name "1000G_high_coverage" \
-                --sample_identifier_column "SAMPLE_NAME" \
-                --url_columns "ENA_FILE_PATH"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt" \
-                --dataset_name "1000G_high_coverage" \
-                --sample_identifier_column "SAMPLE_NAME" \
-                --url_columns "ENA_FILE_PATH"
 }
 
 function download_1KG_ONT_VIENNA {
@@ -84,59 +74,26 @@ function download_1KG_ONT_VIENNA {
     } > "${PROJECT_ROOT}/tmp.txt"
 
     mv "${PROJECT_ROOT}/tmp.txt" "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
-    python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" \
-                --dataset_name "1KG_ONT_VIENNA" \
-                --sample_identifier_column "sample_id" \
-                --url_columns "file_path"
 }
 
 function download_simons_genome_diversity_project {
 	download_ENA_study_index_file ERP010710 analysis "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/"
 	download_ENA_study_index_file PRJEB9586 read_run "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/"
 	prioritize_fastq_download_links "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index" \
-                --dataset_name "simons_genome_diversity_project" \
-                --sample_identifier_column "sample_accession" \
-                --url_columns "submitted_ftp" "submitted_aspera" "generated_ftp" "generated_aspera"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index" \
-                --dataset_name "simons_genome_diversity_project" \
-                --sample_identifier_column "sample_accession" \
-                --url_columns "fastq_ftp" 
 }
 
 function download_ATAC-seq_LCL_100 {
 	download_ENA_study_index_file PRJEB28318 analysis "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index" \
-                --dataset_name "ATAC-seq_LCL_100" \
-                --sample_identifier_column "sample_accession" \
-                --url_columns "submitted_ftp" "submitted_aspera" "generated_ftp" "generated_aspera" \
 }
 
 function download_human_genome_diversity_project { 
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" \
-                --dataset_name "human_genome_diversity_project" \
-                --sample_identifier_column "SAMPLE_NAME" \
-                --url_columns "ENA_FILE_PATH" \
-		--bytes_column "N/A" \
-		--estimated_file_size_in_bytes	
 }
 
 function download_2023_OLR_NATCOMM {
 	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py excel_to_tsv "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx" \
 		--sheet_name "Supplementary Data 1"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv" \
-                --dataset_name "2023_OLR_NATCOMM" \
-                --sample_identifier_column "Sample" \
-                --url_columns "AIRR-seq Accession" "Pacific Biosciences Sequencing Data Accession" \
-		--bytes_column "N/A"	
 }
 
 function download_2026_Light_EE_NatComm {
@@ -144,12 +101,6 @@ function download_2026_Light_EE_NatComm {
     python ${PROJECT_ROOT}/src/datasets/IndexFile.py download_from_drive \
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
 	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
-    python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${out_path}" \
-                --dataset_name "2026_Light_EE_NatComm" \
-                --sample_identifier_column "sample_name" \
-                --url_columns "filename" \
-		--bytes_column "N/A"
 }
 # ------- Platinum Pedigree has a couple functions --------- 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
@@ -197,12 +148,40 @@ function make_index_file_for_platinum_pedigree {
         done
 
     done
-    
-	 python ${PROJECT_ROOT}/src/datasets/IndexFile.py add_new_index_file_to_json \
-                --file_path "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv" \
-                --dataset_name "platinum_pedigree" \
-                --sample_identifier_column "sample_id" \
-                --url_columns "url"
+}    
+
+# Getting expected_size_of_one_file_in_bytes for the files without a bytes column: 1000G_high_coverage, 2023_OLR_NATCOMM, human_genome_diversity_project, 2026_Light_EE_NatComm
+function measure_expected_file_size_for_1000G {
+	file="$1"
+	function_for_downloading_one_file="${2}"
+	tail -n +100 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" | cut -f1 | shuf -n 20 > "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
+	observed_sizes_of_sample_files=()
+	while read -r url_of_current_sampled_file; do	
+		observed_sizes_of_sample_files+=("$(curl -sI $url_of_current_sampled_file | grep -i Content-Length | awk '{print $2}')")
+	done < "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
+	echo "${observed_sizes_of_sample_files[@]}"
+	mean_observed_file_size=$(printf "%s\n" "${observed_sizes_of_sample_files[@]}" | awk '{sum+=$1} END{printf "%.0f\n", sum/NR}')
+	echo "${mean_observed_file_size}"
+	rm "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"	
+}
+
+
+jj
+
+function measure_expected_file_size_for_human_genome_diversity_project {
+	measure_expected_file_size "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" 'curl -L -O {}'
+}
+
+function measure_expected_file_size_for_1000G {
+        tail -n +100 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" | cut -f1 | shuf -n 20 > "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
+        observed_sizes_of_sample_files=()
+        while read -r url_of_current_sampled_file; do
+                observed_sizes_of_sample_files+=("$(curl -sI $url_of_current_sampled_file | grep -i Content-Length | awk '{print $2}')")
+        done < "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
+        echo "${observed_sizes_of_sample_files[@]}"
+        mean_observed_file_size=$(printf "%s\n" "${observed_sizes_of_sample_files[@]}" | awk '{sum+=$1} END{printf "%.0f\n", sum/NR}')
+        echo "${mean_observed_file_size}"
+        rm "1000G_fofn_containing_samples_for_observing_expected_file_size.txt"
 }
 
 # TODO: test these on Minerva. These functions just to show where the files are from.
@@ -215,4 +194,7 @@ function make_index_file_for_platinum_pedigree {
 #download_1KG_ONT_VIENNA
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
-make_index_file_for_platinum_pedigree
+#make_index_file_for_platinum_pedigree
+
+
+measure_expected_file_size_for_1000G
