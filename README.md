@@ -89,7 +89,10 @@ cat "${IN_TSV}" | jq -R -s '
       else .[$keys[$i]] = $row[$i] 
       end
     ))' > "${OUT_JSON}"
+```
+And then convert it back when you're done:
 
+```
 IN_JSON=in.json
 OUT_TSV=out.tsv
 cat "${IN_JSON}" | jq -R -s '
@@ -100,13 +103,7 @@ cat "${IN_JSON}" | jq -R -s '
       else .[$keys[$i]] = $row[$i] 
       end
     ))' > "${OUT_TSV}"
-
-
-
-OUT_JSON=output.json
-jq -r '(map(keys) | add | unique) as $headers | $headers, (.[] | [.[$headers[]] | if type=="array" then join("|") else . // "N/A" end]) | @tsv' "${OUT_JSON}"
-
-OUT_TSV
+```
 
 # Planning
 ## General idea:
