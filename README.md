@@ -77,7 +77,7 @@ Returns just the index file for the dataset you want.
 ```
 
 # Adding datasets
-To add a bunch of datasets at once, it's more convenient to write while the metadata is in `.tsv` format. Convert it like this and edit in Google Sheets:
+The program reads metadata about the datasets in the `.json` format. To add a bunch of datasets at once, it's more convenient to write while the metadata is in `.tsv` format. Convert it like this and edit in Google Sheets:
 ```
 IN_JSON=../../datasets/datasets.json
 OUT_TSV=../../datasets/datasets.tsv
