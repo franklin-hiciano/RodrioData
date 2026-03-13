@@ -10,15 +10,17 @@ PROJECT_ROOT = next(p for p in Path(__file__).resolve().parents if p.name == "Ro
 class IndexFile:
     def __init__(self, file_path):
         self.file_path = file_path
-        self.entry_in_json_file = self.read_entry_from_tsv()
-        self.dataset_name = self.entry_in_json_file["dataset_name"]
-        self.sample_identifier_column = self.entry_in_json_file["sample_identifier_column"]
-        self.url_columns = self.entry_in_json_file["url_columns"]
+        #self.entry_in_json_file = self.read_entry_from_tsv()
+        #self.dataset_name = self.entry_in_json_file["dataset_name"]
+        #self.sample_identifier_column = self.entry_in_json_file["sample_identifier_column"]
+        #self.url_columns = self.entry_in_json_file["url_columns"]
         self.data = pd.read_csv(self.file_path, sep="\t")
 
-    def read_index_file_and_output_subset(self, *, output_path, **kwargs):
+    def read_index_file_and_write_subset(self, *, output_path, **kwargs):
         subsetted_data = self.data
-        for col_name, value in kwargs:
+        print(self.data)
+        print(kwargs)
+        for col_name, value in kwargs.items():
             subsetted_data = subsetted_data[subsetted_data[col_name]==value] 
         subsetted_data.to_csv(output_path, sep="\t", index=False)
 
@@ -83,32 +85,15 @@ def main():
         )
     )
 
-    args, unknown = parser.parse_known_args()
-
-    def main():
-    parser = argparse.ArgumentParser(prog="program", description="Script description")
-    subparsers = parser.add_subparsers(dest="command")
-
-    # --------------- Excel to TSV Converter -----------------
-    excel_subcommand = subparsers.add_parser("excel_to_tsv", help="Convert an Excel sheet to a TSV file.")
-    excel_subcommand.add_argument("file_path", help="Path to the .xlsx file.")
-    excel_subcommand.add_argument("--sheet_name", required=True, help="Name of the sheet to convert.")
-    excel_subcommand.set_defaults(
-        func=lambda args: IndexFile.excel_to_tsv(
-            file_path=args.file_path,
-            sheet_name=args.sheet_name
-        )
-    )
-
     # --------------- Read Subset -----------------
     read_subset_subcommand = subparsers.add_parser("read_index_file_and_write_subset", help="Read a subset of data.")
     read_subset_subcommand.add_argument("file_path", help="Path to the index file.")
-    read_subset_subcommand.add_argument("--output", required=True, help="Path to output TSV file.")
+    read_subset_subcommand.add_argument("--output_path", required=True, help="Path to output TSV file.")
     read_subset_subcommand.set_defaults(
-        func=lambda args: IndexFile().read_index_file_and_write_subset(
-            file_path=args.file_path,
+        func=lambda args: IndexFile(args.file_path).read_index_file_and_write_subset(
+            output_path=args.output_path,
             **args.kwargs
-        ).to_csv(args.output, sep="\t", index=False)
+        )
     )
 
     # --- Parse args AFTER all subcommands are defined ---
