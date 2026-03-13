@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1KG_ONT_VIENNA",
+    "tags": [
+      "sample_id"
+    ]
+  },
+  {
+    "id": "1000G_high_coverage",
+    "tags": [
+      "SAMPLE_NAME"
+    ]
+  },
+  {
+    "id": "1000G_high_coverage",
+    "tags": [
+      "SAMPLE_NAME"
+    ]
+  },
+  {
+    "id": "simons_genome_diversity_project",
+    "tags": [
+      "sample_accession"
+    ]
+  },
+  {
+    "id": "simons_genome_diversity_project",
+    "tags": [
+      "sample_accession"
+    ]
+  },
+  {
+    "id": "ATAC-seq_LCL_100",
+    "tags": [
+      "sample_accession"
+    ]
+  },
+  {
+    "id": "2023_OLR_NATCOMM",
+    "tags": [
+      "Sample"
+    ]
+  },
+  {
+    "id": "human_genome_diversity_project",
+    "tags": [
+      "SAMPLE_NAME"
+    ]
+  },
+  {
+    "id": "2026_Light_EE_NatComm",
+    "tags": [
+      "sample_name"
+    ]
+  },
+  {
+    "id": "platinum_pedigree",
+    "tags": [
+      "primary_id"
+    ]
+  }
+]

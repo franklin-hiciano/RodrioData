@@ -167,9 +167,9 @@ function measure_expected_file_size_for_dataset {
     
     observed_sizes_of_sample_files=()
     while read -r ; do
-        if [[ "${method}" == "globus" ]]; then
+        if [[ "${file_transfer_method}" == "globus" ]]; then
             size=$(GLOBUS_get_size_of_remote_file "${url_of_current_sampled_file}")
-        elif [[ "${method}" == "s3" ]]; then
+        elif [[ "${file_transfer_method}" == "s3" ]]; then
             size=$(S3_get_size_of_remote_file "${url_of_current_sampled_file}")
         else
             size=$(CURL_get_size_of_remote_file "${url_of_current_sampled_file}")
@@ -209,6 +209,6 @@ function measure_expected_file_size_for_platinum_pedigree {
 #make_index_file_for_platinum_pedigree
 
 
-#measure_expected_file_size_for_1000G
-#measure_expected_file_size_for_human_genome_diversity_project
+measure_expected_file_size_for_1000G_high_coverage
+measure_expected_file_size_for_human_genome_diversity_project
 measure_expected_file_size_for_platinum_pedigree
