@@ -3,7 +3,8 @@ set -e -x
 set -euo pipefail
 
 DIR=$(cd -- "$(dirname -- "$0")" && pwd)
-PROJECT_ROOT="${DIR%%RodrioData*}/RodrioData"
+PROJECT_ROOT=$(realpath "${DIR%%RodrioData*}RodrioData")
+echo "${PROJECT_ROOT}"
 
 function download_ENA_study_index_file() {
 	local study="${1}"
@@ -154,14 +155,21 @@ function make_index_file_for_platinum_pedigree {
 function measure_expected_file_size_for_dataset {
     local dataset_name=$1
     local index_file=$2
+    echo "${index_file}"
     source "${PROJECT_ROOT}/src/datasets/downloading_functions.sh"
 
     local tmp_fofn="${dataset_name}_fofn_containing_samples_for_observing_expected_file_size.txt"
 
     tail -n +100 "$index_file" | cut -f1 | shuf -n 20 > "$tmp_fofn"
-
-    file_transfer_method=$(awk -v ds="${dataset_name}" '$1==ds {print $8}' "${PROJECT_ROOT}/datasets/datasets.tsv")
-    name_of_url_column=$(awk -v ds="${dataset_name}" '$1==ds {print $3}' "${PROJECT_ROOT}/datasets/datasets.tsv" | sed 's/;.*//')
+    file_transfer_method=$(jq -r --arg INDEX_FILE "$index_file" '
+  .[]
+  | select(.source_path != null and .source_path != "")
+  | .source_path as $sp
+  # Check if the index file path contains the source path
+  | select($INDEX_FILE | contains($sp))
+  | .accession_method
+  ' /sc/arion/work/hiciaf01/projects/RodrioData/datasets/datasets.json)
+    name_of_url_column=$(awk -v ds="${dataset_name}" '$1==ds {print $3}' "${PROJECT_ROOT}/datasets/datasets.tsv" | sed 's/|.*//')
     index_of_primary_url_column=$(tr '\t' '\n' < "${index_file}" | grep -nx "${name_of_url_column}" | cut -d: -f1)
     
     
