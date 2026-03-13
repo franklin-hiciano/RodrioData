@@ -49,7 +49,7 @@ function S3_download_one_file {
 	:
 }
 function S3_get_size_of_remote_file() {
-	remote_path="${1#s3://}"
+	remote_path="${1#s3://${BUCKET_NAME}/}"
 	module load awscli
 	aws s3api head-object \
     		--bucket "${BUCKET_NAME}" \

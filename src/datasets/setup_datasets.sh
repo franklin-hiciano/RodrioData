@@ -150,8 +150,18 @@ function make_index_file_for_platinum_pedigree {
 
     done
 }    
+function get_dataset_field_from_index {
+    local index_file=$1
+    local field=$2
+    local datasets_json="${PROJECT_ROOT}/datasets/datasets.json"
 
-# Getting expected_size_of_one_file_in_bytes for the files without a bytes column: 1000G_high_coverage, 2023_OLR_NATCOMM, human_genome_diversity_project, 2026_Light_EE_NatComm
+    jq -r --arg INDEX_FILE "$index_file" --arg FIELD "$field" '
+        .[]
+        | select(.source_path != null and .source_path != "")
+        | select($INDEX_FILE | contains(.source_path))
+        | .[$FIELD]
+    ' "$datasets_json"
+}
 function measure_expected_file_size_for_dataset {
     local dataset_name=$1
     local index_file=$2
@@ -159,22 +169,14 @@ function measure_expected_file_size_for_dataset {
     source "${PROJECT_ROOT}/src/datasets/downloading_functions.sh"
 
     local tmp_fofn="${dataset_name}_fofn_containing_samples_for_observing_expected_file_size.txt"
+    tail -n +15 "$index_file" | shuf -n 7 > "$tmp_fofn"
 
-    tail -n +100 "$index_file" | cut -f1 | shuf -n 20 > "$tmp_fofn"
-    file_transfer_method=$(jq -r --arg INDEX_FILE "$index_file" '
-  .[]
-  | select(.source_path != null and .source_path != "")
-  | .source_path as $sp
-  # Check if the index file path contains the source path
-  | select($INDEX_FILE | contains($sp))
-  | .accession_method
-  ' /sc/arion/work/hiciaf01/projects/RodrioData/datasets/datasets.json)
-    name_of_url_column=$(awk -v ds="${dataset_name}" '$1==ds {print $3}' "${PROJECT_ROOT}/datasets/datasets.tsv" | sed 's/|.*//')
-    index_of_primary_url_column=$(tr '\t' '\n' < "${index_file}" | grep -nx "${name_of_url_column}" | cut -d: -f1)
-    
-    
+    file_transfer_method=$(get_dataset_field_from_index "$index_file" "accession_method")
+    local first_url_column=$(get_dataset_field_from_index "$index_file" "url_columns" | jq -r '.[0]')
+    local index_of_primary_url_column=$(grep -v '^##' "$index_file" | tr '\t' '\n' | grep -nx "$first_url_column" | cut -d: -f1)
+
     observed_sizes_of_sample_files=()
-    while read -r ; do
+    while read -r url_of_current_sampled_file; do
         if [[ "${file_transfer_method}" == "globus" ]]; then
             size=$(GLOBUS_get_size_of_remote_file "${url_of_current_sampled_file}")
         elif [[ "${file_transfer_method}" == "s3" ]]; then
@@ -183,12 +185,11 @@ function measure_expected_file_size_for_dataset {
             size=$(CURL_get_size_of_remote_file "${url_of_current_sampled_file}")
         fi
         observed_sizes_of_sample_files+=("$size")
-    done < "$tmp_fofn"
+    done < <(cut -f${index_of_primary_url_column} "$tmp_fofn")
 
     echo "${observed_sizes_of_sample_files[@]}"
     mean_observed_file_size=$(printf "%s\n" "${observed_sizes_of_sample_files[@]}" | awk '{sum+=$1} END{printf "%.0f\n", sum/NR}')
     echo "${mean_observed_file_size}"
-
     rm "$tmp_fofn"
 }
 
