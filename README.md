@@ -97,12 +97,20 @@ IN_TSV=../../datasets/datasets.tsv
 OUT_JSON=../../datasets/datasets.json
 cat "${IN_TSV}" | jq -R -s '
   split("\n") | map(select(length > 0) | split("\t")) | .[0] as $keys 
-  | .[1:] | map(. as $row | reduce range(0; $keys|length) as $i ({}; 
-      if ($row[$i] | contains("|")) 
-      then .[$keys[$i]] = ($row[$i] | split("|")) 
-      else .[$keys[$i]] = $row[$i] 
-      end
-    ))' > "${OUT_JSON}"
+  | .[1:] as $rows
+  # Pass 1: Identify which columns (by index) contain a pipe
+  | (reduce range(0; $keys|length) as $i ({}; 
+      .[$keys[$i]] = (any($rows[][$i] // ""; contains("|"))))) as $needs_array
+  # Pass 2: Reconstruct objects, splitting only where $needs_array is true
+  | $rows | map(
+      . as $row | 
+      reduce range(0; $keys|length) as $i ({}; 
+        if $needs_array[$keys[$i]] 
+        then .[$keys[$i]] = ($row[$i] | split("|"))
+        else .[$keys[$i]] = $row[$i]
+        end
+      )
+    )' > "${OUT_JSON}"
 ```
 
 # Planning
