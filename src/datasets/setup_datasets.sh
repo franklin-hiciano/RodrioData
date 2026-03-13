@@ -194,6 +194,8 @@ function measure_expected_file_size_for_dataset {
 }
 
 function measure_expected_file_size_for_1000G_high_coverage {
+	module load python
+	python "${PROJECT_ROOT}/src/datasets/IndexFile.py" read_index_file_and_write_subset "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" --
 	measure_expected_file_size_for_dataset "1000G_high_coverage" "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 }
 
@@ -202,6 +204,7 @@ function measure_expected_file_size_for_human_genome_diversity_project {
 }
 
 function measure_expected_file_size_for_platinum_pedigree {
+	python "${PROJECT_ROOT}/src/datasets/IndexFile.py" read_index_file_and_write_subset "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" --data_type sequencing_reads --platform hifi
         measure_expected_file_size_for_dataset "platinum_pedigree" "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv"
 }
 
