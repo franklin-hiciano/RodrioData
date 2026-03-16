@@ -6,27 +6,38 @@ from pathlib import Path
 import os
 
 PROJECT_ROOT = next(p for p in Path(__file__).resolve().parents if p.name == "RodrioData")
-
+JSON_OF_INDEX_FILE_METADATA = os.path.join(PROJECT_ROOT, "datasets", "datasets.json")
 class IndexFile:
     def __init__(self, file_path):
         self.file_path = file_path
-        #self.entry_in_json_file = self.read_entry_from_tsv()
-        #self.dataset_name = self.entry_in_json_file["dataset_name"]
-        #self.sample_identifier_column = self.entry_in_json_file["sample_identifier_column"]
-        #self.url_columns = self.entry_in_json_file["url_columns"]
+        try:
+            with open(self.file_path, 'r') as f:
+                pass 
+        except FileNotFoundError:
+            try:
+                self.file_path = os.path.join(PROJECT_ROOT, file_path)
+                with open(self.file_path, 'r') as f:
+                    pass
+            except FileNotFoundError:
+                print(f"index file path is invalid: {file_path}")
+        with open(JSON_OF_INDEX_FILE_METADATA, "r") as f:
+            data = json.load(f)
+            self.metadata_from_json_file = [index_file for index_file in data if index_file["source_path"] == file_path][0]
         self.data = pd.read_csv(self.file_path, sep="\t")
-
-    def read_index_file_and_write_subset(self, *, output_path, **kwargs):
-        subsetted_data = self.data
-        print(self.data)
-        print(kwargs)
+        
+    def subset_by_specific_column_values(self, **kwargs):
         for col_name, value in kwargs.items():
-            subsetted_data = subsetted_data[subsetted_data[col_name]==value] 
-        subsetted_data.to_csv(output_path, sep="\t", index=False)
+            self.data = self.data[self.data[col_name]==value]
 
-    def read_entry_from_tsv(self):
-        # TODO
-        pass
+    def write(self, *, output_path):
+        self.data.to_csv.to_csv(output_path, sep="\t", index=False)
+    
+    def get_dataframe(self):
+        return self.data
+    
+    def get_metadata_from_json_file(self):
+        return self.metadata_from_json_file
+
     def add_row(self, **kwargs):
         new_row = {}
         for column in self.dataframe_with_information_of_index_file.columns:

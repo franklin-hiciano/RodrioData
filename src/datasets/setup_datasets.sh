@@ -166,6 +166,7 @@ function measure_expected_file_size_for_dataset {
     local dataset_name=$1
     local index_file=$2
     echo "${index_file}"
+    
     source "${PROJECT_ROOT}/src/datasets/downloading_functions.sh"
 
     local tmp_fofn="${dataset_name}_fofn_containing_samples_for_observing_expected_file_size.txt"
@@ -204,13 +205,13 @@ function measure_expected_file_size_for_human_genome_diversity_project {
 	measure_expected_file_size_for_dataset "human_genome_diversity_project" "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
 }
 
-
 function measure_expected_file_size_for_platinum_pedigree {
 	# added another index file ${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree_filtered_1.tsv
 	# welp, just realized this was useless, at least for platinum pedigree, because it already has a bytes. :( guess it serves as an example
 	python "${PROJECT_ROOT}/src/datasets/IndexFile.py" read_index_file_and_write_subset "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv" --data_type sequencing_reads --platform hifi --output_path "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree_filtered_1.tsv" 
 #         measure_expected_file_size_for_dataset "platinum_pedigree" "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree_filtered_1.tsv"
 }
+
 
 #TODO: test these on Minerva. These functions just to show where the files are from.
 #download_1000G_high_coverage
