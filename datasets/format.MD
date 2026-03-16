@@ -1,5 +1,5 @@
 # Tasks
-1. Create an index file for each dataset. Include only the columns in the column section below.
+1. Create an index file for each dataset. Include only the columns in the column section below. The column names should be the same across index files.
 2. Create a json/tsv file with dataset name, path and download method
 
 # Columns
@@ -15,4 +15,3 @@
 
 - Skipping 2023_OLR_NATCOMM for now
 - Only use study_PRJEB9586
-# 
