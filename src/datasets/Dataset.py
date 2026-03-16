@@ -6,24 +6,15 @@ from pathlib import Path
 import os
 
 PROJECT_ROOT = next(p for p in Path(__file__).resolve().parents if p.name == "RodrioData")
-JSON_OF_INDEX_FILE_METADATA = os.path.join(PROJECT_ROOT, "datasets", "datasets.json")
-class IndexFile:
-    def __init__(self, *, file_path):
-        self.file_path = file_path
-        try:
-            with open(self.file_path, 'r') as f:
-                pass 
-        except FileNotFoundError:
-            try:
-                self.file_path = os.path.join(PROJECT_ROOT, file_path)
-                with open(self.file_path, 'r') as f:
-                    pass
-            except FileNotFoundError:
-                print(f"index file path is invalid: {file_path}")
-        with open(JSON_OF_INDEX_FILE_METADATA, "r") as f:
-            data = json.load(f)
-            self.metadata_from_json_file = [index_file for index_file in data if index_file["source_path"] == file_path][0]
-        self.data = pd.read_csv(self.file_path, sep="\t")
+JSON_OF_METADATA_OF_DATASETS = os.path.join(PROJECT_ROOT, "datasets", "datasets.json")
+class Dataset:
+    def __init__(self, *, name):
+        self.name = name
+        with open(JSON_OF_METADATA_OF_DATASETS, "r") as f:
+            metadata_of_datasets = json.load(f)
+            self.metadata_from_json_file = [dataset_metadata for dataset_metadata in metadata_of_datasets if dataset_metadata["dataset_name"] == self.name][0]
+        self.index_file_path = self.metadata_from_json_file["index_file_path"]
+        self.data = pd.read_csv(self.index_file_path, sep="\t")
         
     def subset_by_specific_column_values(self, **kwargs):
         for col_name, value in kwargs.items():
@@ -97,11 +88,11 @@ def main():
     )
 
     # --------------- Read Subset -----------------
-    read_subset_subcommand = subparsers.add_parser("read_index_file_and_write_subset", help="Read a subset of data.")
-    read_subset_subcommand.add_argument("file_path", help="Path to the index file.")
-    read_subset_subcommand.add_argument("--output_path", required=True, help="Path to output TSV file.")
+    read_subset_subcommand = subparsers.add_parser("read_index_file_of_dataset_and_write_subset", help="Read a subset of data and write it.")
+    read_subset_subcommand.add_argument("--dataset_name", help="Name of the dataset.")
+    read_subset_subcommand.add_argument("--output_path", required=True, help="Path to output index file.")
     read_subset_subcommand.set_defaults(
-        func=lambda args: IndexFile(args.file_path).read_index_file_and_write_subset(
+        func=lambda args: Dataset(args.dataset_name).read_index_file_and_write_subset(
             output_path=args.output_path,
             **args.kwargs
         )
