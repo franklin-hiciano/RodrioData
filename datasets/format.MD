@@ -1,5 +1,6 @@
 # Tasks
 1. Create an index file for each dataset. Include only the columns in the column section below.
+2. Create a json/tsv file with dataset name, path and download method
 
 # Columns
 1. Sample name
