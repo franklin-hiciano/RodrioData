@@ -53,6 +53,7 @@ function prioritize_fastq_download_links {
 function download_1000G_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
+	cat "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index" <(tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt") > "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.index"
 }
 
 function download_1KG_ONT_VIENNA {
@@ -214,7 +215,7 @@ function measure_expected_file_size_for_platinum_pedigree {
 
 
 #TODO: test these on Minerva. These functions just to show where the files are from.
-#download_1000G_high_coverage
+download_1000G_high_coverage
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM
@@ -228,4 +229,4 @@ function measure_expected_file_size_for_platinum_pedigree {
 
 #measure_expected_file_size_for_1000G_high_coverage
 #measure_expected_file_size_for_human_genome_diversity_project
-measure_expected_file_size_for_platinum_pedigree
+#measure_expected_file_size_for_platinum_pedigree
