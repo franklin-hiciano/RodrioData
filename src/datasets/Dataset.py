@@ -14,6 +14,16 @@ class Dataset:
             metadata_of_datasets = json.load(f)
             self.metadata_from_json_file = [dataset_metadata for dataset_metadata in metadata_of_datasets if dataset_metadata["dataset_name"] == self.name][0]
         self.index_file_path = self.metadata_from_json_file["index_file_path"]
+        try:
+            with open(self.index_file_path, 'r') as f:
+                pass
+        except FileNotFoundError:
+            try:
+                self.index_file_path = os.path.join(PROJECT_ROOT, self.index_file_path)
+                with open(self.index_file_path, 'r') as f:
+                    pass
+            except FileNotFoundError:
+                print(f"index file path is invalid: {self.index_file_path}")
         self.data = pd.read_csv(self.index_file_path, sep="\t")
         
     def subset_by_specific_column_values(self, **kwargs):

@@ -5,6 +5,7 @@
     "url_columns": [
       "file_path"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "bytes"
     ],
@@ -12,7 +13,7 @@
     "checksum_columns": [
       "md5sum"
     ],
-    "source_path": "datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv",
+    "index_file_path": "datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv",
     "accession_method": ""
   },
   {
@@ -21,6 +22,7 @@
     "url_columns": [
       "ENA_FILE_PATH"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "N/A"
     ],
@@ -28,23 +30,7 @@
     "checksum_columns": [
       "MD5SUM"
     ],
-    "source_path": "datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index",
-    "accession_method": "globus"
-  },
-  {
-    "dataset_name": "1000G_high_coverage",
-    "sample_identifier_column": "SAMPLE_NAME",
-    "url_columns": [
-      "ENA_FILE_PATH"
-    ],
-    "bytes_columns": [
-      "N/A"
-    ],
-    "expected_size_of_one_file_in_bytes": "17106336900",
-    "checksum_columns": [
-      "MD5SUM"
-    ],
-    "source_path": "datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt",
+    "index_file_path": "datasets/1000G_high_coverage/1000G_high_coverage.sequence.index",
     "accession_method": "globus"
   },
   {
@@ -53,6 +39,7 @@
     "url_columns": [
       "fastq_ftp"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "fastq_bytes"
     ],
@@ -60,7 +47,7 @@
     "checksum_columns": [
       "fastq_md5"
     ],
-    "source_path": "datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index.filtered",
+    "index_file_path": "datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index.filtered",
     "accession_method": ""
   },
   {
@@ -72,6 +59,7 @@
       "generated_ftp",
       "generated_aspera"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "submitted_bytes",
       "generated_bytes"
@@ -81,7 +69,7 @@
       "submitted_md5",
       "generated_md5"
     ],
-    "source_path": "datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index",
+    "index_file_path": "datasets/simons_genome_diversity_project/study_ERP010710/study_ERP010710.index",
     "accession_method": ""
   },
   {
@@ -93,6 +81,7 @@
       "generated_ftp",
       "generated_aspera"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "submitted_bytes",
       "generated_bytes"
@@ -102,7 +91,7 @@
       "submitted_md5",
       "generated_md5"
     ],
-    "source_path": "datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index",
+    "index_file_path": "datasets/ATAC-seq_LCL_100/study_PRJEB28318/study_PRJEB28318.index",
     "accession_method": ""
   },
   {
@@ -112,6 +101,7 @@
       "AIRR-seq Accession",
       "Pacific Biosciences Sequencing Data Accession"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "N/A"
     ],
@@ -119,7 +109,7 @@
     "checksum_columns": [
       "N/A"
     ],
-    "source_path": "datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv",
+    "index_file_path": "datasets/2023_OLR_NATCOMM/2023_OLR_NATCOMM_Supplementary_Data_1.tsv",
     "accession_method": ""
   },
   {
@@ -128,6 +118,7 @@
     "url_columns": [
       "ENA_FILE_PATH"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "N/A"
     ],
@@ -135,7 +126,7 @@
     "checksum_columns": [
       "MD5SUM"
     ],
-    "source_path": "datasets/human_genome_diversity_project/hgdp_wgs.sequence.index",
+    "index_file_path": "datasets/human_genome_diversity_project/hgdp_wgs.sequence.index",
     "accession_method": "globus"
   },
   {
@@ -144,6 +135,7 @@
     "url_columns": [
       "filename"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "N/A"
     ],
@@ -151,7 +143,7 @@
     "checksum_columns": [
       "N/A"
     ],
-    "source_path": "datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv",
+    "index_file_path": "datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv",
     "accession_method": ""
   },
   {
@@ -160,6 +152,7 @@
     "url_columns": [
       "url"
     ],
+    "applied_filters": "",
     "bytes_columns": [
       "bytes"
     ],
@@ -167,7 +160,7 @@
     "checksum_columns": [
       "checksum"
     ],
-    "source_path": "datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv",
-    "accession_method": "s3"
+    "index_file_path": "datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv",
+    "accession_method": "S3"
   }
 ]
