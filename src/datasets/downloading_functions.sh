@@ -7,7 +7,8 @@ DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 PROJECT_ROOT="${DIR%%RodrioData*}/RodrioData"
 
 function CURL_download_one_file {
-        url="${1}"
+        remote_path="${1}"
+	local_path="${2}"
         curl -L -O "${file}"
 }
 

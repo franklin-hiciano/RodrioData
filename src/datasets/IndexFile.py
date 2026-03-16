@@ -8,7 +8,7 @@ import os
 PROJECT_ROOT = next(p for p in Path(__file__).resolve().parents if p.name == "RodrioData")
 JSON_OF_INDEX_FILE_METADATA = os.path.join(PROJECT_ROOT, "datasets", "datasets.json")
 class IndexFile:
-    def __init__(self, file_path):
+    def __init__(self, *, file_path):
         self.file_path = file_path
         try:
             with open(self.file_path, 'r') as f:
