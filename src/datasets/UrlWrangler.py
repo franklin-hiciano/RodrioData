@@ -19,5 +19,5 @@ class UrlWrangler:
         else:
             pass
         self.outpaths = self.urls.apply(os.path.basename).apply(lambda basename: os.path.join(out_dir, str(basename)))
-        self.pairings_of_urls_and_outpaths = list(zip(self.urls, self.outpaths))
+        self.pairings_of_urls_with_outpaths = list(zip(self.urls, self.outpaths))
         

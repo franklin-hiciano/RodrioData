@@ -47,7 +47,10 @@ function GLOBUS_get_size_of_remote_file() {
 # ---------- AWS S3 ------------
 BUCKET_NAME="platinum-pedigree-data"
 function S3_download_one_file {
-	:
+	remote_path="${1}"
+	local_path="${2}"
+	module load awscli
+	aws s3 cp "${remote_path}" "${local_path}" --no-sign-request --region us-west-1
 }
 function S3_get_size_of_remote_file() {
 	remote_path="${1#s3://${BUCKET_NAME}/}"

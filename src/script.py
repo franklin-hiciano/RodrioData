@@ -5,10 +5,11 @@ from datasets.UrlDownloader import UrlDownloader
 
 def download_one_sample(*, sample, index_file_path, out_dir, **column_subset_values):
     print("downloading one sample")
-    index_file_subsetted_to_specific_column_values = IndexFile(file_path=index_file_path).subset_by_specific_column_values(column_subset_values)
-    pairings_of_urls_and_outpaths = UrlWrangler(user_index=index_file_subsetted_to_specific_column_values, list_of_samples=[sample], out_dir=out_dir).pairings_of_urls_and_outpaths
+    index_file_subsetted_to_specific_column_values = IndexFile(file_path=index_file_path)
+    index_file_subsetted_to_specific_column_values.subset_by_specific_column_values(**column_subset_values)
+    pairings_of_urls_with_outpaths = UrlWrangler(user_index=index_file_subsetted_to_specific_column_values, list_of_samples=[sample], out_dir=out_dir).pairings_of_urls_with_outpaths
     # ALSO DYNAMICALLY FETCH THE DOWNLOAD METHOD FROM THE JSON FILE 
-    UrlDownloader(pairings_of_urls_and_outpaths=pairings_of_urls_and_outpaths, platform="S3").download_files()
+    UrlDownloader(pairings_of_urls_with_outpaths=pairings_of_urls_with_outpaths, platform="S3").download_files()
 
 def main():
     parser = argparse.ArgumentParser(prog="program", description="Script description")
@@ -50,6 +51,10 @@ def main():
             kwargs[key] = val
 
     args.kwargs = kwargs
+    if hasattr(args, 'func'):
+        args.func(args)
+    else:
+        parser.print_help()
 
 
 if __name__ == '__main__':
