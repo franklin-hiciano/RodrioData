@@ -13,5 +13,5 @@
 9. Size of file/md5sum
 
 - Skipping 2023_OLR_NATCOMM for now
-
+- Only use study_PRJEB9586
 # 
