@@ -8,4 +8,4 @@
 7. URLs
 8. Size of file/md5sum
 
-# Skipping 2023_OLR_NATCOMM for now
+- Skipping 2023_OLR_NATCOMM for now
