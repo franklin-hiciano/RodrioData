@@ -53,30 +53,14 @@ function prioritize_fastq_download_links {
 function download_1000G_high_coverage {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.index"
-	(tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"; tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt") | awk -F$'\t' -v OFS='\t' '{print $10, "DNA-seq", "LCL", "Illumina Novaseq 6000" "cram", "paired", "alignment", $1, $2, "17106336900" }' - >> "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.index" 
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index"
+	(tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"; tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt") | awk -F$'\t' -v OFS='\t' '{print $10, "DNA-seq", "LCL", "Illumina Novaseq 6000" "cram", "paired", "alignment", $1, $2, "17106336900" }' - >> "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index" 
 }
 
 function download_1KG_ONT_VIENNA {
     curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
-
-    {
-        printf "sample_id\ttype\tfile_path\tbytes\tmd5sum\n"
-	awk '
-        /hg38/ {
-            split($0, parts_of_file_path, /hg38\/|\.hg38/); 
-            printf "%s\t%s\t%s\t%s\t%s\n", parts_of_file_path[2], "hg38", $1, $2, $3 
-        }
-        /t2t/ {
-            split($0, parts_of_file_path, /t2t\/|\.t2t/); 
-            printf "%s\t%s\t%s\t%s\t%s\n", parts_of_file_path[2], "t2t", $1, $2, $3 
-        }
-        /1KG_ONT_VIENNA\/reference/ {
-            printf "%s\t%s\t%s\t%s\t%s\n", "N/A", "reference", $1, $2, $3
-        }' "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
-    } > "${PROJECT_ROOT}/tmp.txt"
-
-    mv "${PROJECT_ROOT}/tmp.txt" "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
+    printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
+    tail -n +3 "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" | head -n -2 | awk -F$'\t' -v OFS='\t' '{split($1, parts_of_file_path, "[/.]"); url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/" $1; file_type = parts_of_file_path[length(parts_of_file_path)]; print parts_of_file_path[3], "DNA-seq", "LCL", "ONT" file_type, "unpaired", "alignment", url, $3, $2 }' - >> "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
 }
 
 function download_simons_genome_diversity_project {
@@ -216,13 +200,13 @@ function measure_expected_file_size_for_platinum_pedigree {
 
 
 #TODO: test these on Minerva. These functions just to show where the files are from.
-download_1000G_high_coverage
+#download_1000G_high_coverage
 #download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM
 #download_human_genome_diversity_project
 #download_2026_Light_EE_NatComm
-#download_1KG_ONT_VIENNA
+download_1KG_ONT_VIENNA
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
 #make_index_file_for_platinum_pedigree
