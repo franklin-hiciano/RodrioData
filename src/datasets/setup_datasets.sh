@@ -85,7 +85,7 @@ function download_2026_Light_EE_NatComm {
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
 	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | tail -n -195 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; seq_tech = "PacBio" $14; print $1, "DNA-seq", "LCL", seq_tech, "bam", "unpaired", "alignment", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; seq_tech = "PacBio" $14; print $1, "DNA-seq", "LCL", seq_tech, "bam", "unpaired", "alignment", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; seq_tech = "PacBio" $14; print $1, "AIRR_seq", "LCL", seq_tech, "fastq", "paired", "raw", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
 # ------- Platinum Pedigree has a couple functions --------- 
@@ -199,11 +199,11 @@ function measure_expected_file_size_for_platinum_pedigree {
 
 
 #TODO: test these on Minerva. These functions just to show where the files are from.
-download_1000G_high_coverage
-download_1KG_ONT_VIENNA
-download_simons_genome_diversity_project
-download_ATAC_seq_LCL_100
-download_human_genome_diversity_project
+#download_1000G_high_coverage
+#download_1KG_ONT_VIENNA
+#download_simons_genome_diversity_project
+#download_ATAC_seq_LCL_100
+#download_human_genome_diversity_project
 download_2026_Light_EE_NatComm
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
