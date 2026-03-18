@@ -78,11 +78,12 @@ function download_ATAC_seq_LCL_100 {
 
 function download_human_genome_diversity_project { 
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
-
-
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index" 
+	tail -n +25 "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" | paste -d '\t' - - | awk -F$'\t' -v OFS='\t' '{urls = $1 ";" $23; md5sums = $2 ";" $24; sizes = "4060180374;4060180374"; print $10, "DNA-seq", "LCL", "Illumina HiSeq X Ten", "fastq", "paired", "raw", urls, md5sums, sizes }' - >> "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index"
 }
 
 function download_2023_OLR_NATCOMM {
+
 	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
 	python ${PROJECT_ROOT}/src/datasets/IndexFile.py excel_to_tsv "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx" \
 		--sheet_name "Supplementary Data 1"
@@ -208,9 +209,9 @@ function measure_expected_file_size_for_platinum_pedigree {
 #download_1000G_high_coverage
 #download_1KG_ONT_VIENNA
 #download_simons_genome_diversity_project
-download_ATAC_seq_LCL_100
+#download_ATAC_seq_LCL_100
+download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
-#download_human_genome_diversity_project
 #download_2026_Light_EE_NatComm
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
