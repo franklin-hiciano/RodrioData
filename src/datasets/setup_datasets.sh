@@ -81,19 +81,18 @@ function download_human_genome_diversity_project {
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index" 
 	tail -n +25 "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" | paste -d '\t' - - | awk -F$'\t' -v OFS='\t' '{urls = $1 ";" $23; md5sums = $2 ";" $24; sizes = "4060180374;4060180374"; print $10, "DNA-seq", "LCL", "Illumina HiSeq X Ten", "fastq", "paired", "raw", urls, md5sums, sizes }' - >> "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index"
 }
-
-function download_2023_OLR_NATCOMM {
-
-	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-023-40070-x/MediaObjects/41467_2023_40070_MOESM4_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx"
-	python ${PROJECT_ROOT}/src/datasets/IndexFile.py excel_to_tsv "${PROJECT_ROOT}/datasets/2023_OLR_NATCOMM/41467_2023_40070_MOESM4_ESM.xlsx" \
-		--sheet_name "Supplementary Data 1"
-}
-
+# DO I INCLUDE REVIO, SEQUEL ILE, ETC. IN THE INSTRUMENT NAME?
+# TODO: FIND THE MD5SUMS OF THESE AND THE BYTES. QUESTION - IS THIS COMPLETELY NECESSARY? AFTER ALL IT CAN TECHNICALLY BE CHECKED LIVE AND THE DOWNLOADER CAN USE LIVE ALLOCATING OF FILE SPACE.
 function download_2026_Light_EE_NatComm {
-    out_path="${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
-    python ${PROJECT_ROOT}/src/datasets/IndexFile.py download_from_drive \
+	python ${PROJECT_ROOT}/src/datasets/Dataset.py download_from_drive \
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
-	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
+	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).xlsx"
+	python ${PROJECT_ROOT}/src/datasets/Dataset.py excel_to_tsv \
+            "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).xlsx" \
+	    --sheet_name "Supplementary Data 1"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).Supplementary_Data_1.tsv" | tail -n -195 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "DNA-seq", "LCL", "PacBio", "bam", "unpaired", "alignment", url, "NA", "NA" }' > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).Supplementary_Data_1.tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "AIRR_seq", "LCL", "PacBio", "fastq", "paired", "raw", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
 # ------- Platinum Pedigree has a couple functions --------- 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
@@ -210,13 +209,12 @@ function measure_expected_file_size_for_platinum_pedigree {
 #download_1KG_ONT_VIENNA
 #download_simons_genome_diversity_project
 #download_ATAC_seq_LCL_100
-download_human_genome_diversity_project
+#download_human_genome_diversity_project
 #download_2023_OLR_NATCOMM
-#download_2026_Light_EE_NatComm
+download_2026_Light_EE_NatComm
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
 #make_index_file_for_platinum_pedigree
-
 
 #measure_expected_file_size_for_1000G_high_coverage
 #measure_expected_file_size_for_human_genome_diversity_project

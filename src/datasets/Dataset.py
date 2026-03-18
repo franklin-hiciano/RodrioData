@@ -52,9 +52,10 @@ class Dataset:
 
     @classmethod
     def excel_to_tsv(cls, file_path, sheet_name):
-        df = pd.read_excel(file_path, sheet_name=sheet_name)
-        sheet_name_cleaned = re.sub(r'[^a-zA-Z0-9]', '_', sheet_name)
-        output_name = f"{file_path}.{sheet_name_cleaned}.tsv"
+        df = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl')
+        sheet_name_cleaned = re.sub(r'[^a-zA-Z0-9]', '.', sheet_name)
+        base_path, _ = os.path.splitext(file_path)
+        output_name = f"{base_path}.{sheet_name_cleaned}.tsv"
         df.to_csv(output_name, sep='\t', index=False)
 
     @classmethod
@@ -78,7 +79,7 @@ def main():
     excel_subcommand.add_argument("--sheet_name", required=True, help="Name of the sheet to convert.")
 
     excel_subcommand.set_defaults(
-        func=lambda args: IndexFile.excel_to_tsv(
+        func=lambda args: Dataset.excel_to_tsv(
             file_path=args.file_path,
             sheet_name=args.sheet_name
         )
@@ -91,7 +92,7 @@ def main():
     drive_sub.add_argument("--out_path", required=True, help="The local path where the file should be saved.")
 
     drive_sub.set_defaults(
-        func=lambda args: IndexFile.download_from_drive(
+        func=lambda args: Dataset.download_from_drive(
             drive_id=args.drive_id,
             out_path=args.out_path
         )
