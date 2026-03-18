@@ -1,0 +1,400 @@
+sample_name	assay_type	biological_source	technology	file_type	library	processed	url	md5sum	size
+SRR33915889	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915889/220781702C-08082023_S5_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915888	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915888/CW50_NS_pool1_220781702C_S1_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915887	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915887/220881704C_Requeue_S47_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915886	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915886/220881704C_S43_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915885	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915885/220882403C_Requeue_S14_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915884	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915884/220882403C_S26_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915883	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915883/SC-17_R1.fastq.gz.1	NA	NA
+SRR33915882	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915882/SC17_S40_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915880	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915880/CW50_NS_pool1_2210410005_S19_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915879	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915879/2211414001_Requeue_S1_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915878	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915878/CW50_NS_pool1_2202422009_S6_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915813	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915813/2202422009_S38_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915812	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915812/2209419009_Requeue_S12_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915811	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915811/2209419009_S44_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915810	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915810/CW50_NS_pool1_2209430000_1_S4_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915809	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915809/CW50_NS_pool1_2209430000_2_S36_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915808	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915808/CW50_NS_pool1_220271402C_S12_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915807	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915807/CW50_NS_pool1_220770702C_S17_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915805	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915805/SC-22_R1.fastq.gz.1	NA	NA
+SRR33915804	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915804/SC22_S42_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915803	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915803/SC-24_R1.fastq.gz.1	NA	NA
+SRR33915802	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915802/SC24_S34_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915801	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915801/SC-21_R1.fastq.gz.1	NA	NA
+SRR33915800	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915800/SC21_S41_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915799	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915799/220471902C_Requeue_S38_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915798	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915798/230272803C_Requeue_S30_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915797	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915797/SC-11_R1.fastq.gz.1	NA	NA
+SRR33915796	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915796/SC11_S33_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915794	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915794/SC-6_R1.fastq.gz.1	NA	NA
+SRR33915793	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915793/SC6_S29_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915792	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915792/SC-16_R1.fastq.gz.1	NA	NA
+SRR33915791	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915791/SC16_S39_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915790	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915790/CW50_NS_pool1_220380302C_S16_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915789	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915789/SC-1_R1.fastq.gz.1	NA	NA
+SRR33915788	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915788/CW50_NS_pool1_220680803C_S48_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915787	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915787/191080609C_Requeue_S3_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915786	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915786/CW50_NS_pool1_220881103C_S35_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915785	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915785/2302803101_S7_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915783	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915783/SC5_S28_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915782	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915782/2302809105_Requeue_S31_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916005	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916005/CW50_NS_pool1_190981502C_S21_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916004	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916004/SC12_S32_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916003	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916003/211281405C_Requeue_S18_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916002	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916002/CW50_NS_pool1_220581202C_S28_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916001	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916001/190981003C_S3_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916000	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916000/220581805C_S2_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915999	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915999/190980901C_S45_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915998	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915998/220883101C_Requeue_S9_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915996	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915996/191181105C_S34_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915995	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915995/220881703C_Requeue_S45_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915994	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915994/CW50_NS_pool1_220680902C_S30_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915993	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915993/SC-14_R1.fastq.gz.1	NA	NA
+SRR33915992	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915992/CW50_NS_pool1_220381703C_S11_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915991	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915991/SC7_S30_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915990	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915990/CW50_NS_pool1_220782501C_S32_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915989	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915989/CW50_NS_pool1_2301503003_S37_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915988	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915988/2303824104_Requeue_S35_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915987	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915987/220782701C_S7_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915985	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915985/220880402C_Requeue_S20_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915984	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915984/2307820101_S9_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915983	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915983/220880403C_S12_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915982	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915982/220981504C_Requeue_S37_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915981	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915981/CW50_NS_pool1_220782502C_S33_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915980	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915980/220881602C_Requeue_S8_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915979	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915979/220581905C_S11_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915978	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915978/CW50_NS_pool1_220482104C_S10_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915977	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915977/CW50_NS_pool1_220781703C_S31_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915976	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915976/CW50_NS_pool1_220980104C_S18_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915974	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915974/220680903C_S18_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916114	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916114/220683005C_S13_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916113	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916113/220980801C-08082023_S8_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916112	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916112/CW50_NS_pool1_220982202C_S45_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916111	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916111/CW50_NS_pool1_220981402C_S40_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916110	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916110/220382303C_S6_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916109	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916109/220881003C_Requeue_S36_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916108	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916108/CW50_NS_pool1_220982201C_S38_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916107	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916107/2302810101_Requeue_S32_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916106	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916106/220380901C_S32_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916104	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916104/2301826110_Requeue_S27_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916103	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916103/220681401C_S8_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916102	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916102/2303820102_Requeue_S33_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916101	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916101/220781001C-08082023_S4_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916100	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916100/220481803C-08082023_S2_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916099	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916099/CW50_NS_pool1_220383004C_S25_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916098	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916098/2302807101_S24_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916097	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916097/2307825103_S19_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916096	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916096/CW50_NS_pool1_220580504C_S27_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916095	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916095/2301826101_Requeue_S26_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916093	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916093/220682301C_S5_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916092	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916092/2303822105_Requeue_S34_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916091	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916091/2308828109_S3_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916090	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916090/2302515004_Requeue_S28_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916089	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916089/2212405008_S22_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916088	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916088/2308403005_S12_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916087	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916087/2201410002_S25_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916086	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916086/2308429006_S22_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916085	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916085/SC-4_R1.fastq.gz.1	NA	NA
+SRR33916084	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916084/SC-20_R1.fastq.gz.1	NA	NA
+SRR33915876	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915876/SC8_S31_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915875	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915875/2204414003_S28_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915874	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915874/2209413007_Requeue_S11_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915873	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915873/CW50_NS_pool1_2204419003_S9_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915872	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915872/2202414003_Requeue_S7_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915871	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915871/2308403006_S11_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915870	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915870/2308430004_S4_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915869	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915869/2308430001_S21_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915868	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915868/2211410005_Requeue_S17_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915867	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915867/2301431006_Requeue_S25_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915865	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915865/2308429009_S18_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915864	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915864/2209406003_Requeue_S19_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915863	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915863/2203416021_Requeue_S42_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915862	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915862/2204406003_Requeue_S21_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915861	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915861/2307403006_S5_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915860	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915860/2203429011_Requeue_S22_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915859	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915859/2203414011_Requeue_S5_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915858	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915858/CW50_NS_pool1_2209408008_S46_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915857	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915857/2204406011_S26_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915856	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915856/2210428001-08082023_S9_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915854	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915854/2202415007_S14_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915853	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915853/CW50_NS_pool1_2204405004_S7_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915852	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915852/CW50_NS_pool1_2204407022_S2_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915851	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915851/2202404005_Requeue_S46_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915850	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915850/2307403001_S6_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915849	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915849/2202424002_Requeue_S41_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915848	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915848/2203414003_S9_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915847	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915847/2202424005_S20_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915846	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915846/2203421019_S33_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915973	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915973/CW50_NS_pool1_2211429004_S43_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915971	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915971/CW50_NS_pool1_2209401001_S15_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915970	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915970/2209420003-08082023_S6_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915969	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915969/2301425004_S23_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915968	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915968/2209401000_S30_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915967	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915967/2209401007_S19_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915966	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915966/CW50_NS_pool1_2208401009_S47_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915965	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915965/2309405001_S1_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915964	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915964/CW50_NS_pool1_2210411018_S20_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915963	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915963/2308404006_S23_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915962	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915962/2308404004_S24_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915960	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915960/220771402C_S46_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915959	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915959/220472101C_Requeue_S43_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915958	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915958/220971301C-08082023_S12_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915957	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915957/220972003C_Requeue_S16_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915956	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915956/220373103C_S15_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915955	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915955/220272803C_Requeue_S40_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915954	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915954/SC-18_R1.fastq.gz.1	NA	NA
+SRR33915953	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915953/220270702C_Requeue_S39_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915952	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915952/220971201C_Requeue_S15_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915951	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915951/220672801C_Requeue_S13_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915949	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915949/CW50_NS_pool1_220372803C_S24_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915948	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915948/SC25_S35_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915947	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915947/220970803C-08082023_S11_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915946	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915946/230771204C_S10_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915945	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915945/SC-15_R1.fastq.gz.1	NA	NA
+SRR33915944	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915944/220772601C_S4_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915943	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915943/CW50_NS_pool1_220372304C_S22_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915942	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915942/220470501C_S16_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916082	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916082/CW50_NS_pool1_221170702C_S44_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916081	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916081/220373102C_Requeue_S10_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916079	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916079/SC-23_R1.fastq.gz.1	NA	NA
+SRR33916078	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916078/220771101C_S35_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916077	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916077/SC3_S27_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916076	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916076/220770701C_Requeue_S4_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916075	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916075/SC-19_R1.fastq.gz.1	NA	NA
+SRR33916074	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916074/CW50_NS_pool1_220370304C_S14_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916073	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916073/CW50_NS_pool1_220173102C_S13_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916072	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916072/CW50_NS_pool1_220471901C_S26_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916071	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916071/221071801C_Requeue_S2_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916070	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916070/CW50_NS_pool1_220670601C_S29_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916068	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916068/220672803C_Requeue_S6_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916067	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916067/CW50_NS_pool1_220972101C_S5_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916066	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916066/CW50_NS_pool1_220372802C_S23_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916065	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916065/211170201C_S27_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916064	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916064/220372201C_S17_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916063	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916063/221171504C-08082023_S10_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916062	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916062/220372302C_S1_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916061	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916061/220471903C-08082023_S1_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916060	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916060/220472801C_S10_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916059	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916059/230271302C_Requeue_S29_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916057	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916057/CW50_NS_pool1_221170803C_S42_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916056	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916056/230170502C_S29_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916055	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916055/CW50_NS_pool1_220971901C_S3_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916054	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916054/230170402C-08082023_S7_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916053	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916053/CW50_NS_pool1_221071303C_S39_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916052	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916052/CW50_NS_pool1_221170901C_S41_L001_R1_001.fastq.gz.1	NA	NA
+SRR33916051	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916051/221071302C_S31_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915845	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915845/CW50_NS_pool1_230170902C_S34_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915844	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915844/230771301C_S8_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915843	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915843/2307917002_S14_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915841	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915841/2308921002_S20_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915840	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915840/2308915002_S2_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915839	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915839/2307910002_S16_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915838	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915838/2307913002_S15_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915837	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915837/2307907002_S17_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915836	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915836/2308910002_S25_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915835	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915835/2307924001_S13_L001_R1_001.fastq.gz.1	NA	NA
+SRR33915900	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915900/CE0005786-SC13-08082023_S3_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915900/CE0005786-SC13-08082023_S3_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915899	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915899/SC-13_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915899/SC-13_R2.fastq.gz.1	NA	NA
+SRR33915898	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915898/SC13_S37_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915898/SC13_S37_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915897	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915897/CW50_NS_pool1_2202423018_S8_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915897/CW50_NS_pool1_2202423018_S8_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915896	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915896/2301423007_Requeue_S24_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915896/2301423007_Requeue_S24_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915895	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915895/2301423007_S36_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915895/2301423007_S36_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915894	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915894/2208409002_Requeue_S44_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915894/2208409002_Requeue_S44_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915891	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915891/2209413009_Requeue_S23_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915891/2209413009_Requeue_S23_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915890	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915890/2210419015_S21_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915890/2210419015_S21_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915889	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915889/220781702C-08082023_S5_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915889/220781702C-08082023_S5_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915888	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915888/CW50_NS_pool1_220781702C_S1_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915888/CW50_NS_pool1_220781702C_S1_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915887	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915887/220881704C_Requeue_S47_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915887/220881704C_Requeue_S47_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915886	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915886/220881704C_S43_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915886/220881704C_S43_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915885	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915885/220882403C_Requeue_S14_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915885/220882403C_Requeue_S14_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915884	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915884/220882403C_S26_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915884/220882403C_S26_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915883	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915883/SC-17_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915883/SC-17_R2.fastq.gz.1	NA	NA
+SRR33915882	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915882/SC17_S40_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915882/SC17_S40_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915880	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915880/CW50_NS_pool1_2210410005_S19_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915880/CW50_NS_pool1_2210410005_S19_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915879	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915879/2211414001_Requeue_S1_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915879/2211414001_Requeue_S1_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915878	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915878/CW50_NS_pool1_2202422009_S6_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915878/CW50_NS_pool1_2202422009_S6_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915813	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915813/2202422009_S38_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915813/2202422009_S38_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915812	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915812/2209419009_Requeue_S12_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915812/2209419009_Requeue_S12_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915811	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915811/2209419009_S44_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915811/2209419009_S44_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915810	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915810/CW50_NS_pool1_2209430000_1_S4_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915810/CW50_NS_pool1_2209430000_1_S4_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915809	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915809/CW50_NS_pool1_2209430000_2_S36_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915809/CW50_NS_pool1_2209430000_2_S36_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915808	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915808/CW50_NS_pool1_220271402C_S12_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915808/CW50_NS_pool1_220271402C_S12_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915807	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915807/CW50_NS_pool1_220770702C_S17_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915807/CW50_NS_pool1_220770702C_S17_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915805	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915805/SC-22_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915805/SC-22_R2.fastq.gz.1	NA	NA
+SRR33915804	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915804/SC22_S42_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915804/SC22_S42_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915803	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915803/SC-24_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915803/SC-24_R2.fastq.gz.1	NA	NA
+SRR33915802	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915802/SC24_S34_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915802/SC24_S34_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915801	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915801/SC-21_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915801/SC-21_R2.fastq.gz.1	NA	NA
+SRR33915800	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915800/SC21_S41_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915800/SC21_S41_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915799	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915799/220471902C_Requeue_S38_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915799/220471902C_Requeue_S38_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915798	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915798/230272803C_Requeue_S30_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915798/230272803C_Requeue_S30_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915797	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915797/SC-11_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915797/SC-11_R2.fastq.gz.1	NA	NA
+SRR33915796	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915796/SC11_S33_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915796/SC11_S33_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915794	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915794/SC-6_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915794/SC-6_R2.fastq.gz.1	NA	NA
+SRR33915793	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915793/SC6_S29_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915793/SC6_S29_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915792	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915792/SC-16_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915792/SC-16_R2.fastq.gz.1	NA	NA
+SRR33915791	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915791/SC16_S39_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915791/SC16_S39_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915790	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915790/CW50_NS_pool1_220380302C_S16_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915790/CW50_NS_pool1_220380302C_S16_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915789	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915789/SC-1_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915789/SC-1_R2.fastq.gz.1	NA	NA
+SRR33915788	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915788/CW50_NS_pool1_220680803C_S48_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915788/CW50_NS_pool1_220680803C_S48_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915787	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915787/191080609C_Requeue_S3_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915787/191080609C_Requeue_S3_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915786	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915786/CW50_NS_pool1_220881103C_S35_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915786/CW50_NS_pool1_220881103C_S35_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915785	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915785/2302803101_S7_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915785/2302803101_S7_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915783	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915783/SC5_S28_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915783/SC5_S28_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915782	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915782/2302809105_Requeue_S31_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915782/2302809105_Requeue_S31_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916005	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916005/CW50_NS_pool1_190981502C_S21_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916005/CW50_NS_pool1_190981502C_S21_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916004	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916004/SC12_S32_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916004/SC12_S32_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916003	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916003/211281405C_Requeue_S18_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916003/211281405C_Requeue_S18_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916002	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916002/CW50_NS_pool1_220581202C_S28_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916002/CW50_NS_pool1_220581202C_S28_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916001	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916001/190981003C_S3_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916001/190981003C_S3_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916000	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916000/220581805C_S2_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916000/220581805C_S2_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915999	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915999/190980901C_S45_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915999/190980901C_S45_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915998	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915998/220883101C_Requeue_S9_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915998/220883101C_Requeue_S9_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915996	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915996/191181105C_S34_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915996/191181105C_S34_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915995	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915995/220881703C_Requeue_S45_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915995/220881703C_Requeue_S45_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915994	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915994/CW50_NS_pool1_220680902C_S30_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915994/CW50_NS_pool1_220680902C_S30_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915993	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915993/SC-14_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915993/SC-14_R2.fastq.gz.1	NA	NA
+SRR33915992	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915992/CW50_NS_pool1_220381703C_S11_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915992/CW50_NS_pool1_220381703C_S11_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915991	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915991/SC7_S30_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915991/SC7_S30_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915990	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915990/CW50_NS_pool1_220782501C_S32_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915990/CW50_NS_pool1_220782501C_S32_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915989	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915989/CW50_NS_pool1_2301503003_S37_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915989/CW50_NS_pool1_2301503003_S37_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915988	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915988/2303824104_Requeue_S35_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915988/2303824104_Requeue_S35_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915987	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915987/220782701C_S7_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915987/220782701C_S7_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915985	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915985/220880402C_Requeue_S20_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915985/220880402C_Requeue_S20_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915984	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915984/2307820101_S9_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915984/2307820101_S9_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915983	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915983/220880403C_S12_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915983/220880403C_S12_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915982	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915982/220981504C_Requeue_S37_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915982/220981504C_Requeue_S37_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915981	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915981/CW50_NS_pool1_220782502C_S33_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915981/CW50_NS_pool1_220782502C_S33_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915980	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915980/220881602C_Requeue_S8_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915980/220881602C_Requeue_S8_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915979	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915979/220581905C_S11_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915979/220581905C_S11_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915978	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915978/CW50_NS_pool1_220482104C_S10_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915978/CW50_NS_pool1_220482104C_S10_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915977	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915977/CW50_NS_pool1_220781703C_S31_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915977/CW50_NS_pool1_220781703C_S31_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915976	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915976/CW50_NS_pool1_220980104C_S18_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915976/CW50_NS_pool1_220980104C_S18_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915974	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915974/220680903C_S18_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915974/220680903C_S18_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916114	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916114/220683005C_S13_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916114/220683005C_S13_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916113	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916113/220980801C-08082023_S8_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916113/220980801C-08082023_S8_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916112	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916112/CW50_NS_pool1_220982202C_S45_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916112/CW50_NS_pool1_220982202C_S45_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916111	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916111/CW50_NS_pool1_220981402C_S40_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916111/CW50_NS_pool1_220981402C_S40_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916110	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916110/220382303C_S6_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916110/220382303C_S6_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916109	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916109/220881003C_Requeue_S36_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916109/220881003C_Requeue_S36_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916108	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916108/CW50_NS_pool1_220982201C_S38_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916108/CW50_NS_pool1_220982201C_S38_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916107	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916107/2302810101_Requeue_S32_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916107/2302810101_Requeue_S32_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916106	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916106/220380901C_S32_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916106/220380901C_S32_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916104	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916104/2301826110_Requeue_S27_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916104/2301826110_Requeue_S27_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916103	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916103/220681401C_S8_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916103/220681401C_S8_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916102	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916102/2303820102_Requeue_S33_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916102/2303820102_Requeue_S33_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916101	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916101/220781001C-08082023_S4_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916101/220781001C-08082023_S4_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916100	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916100/220481803C-08082023_S2_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916100/220481803C-08082023_S2_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916099	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916099/CW50_NS_pool1_220383004C_S25_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916099/CW50_NS_pool1_220383004C_S25_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916098	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916098/2302807101_S24_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916098/2302807101_S24_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916097	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916097/2307825103_S19_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916097/2307825103_S19_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916096	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916096/CW50_NS_pool1_220580504C_S27_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916096/CW50_NS_pool1_220580504C_S27_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916095	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916095/2301826101_Requeue_S26_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916095/2301826101_Requeue_S26_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916093	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916093/220682301C_S5_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916093/220682301C_S5_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916092	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916092/2303822105_Requeue_S34_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916092/2303822105_Requeue_S34_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916091	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916091/2308828109_S3_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916091/2308828109_S3_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916090	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916090/2302515004_Requeue_S28_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916090/2302515004_Requeue_S28_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916089	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916089/2212405008_S22_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916089/2212405008_S22_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916088	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916088/2308403005_S12_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916088/2308403005_S12_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916087	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916087/2201410002_S25_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916087/2201410002_S25_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916086	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916086/2308429006_S22_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916086/2308429006_S22_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916085	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916085/SC-4_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33916085/SC-4_R2.fastq.gz.1	NA	NA
+SRR33916084	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916084/SC-20_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33916084/SC-20_R2.fastq.gz.1	NA	NA
+SRR33915876	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915876/SC8_S31_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915876/SC8_S31_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915875	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915875/2204414003_S28_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915875/2204414003_S28_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915874	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915874/2209413007_Requeue_S11_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915874/2209413007_Requeue_S11_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915873	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915873/CW50_NS_pool1_2204419003_S9_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915873/CW50_NS_pool1_2204419003_S9_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915872	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915872/2202414003_Requeue_S7_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915872/2202414003_Requeue_S7_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915871	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915871/2308403006_S11_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915871/2308403006_S11_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915870	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915870/2308430004_S4_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915870/2308430004_S4_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915869	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915869/2308430001_S21_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915869/2308430001_S21_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915868	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915868/2211410005_Requeue_S17_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915868/2211410005_Requeue_S17_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915867	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915867/2301431006_Requeue_S25_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915867/2301431006_Requeue_S25_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915865	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915865/2308429009_S18_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915865/2308429009_S18_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915864	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915864/2209406003_Requeue_S19_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915864/2209406003_Requeue_S19_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915863	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915863/2203416021_Requeue_S42_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915863/2203416021_Requeue_S42_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915862	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915862/2204406003_Requeue_S21_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915862/2204406003_Requeue_S21_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915861	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915861/2307403006_S5_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915861/2307403006_S5_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915860	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915860/2203429011_Requeue_S22_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915860/2203429011_Requeue_S22_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915859	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915859/2203414011_Requeue_S5_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915859/2203414011_Requeue_S5_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915858	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915858/CW50_NS_pool1_2209408008_S46_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915858/CW50_NS_pool1_2209408008_S46_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915857	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915857/2204406011_S26_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915857/2204406011_S26_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915856	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915856/2210428001-08082023_S9_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915856/2210428001-08082023_S9_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915854	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915854/2202415007_S14_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915854/2202415007_S14_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915853	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915853/CW50_NS_pool1_2204405004_S7_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915853/CW50_NS_pool1_2204405004_S7_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915852	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915852/CW50_NS_pool1_2204407022_S2_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915852/CW50_NS_pool1_2204407022_S2_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915851	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915851/2202404005_Requeue_S46_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915851/2202404005_Requeue_S46_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915850	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915850/2307403001_S6_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915850/2307403001_S6_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915849	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915849/2202424002_Requeue_S41_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915849/2202424002_Requeue_S41_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915848	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915848/2203414003_S9_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915848/2203414003_S9_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915847	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915847/2202424005_S20_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915847/2202424005_S20_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915846	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915846/2203421019_S33_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915846/2203421019_S33_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915973	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915973/CW50_NS_pool1_2211429004_S43_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915973/CW50_NS_pool1_2211429004_S43_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915971	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915971/CW50_NS_pool1_2209401001_S15_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915971/CW50_NS_pool1_2209401001_S15_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915970	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915970/2209420003-08082023_S6_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915970/2209420003-08082023_S6_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915969	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915969/2301425004_S23_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915969/2301425004_S23_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915968	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915968/2209401000_S30_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915968/2209401000_S30_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915967	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915967/2209401007_S19_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915967/2209401007_S19_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915966	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915966/CW50_NS_pool1_2208401009_S47_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915966/CW50_NS_pool1_2208401009_S47_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915965	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915965/2309405001_S1_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915965/2309405001_S1_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915964	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915964/CW50_NS_pool1_2210411018_S20_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915964/CW50_NS_pool1_2210411018_S20_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915963	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915963/2308404006_S23_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915963/2308404006_S23_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915962	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915962/2308404004_S24_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915962/2308404004_S24_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915960	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915960/220771402C_S46_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915960/220771402C_S46_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915959	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915959/220472101C_Requeue_S43_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915959/220472101C_Requeue_S43_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915958	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915958/220971301C-08082023_S12_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915958/220971301C-08082023_S12_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915957	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915957/220972003C_Requeue_S16_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915957/220972003C_Requeue_S16_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915956	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915956/220373103C_S15_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915956/220373103C_S15_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915955	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915955/220272803C_Requeue_S40_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915955/220272803C_Requeue_S40_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915954	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915954/SC-18_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915954/SC-18_R2.fastq.gz.1	NA	NA
+SRR33915953	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915953/220270702C_Requeue_S39_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915953/220270702C_Requeue_S39_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915952	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915952/220971201C_Requeue_S15_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915952/220971201C_Requeue_S15_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915951	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915951/220672801C_Requeue_S13_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915951/220672801C_Requeue_S13_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915949	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915949/CW50_NS_pool1_220372803C_S24_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915949/CW50_NS_pool1_220372803C_S24_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915948	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915948/SC25_S35_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915948/SC25_S35_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915947	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915947/220970803C-08082023_S11_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915947/220970803C-08082023_S11_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915946	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915946/230771204C_S10_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915946/230771204C_S10_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915945	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915945/SC-15_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33915945/SC-15_R2.fastq.gz.1	NA	NA
+SRR33915944	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915944/220772601C_S4_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915944/220772601C_S4_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915943	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915943/CW50_NS_pool1_220372304C_S22_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915943/CW50_NS_pool1_220372304C_S22_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915942	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915942/220470501C_S16_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915942/220470501C_S16_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916082	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916082/CW50_NS_pool1_221170702C_S44_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916082/CW50_NS_pool1_221170702C_S44_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916081	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916081/220373102C_Requeue_S10_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916081/220373102C_Requeue_S10_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916079	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916079/SC-23_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33916079/SC-23_R2.fastq.gz.1	NA	NA
+SRR33916078	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916078/220771101C_S35_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916078/220771101C_S35_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916077	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33916077/SC3_S27_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916077/SC3_S27_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916076	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916076/220770701C_Requeue_S4_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916076/220770701C_Requeue_S4_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916075	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916075/SC-19_R1.fastq.gz.1;s3://sra-pub-src-13/SRR33916075/SC-19_R2.fastq.gz.1	NA	NA
+SRR33916074	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916074/CW50_NS_pool1_220370304C_S14_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916074/CW50_NS_pool1_220370304C_S14_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916073	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916073/CW50_NS_pool1_220173102C_S13_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916073/CW50_NS_pool1_220173102C_S13_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916072	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916072/CW50_NS_pool1_220471901C_S26_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916072/CW50_NS_pool1_220471901C_S26_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916071	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916071/221071801C_Requeue_S2_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916071/221071801C_Requeue_S2_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916070	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916070/CW50_NS_pool1_220670601C_S29_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916070/CW50_NS_pool1_220670601C_S29_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916068	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916068/220672803C_Requeue_S6_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916068/220672803C_Requeue_S6_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916067	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916067/CW50_NS_pool1_220972101C_S5_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916067/CW50_NS_pool1_220972101C_S5_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916066	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916066/CW50_NS_pool1_220372802C_S23_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916066/CW50_NS_pool1_220372802C_S23_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916065	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916065/211170201C_S27_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916065/211170201C_S27_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916064	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916064/220372201C_S17_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916064/220372201C_S17_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916063	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916063/221171504C-08082023_S10_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916063/221171504C-08082023_S10_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916062	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916062/220372302C_S1_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916062/220372302C_S1_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916061	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916061/220471903C-08082023_S1_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916061/220471903C-08082023_S1_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916060	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916060/220472801C_S10_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916060/220472801C_S10_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916059	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916059/230271302C_Requeue_S29_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916059/230271302C_Requeue_S29_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916057	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916057/CW50_NS_pool1_221170803C_S42_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916057/CW50_NS_pool1_221170803C_S42_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916056	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916056/230170502C_S29_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916056/230170502C_S29_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916055	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916055/CW50_NS_pool1_220971901C_S3_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916055/CW50_NS_pool1_220971901C_S3_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916054	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916054/230170402C-08082023_S7_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916054/230170402C-08082023_S7_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916053	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916053/CW50_NS_pool1_221071303C_S39_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916053/CW50_NS_pool1_221071303C_S39_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916052	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916052/CW50_NS_pool1_221170901C_S41_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916052/CW50_NS_pool1_221170901C_S41_L001_R2_001.fastq.gz.1	NA	NA
+SRR33916051	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33916051/221071302C_S31_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33916051/221071302C_S31_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915845	AIRR_seq	LCL	PacBioSequel IIe	fastq	paired	raw	s3://sra-pub-src-13/SRR33915845/CW50_NS_pool1_230170902C_S34_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915845/CW50_NS_pool1_230170902C_S34_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915844	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915844/230771301C_S8_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915844/230771301C_S8_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915843	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915843/2307917002_S14_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915843/2307917002_S14_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915841	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915841/2308921002_S20_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915841/2308921002_S20_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915840	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915840/2308915002_S2_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915840/2308915002_S2_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915839	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915839/2307910002_S16_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915839/2307910002_S16_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915838	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915838/2307913002_S15_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915838/2307913002_S15_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915837	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915837/2307907002_S17_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915837/2307907002_S17_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915836	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915836/2308910002_S25_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915836/2308910002_S25_L001_R2_001.fastq.gz.1	NA	NA
+SRR33915835	AIRR_seq	LCL	PacBioRevio	fastq	paired	raw	s3://sra-pub-src-13/SRR33915835/2307924001_S13_L001_R1_001.fastq.gz.1;s3://sra-pub-src-13/SRR33915835/2307924001_S13_L001_R2_001.fastq.gz.1	NA	NA

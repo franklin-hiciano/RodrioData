@@ -62,18 +62,15 @@ function download_1KG_ONT_VIENNA {
     printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
     tail -n +3 "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" | head -n -2 | awk -F$'\t' -v OFS='\t' '{split($1, parts_of_file_path, "[/.]"); url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/" $1; file_type = parts_of_file_path[length(parts_of_file_path)]; print parts_of_file_path[3], "DNA-seq", "LCL", "ONT" file_type, "unpaired", "alignment", url, $3, $2 }' - >> "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
 }
-# ARE THESE LCL? NOT SAID IN THE PAPER AS FAR AS I CAN TELL.
 function download_simons_genome_diversity_project {
 	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,study_accession,sample_accession,experiment_accession,sample_title,tax_id,scientific_name,library_layout,library_strategy,library_source,library_selection,instrument_platform,instrument_model,read_count,base_count,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,fastq_ftp,fastq_md5,fastq_bytes,fastq_aspera,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,sra_ftp,sra_md5,sra_bytes,sra_aspera,bam_ftp,bam_md5,bam_bytes,bam_aspera" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -F$'\t' -v OFS='\t' '{print $3, "DNA-seq", "NA", "Illumina HiSeq 2000" "fastq", "paired", "raw", $27, $25, $26 }' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index" 
+	tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -F$'\t' -v OFS='\t' '{print $3, "DNA-seq", "PBMC", "Illumina HiSeq 2000" "fastq", "paired", "raw", $27, $25, $26 }' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index" 
 }
-# WHERE IS THE PAPER BEHIND THIS ONE? I NEED TO NKOW THE TECH AND WHETHER IT USED PARIED END SEQUENCING. I WILL ASSUME THEY HAVE.
-# HOW DOES THE DATA COME OUT USING ATAC SEQ?  
 function download_ATAC_seq_LCL_100 {
 	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB28318&result=analysis&fields=analysis_accession,study_accession,sample_accession,experiment_accession,sample_title,tax_id,scientific_name,analysis_type,reference_genome,pipeline_name,pipeline_version,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,generated_ftp,generated_md5,generated_bytes,generated_aspera" -o "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.index"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.index" | awk -F$'\t' -v OFS='\t' '{num_links=split($24,file_paths,";"); split($22,md5sums,";"); split($23,file_sizes,";"); for(i=1;i<=num_links;i++) {split(file_paths[i], parts, "."); file_type = parts[length(parts)]; print $3,"ATAC-seq","LCL","NA",file_type,"paired","alignment",file_paths[i],md5sums[i],file_sizes[i]}}' >> "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.index" | awk -F$'\t' -v OFS='\t' '{num_links=split($24,file_paths,";"); split($22,md5sums,";"); split($23,file_sizes,";"); for(i=1;i<=num_links;i++) {split(file_paths[i], parts, "."); file_type = parts[length(parts)]; print $3,"ATAC-seq","LCL","Illumina HiSeq 2500",file_type,"paired","alignment",file_paths[i],md5sums[i],file_sizes[i]}}' >> "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
 }
 
 function download_human_genome_diversity_project { 
@@ -86,13 +83,10 @@ function download_human_genome_diversity_project {
 function download_2026_Light_EE_NatComm {
 	python ${PROJECT_ROOT}/src/datasets/Dataset.py download_from_drive \
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
-	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).xlsx"
-	python ${PROJECT_ROOT}/src/datasets/Dataset.py excel_to_tsv \
-            "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).xlsx" \
-	    --sheet_name "Supplementary Data 1"
+	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).Supplementary_Data_1.tsv" | tail -n -195 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "DNA-seq", "LCL", "PacBio", "bam", "unpaired", "alignment", url, "NA", "NA" }' > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).Supplementary_Data_1.tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "AIRR_seq", "LCL", "PacBio", "fastq", "paired", "raw", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | tail -n -195 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; seq_tech = "PacBio" $14; print $1, "DNA-seq", "LCL", seq_tech, "bam", "unpaired", "alignment", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; seq_tech = "PacBio" $14; print $1, "AIRR_seq", "LCL", seq_tech, "fastq", "paired", "raw", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
 # ------- Platinum Pedigree has a couple functions --------- 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
@@ -205,12 +199,11 @@ function measure_expected_file_size_for_platinum_pedigree {
 
 
 #TODO: test these on Minerva. These functions just to show where the files are from.
-#download_1000G_high_coverage
-#download_1KG_ONT_VIENNA
-#download_simons_genome_diversity_project
-#download_ATAC_seq_LCL_100
-#download_human_genome_diversity_project
-#download_2023_OLR_NATCOMM
+download_1000G_high_coverage
+download_1KG_ONT_VIENNA
+download_simons_genome_diversity_project
+download_ATAC_seq_LCL_100
+download_human_genome_diversity_project
 download_2026_Light_EE_NatComm
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
