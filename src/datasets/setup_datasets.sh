@@ -64,10 +64,11 @@ function download_1KG_ONT_VIENNA {
 }
 
 function download_simons_genome_diversity_project {
-	download_ENA_study_index_file ERP010710 analysis "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/"
-	download_ENA_study_index_file PRJEB9586 read_run "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/"
-	prioritize_fastq_download_links "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586/study_PRJEB9586.index"
+	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,study_accession,sample_accession,experiment_accession,sample_title,tax_id,scientific_name,library_layout,library_strategy,library_source,library_selection,instrument_platform,instrument_model,read_count,base_count,cell_type,tissue_type,disease,dev_stage,host,host_sex,age,experimental_factor,first_public,fastq_ftp,fastq_md5,fastq_bytes,fastq_aspera,submitted_ftp,submitted_md5,submitted_bytes,submitted_aspera,sra_ftp,sra_md5,sra_bytes,sra_aspera,bam_ftp,bam_md5,bam_bytes,bam_aspera" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -F$'\t' -v OFS='\t' '{print $3, "DNA-seq", "N/A", "Illumina HiSeq 2000" "fastq", "paired", "raw", $27, $25, $26 }' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index" 
 }
+
 
 function download_ATAC-seq_LCL_100 {
 	download_ENA_study_index_file PRJEB28318 analysis "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/"
@@ -201,12 +202,12 @@ function measure_expected_file_size_for_platinum_pedigree {
 
 #TODO: test these on Minerva. These functions just to show where the files are from.
 #download_1000G_high_coverage
-#download_simons_genome_diversity_project
+#download_1KG_ONT_VIENNA
+download_simons_genome_diversity_project
 #download_ATAC-seq_LCL_100
 #download_2023_OLR_NATCOMM
 #download_human_genome_diversity_project
 #download_2026_Light_EE_NatComm
-download_1KG_ONT_VIENNA
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
 #make_index_file_for_platinum_pedigree
