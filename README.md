@@ -22,7 +22,7 @@ The program requires each file to be in a `std.index` and contain the following 
 Adding a file takes time, so take inspiration from `src/datasets/setup_datasets.sh` and write your code in there to help the next person. Find the index file most similar to yours, see how it was standardized, and maybe steal some code.
 
 ### Making the `url` column
-The url column is often most difficult to make. One common problem is don't come with URLs, just sample IDs. In this case, figure out how to use the id in a url and write a script to fill the `url` column. Then add your process to the documentations below.
+The url column is often most difficult to make. One common problem is datasets that don't come with URLs, just sample IDs. In this case, figure out how to use the id in a url. Then write a script that loops through ids, makes urls from them, and fills the url column. Finally, add your process to the documentations below.
 
 #### SRA to S3
 used in `2026_Light_EE_NatComm`
