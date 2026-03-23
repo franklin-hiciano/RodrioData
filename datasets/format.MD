@@ -1,5 +1,5 @@
 # Tasks
-- [ ] Create an index file for each dataset. Include only the columns in the column section below. The column names should be the same across index files.
+- [x] Create an index file for each dataset. Include only the columns in the column section below. The column names should be the same across index files.
 - [ ] Create a json/tsv file with dataset name, path and download method
 - [ ] Create a documention on going from SRR to url
 
