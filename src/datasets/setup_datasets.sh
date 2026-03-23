@@ -78,6 +78,7 @@ function download_human_genome_diversity_project {
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index" 
 	tail -n +25 "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" | paste -d '\t' - - | awk -F$'\t' -v OFS='\t' '{urls = $1 ";" $23; md5sums = $2 ";" $24; sizes = "4060180374;4060180374"; print $10, "DNA-seq", "LCL", "Illumina HiSeq X Ten", "fastq", "paired", "raw", urls, md5sums, sizes }' - >> "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index"
 }
+
 # DO I INCLUDE REVIO, SEQUEL ILE, ETC. IN THE INSTRUMENT NAME?
 # TODO: FIND THE MD5SUMS OF THESE AND THE BYTES. QUESTION - IS THIS COMPLETELY NECESSARY? AFTER ALL IT CAN TECHNICALLY BE CHECKED LIVE AND THE DOWNLOADER CAN USE LIVE ALLOCATING OF FILE SPACE.
 function download_2026_Light_EE_NatComm {
@@ -88,6 +89,7 @@ function download_2026_Light_EE_NatComm {
 	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; seq_tech = "PacBio" $14; print $1, "DNA-seq", "LCL", seq_tech, "bam", "unpaired", "alignment", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; seq_tech = "PacBio" $14; print $1, "AIRR_seq", "LCL", seq_tech, "fastq", "paired", "raw", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
+
 # ------- Platinum Pedigree has a couple functions --------- 
 function make_index_file_with_basic_sample_information_for_platinum_pedigree {
 	# told ChatGPT to make a .tsv of this table https://github.com/Platinum-Pedigree-Consortium/Platinum-Pedigree-Datasets?tab=readme-ov-file#sample-meta-data
@@ -106,35 +108,61 @@ function list_all_files_in_platinum_pedigree {
         --query 'Contents[].[Size, ETag, Key]' \
         --output text | tr -d '"' > "$output"
 }
-
 function make_index_file_for_platinum_pedigree {
     local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree.tsv"
-    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv"
+    local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.std.index"
     local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
 
-    # Header with bytes and checksum columns
-    printf "%s\t%s\t%s\t%s\t%s\t%s\n" "primary_id" "data_type" "platform" "bytes" "checksum" "url" > "$output_file"
+    printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "$output_file"
 
     tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do
-        
-        # --- Loop 1: Sequencing Reads ---
+
         for platform in "element" "hifi" "illumina" "ont" "strandseq"; do
             awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
+                BEGIN { FS="\t"; OFS="\t" }
                 $3 ~ "data/"plat && ($3 ~ id || $3 ~ p_id) {
-                    printf "%s\t%s\t%s\t%s\t%s\t%s\n", p_id, "sequencing_reads", plat, $1, $2, "s3://platinum-pedigree-data/"$3
-                }' "$list_file" >> "$output_file"
+                    tech = "NA"
+		    biological_source = "PBMC"
+                    if ($3 ~ /element/)       { tech = "Element AVITI" }
+                    else if ($3 ~ /hifi/)     { tech = "PacBio HiFi" }
+                    else if ($3 ~ /illumina/) { tech = "Illumina HiSeq" }
+                    else if ($3 ~ /ont/)      { tech = "Oxford Nanopore"; biological_source = "LCL" }
+                    else if ($3 ~ /strandseq/){ tech = "Strand-seq" }
+
+                    ext = "NA"
+                    supported = "(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)"
+		    if (match($3, "\\." supported "($|\\.)")) {
+                        temp_ext = substr($3, RSTART + 1)
+                        split(temp_ext, parts, ".")
+                        ext = parts[1]
+                    }
+		    
+		    processed = "raw"
+		    if ($3 ~ /mapped/) { processed = "alignment" }
+
+                    print p_id, "DNA-seq", biological_source, tech, ext, "unpaired", processed, $3, $2, $1
+                }
+            ' "$list_file" >> "$output_file"
         done
 
-        # --- Loop 2: Assemblies ---
-        for platform in "hifiasm_ont" "verkko"; do
-            awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
-                $3 ~ "assemblies/" && $3 ~ plat && ($3 ~ id || $3 ~ p_id) {
-                    printf "%s\t%s\t%s\t%s\t%s\t%s\n", p_id, "assembly", plat, $1, $2, "s3://platinum-pedigree-data/"$3
-                }' "$list_file" >> "$output_file"
-        done
+        awk -v id="${id}" -v p_id="${primary_id}" '
+            BEGIN { FS="\t"; OFS="\t" }
+            $3 ~ "assemblies/" && ($3 ~ id || $3 ~ p_id) {
+                print p_id, "NA", "NA", "NA", "fasta", "NA", "assembly", $3, $2, $1
+            }
+        ' "$list_file" >> "$output_file"
 
     done
-}    
+}
+function download_2026_Light_EE_NatComm {
+        python ${PROJECT_ROOT}/src/datasets/Dataset.py download_from_drive \
+            --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
+            --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
+        printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" "md5sum" "size" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+        tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; seq_tech = "PacBio" $14; print $1, "DNA-seq", "LCL", seq_tech, "bam", "unpaired", "alignment", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+        tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; seq_tech = "PacBio" $14; print $1, "AIRR_seq", "LCL", seq_tech, "fastq", "paired", "raw", url, "NA", "NA" }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+}
+
 function get_dataset_field_from_index {
     local index_file=$1
     local field=$2
@@ -191,6 +219,7 @@ function measure_expected_file_size_for_human_genome_diversity_project {
 }
 
 function measure_expected_file_size_for_platinum_pedigree {
+	
 	# added another index file ${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree_filtered_1.tsv
 	# welp, just realized this was useless, at least for platinum pedigree, because it already has a bytes. :( guess it serves as an example
 	python "${PROJECT_ROOT}/src/datasets/IndexFile.py" read_index_file_and_write_subset "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.tsv" --data_type sequencing_reads --platform hifi --output_path "${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree_filtered_1.tsv" 
@@ -204,10 +233,10 @@ function measure_expected_file_size_for_platinum_pedigree {
 #download_simons_genome_diversity_project
 #download_ATAC_seq_LCL_100
 #download_human_genome_diversity_project
-download_2026_Light_EE_NatComm
+#download_2026_Light_EE_NatComm
 #make_index_file_with_basic_sample_information_for_platinum_pedigree 
 #list_all_files_in_platinum_pedigree
-#make_index_file_for_platinum_pedigree
+make_index_file_for_platinum_pedigree
 
 #measure_expected_file_size_for_1000G_high_coverage
 #measure_expected_file_size_for_human_genome_diversity_project
