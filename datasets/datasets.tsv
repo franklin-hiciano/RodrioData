@@ -2,7 +2,7 @@ dataset_name	path	download_method
 1KG_ONT_VIENNA	datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index	globus
 1000G_high_coverage	datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index	globus
 ATAC-seq_LCL_100	datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index	globus
-human_genome_diversity_project	datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index	
+human_genome_diversity_project	datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index	globus
 2026_Light_EE_NatComm	datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index	s3
 platinum_pedigree	datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.std.index	s3
 simons_genome_diversity_project	datasets/simons_genome_diversity_project/study_PRJEB9586.std.index	globus
