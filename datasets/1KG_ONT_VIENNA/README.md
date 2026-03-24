@@ -1,9 +1,11 @@
 
 ## Description
-Long reads of 1,019 samples from the 1000 Genomes Project ONT PromethION 48 with R9.4.1 Flow Cells. The DNA came from LCLs.
+Long reads of 1,019 samples from the 1000 Genomes Project.
+
+## Details
+1. DNA source: "DNA was extracted from lymphoblastoid cell lines" [1]
+2. Platform: "FLO-PRO002 (R9.4.1) flow cells from ONT on the PromethION 48." [1]
 
 ### Sources
-1. Paper: [Long-read sequencing and structural variant characterization in 1,019 samples
-from the 1000 Genomes Project](https://www.biorxiv.org/content/10.1101/2024.04.18.590093v1)
-2. Data repo: [Long-read sequencing and structural variant characterization in 1,019 samples
-from the 1000 Genomes Project](https://github.com/1kg-ont-vienna/sv-analysis)
+
+1. Paper: [Structural variation in 1,019 diverse humans based on long-read sequencing](https://www.nature.com/articles/s41586-025-09290-7)
