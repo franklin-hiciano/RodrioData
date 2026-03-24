@@ -10,7 +10,7 @@ function download_1000G_high_coverage() {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index"
-	(tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"; tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt") | awk -F$'\t' -v OFS='\t' '{print $10, "DNA-seq", "LCL", "Illumina", "cram", "paired", "alignment", $1 }' - >> "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index" 
+	(tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"; tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt") | awk -F$'\t' -v OFS='\t' '{print $10, "DNA-seq", "NA", "Illumina", "NovaSeq 6000", "cram", "paired", "alignment", $1 }' - >> "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index" 
 }
 
 function download_1KG_ONT_VIENNA() {
@@ -41,9 +41,9 @@ function download_2026_Light_EE_NatComm() {
 	python ${PROJECT_ROOT}/src/datasets/Dataset.py download_from_drive \
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
 	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "DNA-seq", "LCL", seq_tech, "bam", "unpaired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "AIRR_seq", "LCL", "PacBio", "fastq", "paired", "raw", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "DNA-seq", "PBMC", Illumina, "NextSeq", "bam" "paired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "AIRR_seq", "Illumina", "NextSeq", "fastq", "paired", "raw", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
 
 function make_index_file_for_platinum_pedigree() {
