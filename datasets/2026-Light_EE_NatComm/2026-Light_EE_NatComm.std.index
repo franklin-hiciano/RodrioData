@@ -1,194 +1,194 @@
 sample_name	assay_type	biological_source	technology	file_type	library	processed	url
-SRR33916178	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916178/m64152e_230221_181556.bc1010--bc1010.bam.1
-SRR33916177	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916177/m64152e_230221_181556.bc1011--bc1011.bam.1
-SRR33915893	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915893/m64152e_230221_181556.bc1005--bc1005.bam.1
-SRR33916083	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916083/m64152e_230221_181556.bc1012--bc1012.bam.1
-SRR33915834	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915834/demultiplex.bc1024--bc1024.bam.1
-SRR33915823	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915823/m64152e_230221_181556.bc1013--bc1013.bam.1
-SRR33915940	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915940/m64152e_230221_181556.bc1014--bc1014.bam.1
-SRR33915929	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915929/m64152e_230221_181556.bc1015--bc1015.bam.1
-SRR33915918	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915918/demultiplex.bc1023--bc1023.bam.1
-SRR33916048	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916048/m64152e_230221_181556.bc1016--bc1016.bam.1
-SRR33916176	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916176/m64152e_230221_181556.bc1006--bc1006.bam.1
-SRR33916165	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916165/m64152e_230221_181556.bc1017--bc1017.bam.1
-SRR33916154	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916154/m64152e_230221_181556.bc1007--bc1007.bam.1
-SRR33916034	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916034/demultiplex.bc1025--bc1025.bam.1
-SRR33916023	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916023/m64152e_230221_181556.bc1018--bc1018.bam.1
-SRR33916012	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916012/demultiplex.bc1021--bc1021.bam.1
-SRR33916142	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916142/m64407e_230217_204819.bc1019--bc1019.bam.1
-SRR33916131	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916131/m64407e_230217_204819.bc1026--bc1026.bam.1
-SRR33916120	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916120/m64407e_230217_204819.bc1028--bc1028.bam.1
-SRR33915904	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915904/m64407e_230217_204819.bc1029--bc1029.bam.1
-SRR33915892	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915892/m64407e_230217_204819.bc1030--bc1030.bam.1
-SRR33915881	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915881/m64407e_230217_204819.bc1031--bc1031.bam.1
-SRR33915806	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915806/m64407e_230217_204819.bc1032--bc1032.bam.1
-SRR33915795	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915795/m64407e_230217_204819.bc1033--bc1033.bam.1
-SRR33915784	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915784/demultiplex.bc1020--bc1020.bam.1
-SRR33915997	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915997/m64407e_230217_204819.bc1009--bc1009.bam.1
-SRR33915986	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915986/m64407e_230217_204819.bc1034--bc1034.bam.1
-SRR33915975	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915975/demultiplex.bc1022--bc1022.bam.1
-SRR33916105	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916105/m64407e_230217_204819.bc1035--bc1035.bam.1
-SRR33916094	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916094/m64407e_230217_204819.bc1036--bc1036.bam.1
-SRR33915877	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915877/m64407e_230219_024704.bc1004--bc1004.bam.1
-SRR33915866	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915866/m64407e_230219_024704.bc1037--bc1037.bam.1
-SRR33915855	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915855/m64407e_230219_024704.bc1039--bc1039.bam.1
-SRR33915972	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915972/m64407e_230219_024704.bc1040--bc1040.bam.1
-SRR33915961	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915961/m64407e_230219_024704.bc1041--bc1041.bam.1
-SRR33915950	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915950/m64407e_230219_024704.bc1042--bc1042.bam.1
-SRR33916080	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916080/m64407e_230219_024704.bc1043--bc1043.bam.1
-SRR33916069	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916069/m64407e_230219_024704.bc1044--bc1044.bam.1
-SRR33916058	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916058/m64407e_230219_024704.bc1045--bc1045.bam.1
-SRR33915842	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915842/m64407e_230219_024704.bc1062--bc1062.bam.1
-SRR33915833	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915833/m64152e_230401_034152.bc1032--bc1032.bam.1
-SRR33915832	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915832/m64152e_230401_034152.bc1033--bc1033.bam.1
-SRR33915831	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915831/m64152e_230401_034152.bc1034--bc1034.bam.1
-SRR33915830	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915830/m64152e_230401_034152.bc1035--bc1035.bam.1
-SRR33915829	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915829/m64152e_230401_034152.bc1036--bc1036.bam.1
-SRR33915828	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915828/m64152e_230401_034152.bc1037--bc1037.bam.1
-SRR33915827	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915827/m64152e_230401_034152.bc1039--bc1039.bam.1
-SRR33915826	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915826/m64152e_230401_034152.bc1040--bc1040.bam.1
-SRR33915825	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915825/m64152e_230401_034152.bc1041--bc1041.bam.1
-SRR33915824	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915824/m64152e_230401_034152.bc1042--bc1042.bam.1
-SRR33915822	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915822/m64152e_230401_034152.bc1043--bc1043.bam.1
-SRR33915821	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915821/m64152e_230401_034152.bc1044--bc1044.bam.1
-SRR33915820	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915820/m64152e_230402_095308.bc1045--bc1045.bam.1
-SRR33915819	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915819/m64152e_230402_095308.bc1046--bc1046.bam.1
-SRR33915818	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915818/m64152e_230402_095308.bc1047--bc1047.bam.1
-SRR33915817	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915817/m64152e_230402_095308.bc1051--bc1051.bam.1
-SRR33915816	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915816/m64152e_230402_095308.bc1052--bc1052.bam.1
-SRR33915815	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915815/m64152e_230402_095308.bc1053--bc1053.bam.1
-SRR33915814	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915814/m64407e_230514_011756.bc1005--bc1005.bam.1
-SRR33915941	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915941/m64407e_230514_011756.bc1007--bc1007.bam.1
-SRR33915939	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915939/m64407e_230514_011756.bc1009--bc1009.bam.1
-SRR33915938	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915938/m64407e_230514_011756.bc1010--bc1010.bam.1
-SRR33915937	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915937/m64407e_230514_011756.bc1011--bc1011.bam.1
-SRR33915936	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915936/m64407e_230514_011756.bc1012--bc1012.bam.1
-SRR33915935	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915935/m64407e_230722_040625.bc1015--bc1015.bam.1
-SRR33915934	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915934/m64407e_230515_072922.bc1016--bc1016.bam.1
-SRR33915933	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915933/m64407e_230515_072922.bc1017--bc1017.bam.1
-SRR33915932	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915932/m64407e_230515_072922.bc1018--bc1018.bam.1
-SRR33915931	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915931/m64407e_230515_072922.bc1019--bc1019.bam.1
-SRR33915930	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915930/m64407e_230515_072922.bc1020--bc1020.bam.1
-SRR33915928	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915928/m64407e_230515_072922.bc1021--bc1021.bam.1
-SRR33915927	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915927/m64407e_230515_072922.bc1022--bc1022.bam.1
-SRR33915926	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915926/m64407e_230515_072922.bc1023--bc1023.bam.1
-SRR33915925	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915925/m64407e_230515_072922.bc1024--bc1024.bam.1
-SRR33915924	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915924/m64407e_230515_072922.bc1025--bc1025.bam.1
-SRR33915923	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915923/m64407e_230515_072922.bc1026--bc1026.bam.1
-SRR33915922	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915922/m64407e_230515_072922.bc1028--bc1028.bam.1
-SRR33915921	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915921/m64152e_230602_034553.bc1029--bc1029.bam.1
-SRR33915920	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915920/m64152e_230602_034553.bc1030--bc1030.bam.1
-SRR33915919	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915919/m64152e_230602_034553.bc1031--bc1031.bam.1
-SRR33915917	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915917/m64152e_230602_034553.bc1032--bc1032.bam.1
-SRR33915916	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915916/m64152e_230602_034553.bc1033--bc1033.bam.1
-SRR33915915	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915915/m64152e_230602_034553.bc1034--bc1034.bam.1
-SRR33915914	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915914/m64407e_230722_040625.bc1035--bc1035.bam.1
-SRR33915913	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915913/m64407e_230722_040625.bc1036--bc1036.bam.1
-SRR33915912	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915912/m64407e_230722_040625.bc1037--bc1037.bam.1
-SRR33915911	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915911/m64152e_230602_034553.bc1039--bc1039.bam.1
-SRR33915910	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915910/m64152e_230602_034553.bc1040--bc1040.bam.1
-SRR33916050	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916050/m64407e_230722_040625.bc1041--bc1041.bam.1
-SRR33916049	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916049/m64152e_230602_034553.bc1042--bc1042.bam.1
-SRR33916047	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916047/m64407e_230722_040625.bc1043--bc1043.bam.1
-SRR33916046	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916046/m64152e_230602_034553.bc1044--bc1044.bam.1
-SRR33916045	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916045/m64407e_230722_040625.bc1045--bc1045.bam.1
-SRR33916044	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916044/m64152e_230602_034553.bc1046--bc1046.bam.1
-SRR33916043	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916043/m64152e_230602_034553.bc1047--bc1047.bam.1
-SRR33916042	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916042/m64152e_230604_160926.bc1053--bc1053.bam.1
-SRR33916041	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916041/m64407e_230722_040625.bc1054--bc1054.bam.1
-SRR33916040	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916040/m64152e_230604_160926.bc1055--bc1055.bam.1
-SRR33916039	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916039/m64407e_230722_040625.bc1056--bc1056.bam.1
-SRR33916038	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916038/m64407e_230722_040625.bc1057--bc1057.bam.1
-SRR33916175	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916175/m64152e_230604_160926.bc1058--bc1058.bam.1
-SRR33916174	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916174/m64152e_230604_160926.bc1059--bc1059.bam.1
-SRR33916173	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916173/m64407e_230722_040625.bc1060--bc1060.bam.1
-SRR33916172	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916172/m64152e_230604_160926.bc1061--bc1061.bam.1
-SRR33916171	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916171/m64152e_230604_160926.bc1062--bc1062.bam.1
-SRR33916170	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916170/m64407e_230722_040625.bc1005--bc1005.bam.1
-SRR33916169	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916169/m64152e_230604_160926.bc1007--bc1007.bam.1
-SRR33916168	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916168/m64407e_230723_101753.bc1009--bc1009.bam.1
-SRR33916167	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916167/m64152e_230604_160926.bc1010--bc1010.bam.1
-SRR33916166	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916166/m64152e_230604_160926.bc1011--bc1011.bam.1
-SRR33916164	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916164/m64407e_230723_101753.bc1012--bc1012.bam.1
-SRR33916163	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916163/m64407e_230723_101753.bc1015--bc1015.bam.1
-SRR33916162	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916162/m64407e_230723_101753.bc1016--bc1016.bam.1
-SRR33916161	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916161/m64152e_230604_160926.bc1019--bc1019.bam.1
-SRR33916160	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916160/m64152e_230604_160926.bc1020--bc1020.bam.1
-SRR33916159	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916159/m64152e_230604_160926.bc1021--bc1021.bam.1
-SRR33916158	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916158/m64407e_230723_101753.bc1017--bc1017.bam.1
-SRR33916157	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916157/m64407e_230723_101753.bc1018--bc1018.bam.1
-SRR33916156	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916156/m64407e_230723_101753.bc1022--bc1022.bam.1
-SRR33916155	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916155/m64407e_230723_101753.bc1023--bc1023.bam.1
-SRR33916153	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916153/m64407e_230723_101753.bc1024--bc1024.bam.1
-SRR33916152	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916152/m64407e_230723_101753.bc1025--bc1025.bam.1
-SRR33916151	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916151/m64407e_230723_101753.bc1026--bc1026.bam.1
-SRR33916150	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916150/m64407e_230723_101753.bc1028--bc1028.bam.1
-SRR33916149	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916149/m64407e_230610_114349.bc1029--bc1029.bam.1
-SRR33916148	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916148/m64407e_230610_114349.bc1030--bc1030.bam.1
-SRR33916147	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916147/m64407e_230923_205323.bc1016--bc1016.bam.1
-SRR33916037	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916037/m64407e_230923_205323.bc1017--bc1017.bam.1
-SRR33916036	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916036/m64407e_230923_205323.bc1018--bc1018.bam.1
-SRR33916035	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916035/m64407e_230923_205323.bc1019--bc1019.bam.1
-SRR33916033	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916033/m64407e_230923_205323.bc1020--bc1020.bam.1
-SRR33916032	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916032/m64407e_230923_205323.bc1021--bc1021.bam.1
-SRR33916031	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916031/220880402C_m64407e_231023_061149.bc1007--bc1007.bam.1
-SRR33916030	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916030/2209401000_m64407e_231023_061149.bc1009--bc1009.bam.1
-SRR33916029	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916029/2209413009_m64407e_231023_061149.bc1010--bc1010.bam.1
-SRR33916028	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916028/2210419015_m64407e_231023_061149.bc1011--bc1011.bam.1
-SRR33916027	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916027/2302515004_m64407e_231023_061149.bc1022--bc1022.bam.1
-SRR33916026	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916026/230271302C_m64407e_231023_061149.bc1023--bc1023.bam.1
-SRR33916025	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916025/230272803C_m64407e_231023_061149.bc1024--bc1024.bam.1
-SRR33916024	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916024/2302807101_m64407e_231023_061149.bc1025--bc1025.bam.1
-SRR33916022	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916022/2302809105_m64407e_231023_061149.bc1026--bc1026.bam.1
-SRR33916021	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916021/m84149_231130_233926_s1.univ_v3_bc1028--univ_v3_bc1028.bam.1
-SRR33916020	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916020/m84149_231130_233926_s1.univ_v3_bc1054--univ_v3_bc1054.bam.1
-SRR33916019	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916019/m84149_231130_233926_s1.univ_v3_bc1055--univ_v3_bc1055.bam.1
-SRR33916018	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916018/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1004.bam.1
-SRR33916017	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916017/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1005.bam.1
-SRR33916016	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916016/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1006.bam.1
-SRR33916015	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916015/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1007.bam.1
-SRR33916014	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916014/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1009.bam.1
-SRR33916013	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916013/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1010.bam.1
-SRR33916011	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916011/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1011.bam.1
-SRR33916010	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916010/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1012.bam.1
-SRR33916009	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916009/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1013.bam.1
-SRR33916008	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916008/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1014.bam.1
-SRR33916007	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916007/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1015.bam.1
-SRR33916006	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916006/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1019.bam.1
-SRR33916146	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916146/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1021.bam.1
-SRR33916145	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916145/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1023.bam.1
-SRR33916144	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916144/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1024.bam.1
-SRR33916143	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916143/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1026.bam.1
-SRR33916141	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916141/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1028.bam.1
-SRR33916140	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916140/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1032.bam.1
-SRR33916139	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916139/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1033.bam.1
-SRR33916138	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916138/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1034.bam.1
-SRR33916137	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916137/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1035.bam.1
-SRR33916136	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916136/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1037.bam.1
-SRR33916135	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916135/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1039.bam.1
-SRR33916134	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916134/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1040.bam.1
-SRR33916133	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916133/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1044.bam.1
-SRR33916132	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916132/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1046.bam.1
-SRR33916130	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916130/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1047.bam.1
-SRR33916129	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916129/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1051.bam.1
-SRR33916128	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916128/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1052.bam.1
-SRR33916127	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916127/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1053.bam.1
-SRR33916126	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916126/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1054.bam.1
-SRR33916125	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916125/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1058.bam.1
-SRR33916124	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916124/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1060.bam.1
-SRR33916123	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916123/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1061.bam.1
-SRR33916122	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916122/2303820102_m64407e_231023_061149.bc1029--bc1029.bam.1
-SRR33916121	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916121/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1021.bam.1
-SRR33916119	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916119/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1031.bam.1
-SRR33916118	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916118/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1032.bam.1
-SRR33916117	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916117/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1033.bam.1
-SRR33916116	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916116/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1034.bam.1
-SRR33916115	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916115/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1035.bam.1
-SRR33915909	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915909/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1036.bam.1
-SRR33915908	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915908/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1037.bam.1
-SRR33915907	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915907/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1039.bam.1
-SRR33915906	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915906/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1040.bam.1
-SRR33915905	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915905/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1041.bam.1
-SRR33915903	DNA-seq	LCL	PacBioRevio	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915903/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1042.bam.1
-SRR33915902	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915902/m84149_231130_233926_s1.univ_v3_bc1005--univ_v3_bc1005.bam.1
-SRR33915901	DNA-seq	LCL	PacBioSequel IIe	bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915901/m84149_231130_233926_s1.univ_v3_bc1006--univ_v3_bc1006.bam.1
+SRR33916178	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916178/m64152e_230221_181556.bc1010--bc1010.bam.1
+SRR33916177	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916177/m64152e_230221_181556.bc1011--bc1011.bam.1
+SRR33915893	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915893/m64152e_230221_181556.bc1005--bc1005.bam.1
+SRR33916083	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916083/m64152e_230221_181556.bc1012--bc1012.bam.1
+SRR33915834	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915834/demultiplex.bc1024--bc1024.bam.1
+SRR33915823	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915823/m64152e_230221_181556.bc1013--bc1013.bam.1
+SRR33915940	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915940/m64152e_230221_181556.bc1014--bc1014.bam.1
+SRR33915929	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915929/m64152e_230221_181556.bc1015--bc1015.bam.1
+SRR33915918	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915918/demultiplex.bc1023--bc1023.bam.1
+SRR33916048	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916048/m64152e_230221_181556.bc1016--bc1016.bam.1
+SRR33916176	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916176/m64152e_230221_181556.bc1006--bc1006.bam.1
+SRR33916165	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916165/m64152e_230221_181556.bc1017--bc1017.bam.1
+SRR33916154	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916154/m64152e_230221_181556.bc1007--bc1007.bam.1
+SRR33916034	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916034/demultiplex.bc1025--bc1025.bam.1
+SRR33916023	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916023/m64152e_230221_181556.bc1018--bc1018.bam.1
+SRR33916012	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916012/demultiplex.bc1021--bc1021.bam.1
+SRR33916142	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916142/m64407e_230217_204819.bc1019--bc1019.bam.1
+SRR33916131	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916131/m64407e_230217_204819.bc1026--bc1026.bam.1
+SRR33916120	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916120/m64407e_230217_204819.bc1028--bc1028.bam.1
+SRR33915904	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915904/m64407e_230217_204819.bc1029--bc1029.bam.1
+SRR33915892	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915892/m64407e_230217_204819.bc1030--bc1030.bam.1
+SRR33915881	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915881/m64407e_230217_204819.bc1031--bc1031.bam.1
+SRR33915806	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915806/m64407e_230217_204819.bc1032--bc1032.bam.1
+SRR33915795	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915795/m64407e_230217_204819.bc1033--bc1033.bam.1
+SRR33915784	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915784/demultiplex.bc1020--bc1020.bam.1
+SRR33915997	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915997/m64407e_230217_204819.bc1009--bc1009.bam.1
+SRR33915986	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915986/m64407e_230217_204819.bc1034--bc1034.bam.1
+SRR33915975	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915975/demultiplex.bc1022--bc1022.bam.1
+SRR33916105	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916105/m64407e_230217_204819.bc1035--bc1035.bam.1
+SRR33916094	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916094/m64407e_230217_204819.bc1036--bc1036.bam.1
+SRR33915877	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915877/m64407e_230219_024704.bc1004--bc1004.bam.1
+SRR33915866	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915866/m64407e_230219_024704.bc1037--bc1037.bam.1
+SRR33915855	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915855/m64407e_230219_024704.bc1039--bc1039.bam.1
+SRR33915972	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915972/m64407e_230219_024704.bc1040--bc1040.bam.1
+SRR33915961	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915961/m64407e_230219_024704.bc1041--bc1041.bam.1
+SRR33915950	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915950/m64407e_230219_024704.bc1042--bc1042.bam.1
+SRR33916080	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916080/m64407e_230219_024704.bc1043--bc1043.bam.1
+SRR33916069	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916069/m64407e_230219_024704.bc1044--bc1044.bam.1
+SRR33916058	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916058/m64407e_230219_024704.bc1045--bc1045.bam.1
+SRR33915842	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915842/m64407e_230219_024704.bc1062--bc1062.bam.1
+SRR33915833	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915833/m64152e_230401_034152.bc1032--bc1032.bam.1
+SRR33915832	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915832/m64152e_230401_034152.bc1033--bc1033.bam.1
+SRR33915831	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915831/m64152e_230401_034152.bc1034--bc1034.bam.1
+SRR33915830	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915830/m64152e_230401_034152.bc1035--bc1035.bam.1
+SRR33915829	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915829/m64152e_230401_034152.bc1036--bc1036.bam.1
+SRR33915828	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915828/m64152e_230401_034152.bc1037--bc1037.bam.1
+SRR33915827	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915827/m64152e_230401_034152.bc1039--bc1039.bam.1
+SRR33915826	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915826/m64152e_230401_034152.bc1040--bc1040.bam.1
+SRR33915825	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915825/m64152e_230401_034152.bc1041--bc1041.bam.1
+SRR33915824	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915824/m64152e_230401_034152.bc1042--bc1042.bam.1
+SRR33915822	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915822/m64152e_230401_034152.bc1043--bc1043.bam.1
+SRR33915821	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915821/m64152e_230401_034152.bc1044--bc1044.bam.1
+SRR33915820	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915820/m64152e_230402_095308.bc1045--bc1045.bam.1
+SRR33915819	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915819/m64152e_230402_095308.bc1046--bc1046.bam.1
+SRR33915818	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915818/m64152e_230402_095308.bc1047--bc1047.bam.1
+SRR33915817	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915817/m64152e_230402_095308.bc1051--bc1051.bam.1
+SRR33915816	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915816/m64152e_230402_095308.bc1052--bc1052.bam.1
+SRR33915815	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915815/m64152e_230402_095308.bc1053--bc1053.bam.1
+SRR33915814	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915814/m64407e_230514_011756.bc1005--bc1005.bam.1
+SRR33915941	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915941/m64407e_230514_011756.bc1007--bc1007.bam.1
+SRR33915939	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915939/m64407e_230514_011756.bc1009--bc1009.bam.1
+SRR33915938	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915938/m64407e_230514_011756.bc1010--bc1010.bam.1
+SRR33915937	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915937/m64407e_230514_011756.bc1011--bc1011.bam.1
+SRR33915936	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915936/m64407e_230514_011756.bc1012--bc1012.bam.1
+SRR33915935	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915935/m64407e_230722_040625.bc1015--bc1015.bam.1
+SRR33915934	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915934/m64407e_230515_072922.bc1016--bc1016.bam.1
+SRR33915933	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915933/m64407e_230515_072922.bc1017--bc1017.bam.1
+SRR33915932	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915932/m64407e_230515_072922.bc1018--bc1018.bam.1
+SRR33915931	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915931/m64407e_230515_072922.bc1019--bc1019.bam.1
+SRR33915930	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915930/m64407e_230515_072922.bc1020--bc1020.bam.1
+SRR33915928	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915928/m64407e_230515_072922.bc1021--bc1021.bam.1
+SRR33915927	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915927/m64407e_230515_072922.bc1022--bc1022.bam.1
+SRR33915926	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915926/m64407e_230515_072922.bc1023--bc1023.bam.1
+SRR33915925	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915925/m64407e_230515_072922.bc1024--bc1024.bam.1
+SRR33915924	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915924/m64407e_230515_072922.bc1025--bc1025.bam.1
+SRR33915923	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915923/m64407e_230515_072922.bc1026--bc1026.bam.1
+SRR33915922	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915922/m64407e_230515_072922.bc1028--bc1028.bam.1
+SRR33915921	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915921/m64152e_230602_034553.bc1029--bc1029.bam.1
+SRR33915920	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915920/m64152e_230602_034553.bc1030--bc1030.bam.1
+SRR33915919	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915919/m64152e_230602_034553.bc1031--bc1031.bam.1
+SRR33915917	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915917/m64152e_230602_034553.bc1032--bc1032.bam.1
+SRR33915916	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915916/m64152e_230602_034553.bc1033--bc1033.bam.1
+SRR33915915	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915915/m64152e_230602_034553.bc1034--bc1034.bam.1
+SRR33915914	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915914/m64407e_230722_040625.bc1035--bc1035.bam.1
+SRR33915913	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915913/m64407e_230722_040625.bc1036--bc1036.bam.1
+SRR33915912	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915912/m64407e_230722_040625.bc1037--bc1037.bam.1
+SRR33915911	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915911/m64152e_230602_034553.bc1039--bc1039.bam.1
+SRR33915910	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915910/m64152e_230602_034553.bc1040--bc1040.bam.1
+SRR33916050	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916050/m64407e_230722_040625.bc1041--bc1041.bam.1
+SRR33916049	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916049/m64152e_230602_034553.bc1042--bc1042.bam.1
+SRR33916047	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916047/m64407e_230722_040625.bc1043--bc1043.bam.1
+SRR33916046	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916046/m64152e_230602_034553.bc1044--bc1044.bam.1
+SRR33916045	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916045/m64407e_230722_040625.bc1045--bc1045.bam.1
+SRR33916044	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916044/m64152e_230602_034553.bc1046--bc1046.bam.1
+SRR33916043	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916043/m64152e_230602_034553.bc1047--bc1047.bam.1
+SRR33916042	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916042/m64152e_230604_160926.bc1053--bc1053.bam.1
+SRR33916041	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916041/m64407e_230722_040625.bc1054--bc1054.bam.1
+SRR33916040	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916040/m64152e_230604_160926.bc1055--bc1055.bam.1
+SRR33916039	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916039/m64407e_230722_040625.bc1056--bc1056.bam.1
+SRR33916038	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916038/m64407e_230722_040625.bc1057--bc1057.bam.1
+SRR33916175	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916175/m64152e_230604_160926.bc1058--bc1058.bam.1
+SRR33916174	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916174/m64152e_230604_160926.bc1059--bc1059.bam.1
+SRR33916173	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916173/m64407e_230722_040625.bc1060--bc1060.bam.1
+SRR33916172	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916172/m64152e_230604_160926.bc1061--bc1061.bam.1
+SRR33916171	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916171/m64152e_230604_160926.bc1062--bc1062.bam.1
+SRR33916170	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916170/m64407e_230722_040625.bc1005--bc1005.bam.1
+SRR33916169	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916169/m64152e_230604_160926.bc1007--bc1007.bam.1
+SRR33916168	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916168/m64407e_230723_101753.bc1009--bc1009.bam.1
+SRR33916167	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916167/m64152e_230604_160926.bc1010--bc1010.bam.1
+SRR33916166	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916166/m64152e_230604_160926.bc1011--bc1011.bam.1
+SRR33916164	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916164/m64407e_230723_101753.bc1012--bc1012.bam.1
+SRR33916163	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916163/m64407e_230723_101753.bc1015--bc1015.bam.1
+SRR33916162	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916162/m64407e_230723_101753.bc1016--bc1016.bam.1
+SRR33916161	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916161/m64152e_230604_160926.bc1019--bc1019.bam.1
+SRR33916160	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916160/m64152e_230604_160926.bc1020--bc1020.bam.1
+SRR33916159	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916159/m64152e_230604_160926.bc1021--bc1021.bam.1
+SRR33916158	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916158/m64407e_230723_101753.bc1017--bc1017.bam.1
+SRR33916157	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916157/m64407e_230723_101753.bc1018--bc1018.bam.1
+SRR33916156	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916156/m64407e_230723_101753.bc1022--bc1022.bam.1
+SRR33916155	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916155/m64407e_230723_101753.bc1023--bc1023.bam.1
+SRR33916153	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916153/m64407e_230723_101753.bc1024--bc1024.bam.1
+SRR33916152	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916152/m64407e_230723_101753.bc1025--bc1025.bam.1
+SRR33916151	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916151/m64407e_230723_101753.bc1026--bc1026.bam.1
+SRR33916150	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916150/m64407e_230723_101753.bc1028--bc1028.bam.1
+SRR33916149	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916149/m64407e_230610_114349.bc1029--bc1029.bam.1
+SRR33916148	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916148/m64407e_230610_114349.bc1030--bc1030.bam.1
+SRR33916147	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916147/m64407e_230923_205323.bc1016--bc1016.bam.1
+SRR33916037	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916037/m64407e_230923_205323.bc1017--bc1017.bam.1
+SRR33916036	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916036/m64407e_230923_205323.bc1018--bc1018.bam.1
+SRR33916035	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916035/m64407e_230923_205323.bc1019--bc1019.bam.1
+SRR33916033	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916033/m64407e_230923_205323.bc1020--bc1020.bam.1
+SRR33916032	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916032/m64407e_230923_205323.bc1021--bc1021.bam.1
+SRR33916031	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916031/220880402C_m64407e_231023_061149.bc1007--bc1007.bam.1
+SRR33916030	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916030/2209401000_m64407e_231023_061149.bc1009--bc1009.bam.1
+SRR33916029	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916029/2209413009_m64407e_231023_061149.bc1010--bc1010.bam.1
+SRR33916028	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916028/2210419015_m64407e_231023_061149.bc1011--bc1011.bam.1
+SRR33916027	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916027/2302515004_m64407e_231023_061149.bc1022--bc1022.bam.1
+SRR33916026	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916026/230271302C_m64407e_231023_061149.bc1023--bc1023.bam.1
+SRR33916025	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916025/230272803C_m64407e_231023_061149.bc1024--bc1024.bam.1
+SRR33916024	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916024/2302807101_m64407e_231023_061149.bc1025--bc1025.bam.1
+SRR33916022	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916022/2302809105_m64407e_231023_061149.bc1026--bc1026.bam.1
+SRR33916021	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916021/m84149_231130_233926_s1.univ_v3_bc1028--univ_v3_bc1028.bam.1
+SRR33916020	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916020/m84149_231130_233926_s1.univ_v3_bc1054--univ_v3_bc1054.bam.1
+SRR33916019	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916019/m84149_231130_233926_s1.univ_v3_bc1055--univ_v3_bc1055.bam.1
+SRR33916018	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916018/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1004.bam.1
+SRR33916017	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916017/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1005.bam.1
+SRR33916016	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916016/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1006.bam.1
+SRR33916015	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916015/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1007.bam.1
+SRR33916014	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916014/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1009.bam.1
+SRR33916013	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916013/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1010.bam.1
+SRR33916011	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916011/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1011.bam.1
+SRR33916010	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916010/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1012.bam.1
+SRR33916009	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916009/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1013.bam.1
+SRR33916008	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916008/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1014.bam.1
+SRR33916007	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916007/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1015.bam.1
+SRR33916006	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916006/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1019.bam.1
+SRR33916146	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916146/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1021.bam.1
+SRR33916145	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916145/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1023.bam.1
+SRR33916144	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916144/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1024.bam.1
+SRR33916143	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916143/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1026.bam.1
+SRR33916141	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916141/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1028.bam.1
+SRR33916140	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916140/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1032.bam.1
+SRR33916139	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916139/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1033.bam.1
+SRR33916138	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916138/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1034.bam.1
+SRR33916137	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916137/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1035.bam.1
+SRR33916136	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916136/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1037.bam.1
+SRR33916135	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916135/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1039.bam.1
+SRR33916134	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916134/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1040.bam.1
+SRR33916133	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916133/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1044.bam.1
+SRR33916132	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916132/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1046.bam.1
+SRR33916130	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916130/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1047.bam.1
+SRR33916129	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916129/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1051.bam.1
+SRR33916128	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916128/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1052.bam.1
+SRR33916127	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916127/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1053.bam.1
+SRR33916126	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916126/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1054.bam.1
+SRR33916125	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916125/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1058.bam.1
+SRR33916124	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916124/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1060.bam.1
+SRR33916123	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916123/m84248_240314_063331_s4.hifi_reads.univ_v3_bc1061.bam.1
+SRR33916122	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916122/2303820102_m64407e_231023_061149.bc1029--bc1029.bam.1
+SRR33916121	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916121/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1021.bam.1
+SRR33916119	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916119/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1031.bam.1
+SRR33916118	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916118/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1032.bam.1
+SRR33916117	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916117/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1033.bam.1
+SRR33916116	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916116/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1034.bam.1
+SRR33916115	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33916115/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1035.bam.1
+SRR33915909	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915909/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1036.bam.1
+SRR33915908	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915908/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1037.bam.1
+SRR33915907	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915907/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1039.bam.1
+SRR33915906	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915906/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1040.bam.1
+SRR33915905	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915905/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1041.bam.1
+SRR33915903	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915903/m84248_240328_052525_s4.hifi_reads.univ_v3_bc1042.bam.1
+SRR33915902	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915902/m84149_231130_233926_s1.univ_v3_bc1005--univ_v3_bc1005.bam.1
+SRR33915901	DNA-seq	LCL		bam	unpaired	alignment	s3://sra-pub-src-13/SRR33915901/m84149_231130_233926_s1.univ_v3_bc1006--univ_v3_bc1006.bam.1
