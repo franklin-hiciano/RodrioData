@@ -1,4 +1,3 @@
-This index file needs validation on several counts:
 ### Description
 
 "We used Mendelian inheritance in a large pedigree (CEPH-1463) to filter variants across PacBio high-fidelity (HiFi), Illumina and Oxford Nanopore Technologies platforms. This generated a variant map with over 4.7 million single-nucleotide variants, 767,795 insertions and deletions (indels), 537,486 tandem repeats and 24,315 structural variants, covering 2.77 Gb of the GRCh38 genome" [1]
@@ -9,7 +8,7 @@ This index file needs validation on several counts:
 2. Sequencing platform: For gens 1-3, the exact PacBio and ONT platforms used in the multiple sequencing runs for each sample are in [2].
 
 ### Sources
-1. [The Platinum Pedigree: a long-read benchmark for genetic variants](https://www.nature.com/articles/s41592-025-02750-y)
+1. Paper: [The Platinum Pedigree: a long-read benchmark for genetic variants](https://www.nature.com/articles/s41592-025-02750-y)
 2. [Supplementary data table 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41592-025-02750-y/MediaObjects/41592_2025_2750_MOESM4_ESM.xlsx)
 
 
