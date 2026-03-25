@@ -1,6 +1,6 @@
 ### Description
 
-"We used Mendelian inheritance in a large pedigree (CEPH-1463) to filter variants across PacBio high-fidelity (HiFi), Illumina and Oxford Nanopore Technologies platforms. This generated a variant map with over 4.7 million single-nucleotide variants, 767,795 insertions and deletions (indels), 537,486 tandem repeats and 24,315 structural variants, covering 2.77 Gb of the GRCh38 genome" [1]
+"...we create and analyze a catalog of pedigree-concordant genetic variation based on an extended family (two parents and eight children) sequenced with the latest technologies..." [1]
 
 ### Details
 
