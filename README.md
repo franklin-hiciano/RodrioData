@@ -33,11 +33,11 @@ used in `2026_Light_EE_NatComm`
 3. Click on run > data access
 4. See how the id fits into the path. In this case, I saw `https://sra-pub-run-odp.s3.amazonaws.com/sra/${ID}/${ID}/${FILE_BASENAME}` so I used this blueprint to [process](https://github.com/franklin-hiciano/RodrioData/blob/b76978ce4f23b960dad1b89ed98da21606a55ec7/src/datasets/setup_datasets.sh#L45) my index file.
 
+#### Documentation 2, and so on
+
 ### Writing documentation
 `Biological source` and `Platform` can be even harder to make because their information is usually hidden somewhere on the internet (and thus completely unreliable from an LLM), so please cite where you get the information for these two columns when you write the dataset's readme. [Here's](https://github.com/franklin-hiciano/RodrioData/blob/12fa4546c7346ae99f1ff2337ad0ed8069770529/datasets/simons_genome_diversity_project/README.md) an example. 
 
-
-#### Documentation 2, and so on
 ### Adding your dataset to the `json` file
 
 The program reads dataset metadata from `datasets/datasets.json`. But it's more convenient to copy `datasets/datasets.tsv` into Google Sheets, edit it there, and convert it into `json` like this. 
