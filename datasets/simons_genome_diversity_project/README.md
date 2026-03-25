@@ -1,15 +1,11 @@
+## Description
 
-# Simons Genome Diversity Project
+"...high quality genomes from 300 individuals from 142 diverse populations." [1]
 
 ## Description
 
-A diverse dataset of Whole-genome sequencing reads from 301 individuals from 146 countries to highlight genetic variants not found in datasets made with genotyping arrays.
-
-[TODO] Find out what each file is. I know that `ERP010710_metadata.tsv` contains reference alignments and variant calling files. `PRJEB9586_metadata.tsv` contains fastq reads. But the former has 555 lines, and the later 398, so I can't infer whether it is one-to-one.
-
-" HiSeq2000 sequencers
-
-Platform: "The samples were sequenced using 100 base pair paired-end sequencing on
+1. DNA source: 297 rows of LCL, 82 of PBMC, 17 of Saliva. Keep in mind there are only 300 samples. [3]
+2. Platform: "The samples were sequenced using 100 base pair paired-end sequencing on
 HiSeq2000 sequencers" [2]
 
 
@@ -17,9 +13,6 @@ HiSeq2000 sequencers" [2]
 
 1. [The Simons Genome Diversity Project: 300 genomes from 142 diverse populations](https://www.nature.com/articles/nature18964#accession-codes)
 2. [Supplementary information](https://static-content.springer.com/esm/art%3A10.1038%2Fnature18964/MediaObjects/41586_2016_BFnature18964_MOESM204_ESM.pdf)
-
-
-1. [Original paper behind this dataset](https://www.nature.com/articles/nature18964)
-2. [ERP010710 dataset](https://www.ebi.ac.uk/ena/browser/view/ERP010710)
-3. [PRJEB9586 dataset](https://www.ebi.ac.uk/ena/browser/view/PRJEB9586)
+3. [Supplementary data table 1](https://static-content.springer.com/esm/art%3A10.1038%2Fnature18964/MediaObjects/41586_2016_BFnature18964_MOESM205_ESM.xlsx). In `setup_datasets.sh`, check in `download_simons_genome_diversity_project` to see how this `.xlsx` file was used to provide dna source values for each row in the `.std.index`.
+4. [Dataset, project PRJEB9586 on European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/view/PRJEB9586)
 
