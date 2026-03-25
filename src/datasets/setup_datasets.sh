@@ -26,7 +26,7 @@ function download_simons_genome_diversity_project() {
 	--sheet_name "Sheet1"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
 	while IFS=$'\t' read -r sample_alias dna_source; do
-		tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -v sample="${sample_alias}" -v source="${dna_source}" '$3 == sample {print $2, "DNA-seq", source, "Illumina", "HiSeq 2000", "fastq", "paired", "raw", $3 }' - | sed 's/Genomic_from_cell_lines/LCL/' | sed 's/Genomic_from_blood/PBMC/' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
+		tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -v sample="${sample_alias}" -v source="${dna_source}" '$3 == sample {print $2, "DNA-seq", source, "Illumina", "HiSeq 2000", "fastq", "paired", "raw", $4 }' - | sed 's/Genomic_from_cell_lines/LCL/' | sed 's/Genomic_from_blood/PBMC/' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
 	done < <(tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.Sheet1.tsv" | cut -f4,6)
 }
 

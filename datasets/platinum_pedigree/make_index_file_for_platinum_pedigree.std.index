@@ -1,4 +1,4 @@
-sample_name	assay_type	biological_source	technology	file_type	library	processed	url
+sample_name	assay_type	biological_source	technology	platform	file_type	library	processed	url
 NA12889	DNA-seq	PBMC	Element	bam	unpaired	alignment	data/element/mapped/GRCh38/2281-E.GRCh38.merged.sort.bam
 NA12889	DNA-seq	PBMC	Element	bam	unpaired	alignment	data/element/mapped/GRCh38/2281-E.GRCh38.merged.sort.bam.bai
 NA12889	DNA-seq	PBMC	PacBio	bam	unpaired	alignment	data/hifi/mapped/CHM13/NA12889.CHM13.haplotagged.bam
@@ -11,10 +11,10 @@ NA12889	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12889	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2281.v4.2.4.grc38.bam
 NA12889	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2281.v4.2.4.grc38.bam.bai
 NA12889	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2281.v4.2.4.grc38.bam.md5sum
-NA12889	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12889.minimap2.bam
-NA12889	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12889.minimap2.bam.bai
-NA12889	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12889.minimap2.bam
-NA12889	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12889.minimap2.bam.bai
+NA12889	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12889.minimap2.bam
+NA12889	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12889.minimap2.bam.bai
+NA12889	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12889.minimap2.bam
+NA12889	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12889.minimap2.bam.bai
 NA12889	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12889/gm12889-22nov29-r54-c02_S542.trimmed.1.fastq.gz
 NA12889	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12889/gm12889-22nov29-r54-c02_S542.trimmed.2.fastq.gz
 NA12889	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12889/gm12889-22nov29-r54-c03_S543.trimmed.1.fastq.gz
@@ -548,10 +548,10 @@ NA12890	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12890	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/2280.v4.2.4.t2tchm13.bam.md5sum
 NA12890	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2280.v4.2.4.grc38.bam.bai
 NA12890	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2280.v4.2.4.grc38.bam.md5sum
-NA12890	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12890.minimap2.bam
-NA12890	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12890.minimap2.bam.bai
-NA12890	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12890.minimap2.bam
-NA12890	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12890.minimap2.bam.bai
+NA12890	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12890.minimap2.bam
+NA12890	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12890.minimap2.bam.bai
+NA12890	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12890.minimap2.bam
+NA12890	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12890.minimap2.bam.bai
 NA12890	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12890/gm12890-22nov29-r57-c02_S650.trimmed.1.fastq.gz
 NA12890	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12890/gm12890-22nov29-r57-c02_S650.trimmed.2.fastq.gz
 NA12890	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12890/gm12890-22nov29-r57-c03_S651.trimmed.1.fastq.gz
@@ -1116,10 +1116,10 @@ NA12891	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12891	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2214.v4.2.4.grc38.bam
 NA12891	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2214.v4.2.4.grc38.bam.bai
 NA12891	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2214.v4.2.4.grc38.bam.md5sum
-NA12891	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12891.minimap2.bam
-NA12891	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12891.minimap2.bam.bai
-NA12891	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12891.minimap2.bam
-NA12891	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12891.minimap2.bam.bai
+NA12891	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12891.minimap2.bam
+NA12891	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12891.minimap2.bam.bai
+NA12891	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12891.minimap2.bam
+NA12891	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12891.minimap2.bam.bai
 NA12891	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12891/gm12891-22nov29-r60-c02_S758.trimmed.1.fastq.gz
 NA12891	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12891/gm12891-22nov29-r60-c02_S758.trimmed.2.fastq.gz
 NA12891	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12891/gm12891-22nov29-r60-c04_S760.trimmed.1.fastq.gz
@@ -1612,10 +1612,10 @@ NA12892	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12892	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2213.v4.2.4.grc38.bam
 NA12892	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2213.v4.2.4.grc38.bam.bai
 NA12892	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2213.v4.2.4.grc38.bam.md5sum
-NA12892	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12892.minimap2.bam
-NA12892	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12892.minimap2.bam.bai
-NA12892	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12892.minimap2.bam
-NA12892	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12892.minimap2.bam.bai
+NA12892	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12892.minimap2.bam
+NA12892	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12892.minimap2.bam.bai
+NA12892	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12892.minimap2.bam
+NA12892	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12892.minimap2.bam.bai
 NA12892	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12892/gm12892-22nov29-r63-c02_S866.trimmed.1.fastq.gz
 NA12892	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12892/gm12892-22nov29-r63-c02_S866.trimmed.2.fastq.gz
 NA12892	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12892/gm12892-22nov29-r63-c04_S868.trimmed.1.fastq.gz
@@ -2066,10 +2066,10 @@ NA12877	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12877	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2209.v4.2.4.grc38.bam
 NA12877	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2209.v4.2.4.grc38.bam.bai
 NA12877	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2209.v4.2.4.grc38.bam.md5sum
-NA12877	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12877.minimap2.bam
-NA12877	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12877.minimap2.bam.bai
-NA12877	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12877.minimap2.bam
-NA12877	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12877.minimap2.bam.bai
+NA12877	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12877.minimap2.bam
+NA12877	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12877.minimap2.bam.bai
+NA12877	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12877.minimap2.bam
+NA12877	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12877.minimap2.bam.bai
 NA12877	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12877/gm12877-22nov29-r48-c01_S325.trimmed.1.fastq.gz
 NA12877	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12877/gm12877-22nov29-r48-c01_S325.trimmed.2.fastq.gz
 NA12877	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12877/gm12877-22nov29-r48-c04_S328.trimmed.1.fastq.gz
@@ -2558,10 +2558,10 @@ NA12878	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12878	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2188.v4.2.4.grc38.bam
 NA12878	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2188.v4.2.4.grc38.bam.bai
 NA12878	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2188.v4.2.4.grc38.bam.md5sum
-NA12878	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12878.minimap2.bam
-NA12878	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12878.minimap2.bam.bai
-NA12878	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12878.minimap2.bam
-NA12878	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12878.minimap2.bam.bai
+NA12878	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12878.minimap2.bam
+NA12878	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12878.minimap2.bam.bai
+NA12878	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12878.minimap2.bam
+NA12878	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12878.minimap2.bam.bai
 NA12878	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12878/gm12878-22nov29-r51-c01_S433.trimmed.1.fastq.gz
 NA12878	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12878/gm12878-22nov29-r51-c01_S433.trimmed.2.fastq.gz
 NA12878	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12878/gm12878-22nov29-r51-c02_S434.trimmed.1.fastq.gz
@@ -3060,10 +3060,10 @@ NA12879	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12879	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2216.v4.2.4.grc38.bam
 NA12879	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2216.v4.2.4.grc38.bam.bai
 NA12879	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2216.v4.2.4.grc38.bam.md5sum
-NA12879	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12879.minimap2.bam
-NA12879	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12879.minimap2.bam.bai
-NA12879	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12879.minimap2.bam
-NA12879	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12879.minimap2.bam.bai
+NA12879	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12879.minimap2.bam
+NA12879	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12879.minimap2.bam.bai
+NA12879	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12879.minimap2.bam
+NA12879	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12879.minimap2.bam.bai
 NA12879	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12879/gm12879-22dec07-r39-c02_S2.trimmed.1.fastq.gz
 NA12879	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12879/gm12879-22dec07-r39-c02_S2.trimmed.2.fastq.gz
 NA12879	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12879/gm12879-22dec07-r39-c03_S3.trimmed.1.fastq.gz
@@ -3514,10 +3514,10 @@ NA12881	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12881	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2211.v4.2.4.grc38.bam
 NA12881	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2211.v4.2.4.grc38.bam.bai
 NA12881	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2211.v4.2.4.grc38.bam.md5sum
-NA12881	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12881.minimap2.bam
-NA12881	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12881.minimap2.bam.bai
-NA12881	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12881.minimap2.bam
-NA12881	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12881.minimap2.bam.bai
+NA12881	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12881.minimap2.bam
+NA12881	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12881.minimap2.bam.bai
+NA12881	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12881.minimap2.bam
+NA12881	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12881.minimap2.bam.bai
 NA12881	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12881/gm12881-22dec07-r45-c03_S219.trimmed.1.fastq.gz
 NA12881	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12881/gm12881-22dec07-r45-c03_S219.trimmed.2.fastq.gz
 NA12881	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12881/gm12881-22dec07-r45-c04_S220.trimmed.1.fastq.gz
@@ -3932,10 +3932,10 @@ NA12882	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12882	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2212.v4.2.4.grc38.bam
 NA12882	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2212.v4.2.4.grc38.bam.bai
 NA12882	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2212.v4.2.4.grc38.bam.md5sum
-NA12882	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12882.minimap2.bam
-NA12882	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12882.minimap2.bam.bai
-NA12882	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12882.minimap2.bam
-NA12882	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12882.minimap2.bam.bai
+NA12882	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12882.minimap2.bam
+NA12882	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12882.minimap2.bam.bai
+NA12882	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12882.minimap2.bam
+NA12882	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12882.minimap2.bam.bai
 NA12882	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12882/gm12882-22dec07-r48-c01_S325.trimmed.1.fastq.gz
 NA12882	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12882/gm12882-22dec07-r48-c01_S325.trimmed.2.fastq.gz
 NA12882	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12882/gm12882-22dec07-r48-c02_S326.trimmed.1.fastq.gz
@@ -4446,10 +4446,10 @@ NA12885	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12885	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2217.v4.2.4.grc38.bam
 NA12885	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2217.v4.2.4.grc38.bam.bai
 NA12885	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2217.v4.2.4.grc38.bam.md5sum
-NA12885	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12885.minimap2.bam
-NA12885	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12885.minimap2.bam.bai
-NA12885	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12885.minimap2.bam
-NA12885	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12885.minimap2.bam.bai
+NA12885	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12885.minimap2.bam
+NA12885	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/CHM13/NA12885.minimap2.bam.bai
+NA12885	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12885.minimap2.bam
+NA12885	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12885.minimap2.bam.bai
 NA12885	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12885/gm12885-22dec07-r57-c01_S649.trimmed.1.fastq.gz
 NA12885	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12885/gm12885-22dec07-r57-c01_S649.trimmed.2.fastq.gz
 NA12885	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12885/gm12885-22dec07-r57-c02_S650.trimmed.1.fastq.gz
@@ -4934,8 +4934,8 @@ NA12886	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/CHM13/
 NA12886	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2189.v4.2.4.grc38.bam
 NA12886	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2189.v4.2.4.grc38.bam.bai
 NA12886	DNA-seq	PBMC	Illumina	bam	unpaired	alignment	data/illumina/mapped/GRCh38/2189.v4.2.4.grc38.bam.md5sum
-NA12886	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12886.minimap2.bam
-NA12886	DNA-seq	LCL	ONT	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12886.minimap2.bam.bai
+NA12886	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12886.minimap2.bam
+NA12886	DNA-seq	LCL	Oxford Nanopore	bam	unpaired	alignment	data/ont/mapped/GRCh38/NA12886.minimap2.bam.bai
 NA12886	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12886/gm12886-22dec07-r60-c01_S757.trimmed.1.fastq.gz
 NA12886	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12886/gm12886-22dec07-r60-c01_S757.trimmed.2.fastq.gz
 NA12886	DNA-seq	PBMC	Strand-seq	fastq	unpaired	raw	data/strandseq/data/NA12886/gm12886-22dec07-r60-c02_S758.trimmed.1.fastq.gz
