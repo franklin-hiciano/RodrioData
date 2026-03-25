@@ -12,7 +12,7 @@ The program requires each file to be in a `std.index` and contain the following 
 
 1. Sample name
 2. Assay type: DNA-seq, ATAC-seq, RNA-seq, Strand-seq, AIRR-seq, FLAIRR
-3. Biological source: LCL, PBMCs
+3. Biological source: LCL, PBMCs, Saliva
 4. Technology: Element, PacBio, Oxford Nanopore, Illumina
 5. File type: FASTQ, BAM
 6. Library: PAIRED, UNPAIRED
