@@ -20,7 +20,7 @@ function download_1KG_ONT_VIENNA() {
 }
 
 function download_simons_genome_diversity_project() {
-	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,sample_accession,fastq_ftp,sample_alias,submitted_aspera,submitted_ftp,submitted_bytes" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index"
+	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,sample_accession,sample_alias,submitted_aspera,submitted_ftp,submitted_bytes" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index"
 	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fnature18964/MediaObjects/41586_2016_BFnature18964_MOESM205_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.xlsx"
 	python ${PROJECT_ROOT}/src/datasets/Dataset.py excel_to_tsv "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.xlsx" \
 	--sheet_name "Sheet1"
