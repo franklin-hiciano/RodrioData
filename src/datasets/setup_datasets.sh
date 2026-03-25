@@ -48,8 +48,20 @@ function download_2026_Light_EE_NatComm() {
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
 	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; ext = (match(url, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"; print $1, "DNA-seq", "PBMC", "Illumina", "NextSeq", ext, "paired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; ext = (match(url, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"; print $1, "AIRR_seq", "PBMC", "Illumina", "NextSeq", ext, "paired", "raw", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	awk -F$'\t' -v OFS='\t' 'NR>=2 && NR<=194 {
+	    url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"
+	    ext = (match(url, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"
+	    print $1, "DNA-seq", "PBMC", "Illumina", "NextSeq", ext, "paired", "alignment", url
+	}' "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" \
+	>> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	
+	awk -F$'\t' -v OFS='\t' 'NR>=195 {
+	    url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"
+	    ext = (match(url, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"
+	    print $1, "AIRR_seq", "PBMC", "Illumina", "NextSeq", ext, "paired", "raw", url
+	}' "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" \
+	>> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	
 }
 
 function make_index_file_for_platinum_pedigree() {
