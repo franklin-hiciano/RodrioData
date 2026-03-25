@@ -3,7 +3,7 @@
 - [x] Create a json/tsv file with dataset name, path and download method
 - [x] Create a documention on going from SRR to url
 - [x] In the README, write a description about each dataset. Add more specifics about each dataset. For e.g, is the PacBio Revio, Sequel, coverage stats, read length etc. Make sure this is easy to read.
-- [ ] Make sure it has standardized names and has descriptions in each readme
+- [x] Make sure it has standardized names and has descriptions in each readme
 
 # Columns
 1. Sample name
