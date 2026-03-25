@@ -25,10 +25,6 @@ Adding a file takes time, so take inspiration from `src/datasets/setup_datasets.
 ### Making the `url` column
 Making the url column is not always straightforward. One common problem is datasets that don't come with URLs, just sample IDs. In this case, figure out how to use the id in a url. Then write a script that loops through ids, makes urls from them, and fills the url column. Finally, add your process to the documentations below.
 
-### Writing documentation
-`Biological source` and `Platform` can be even harder to make because their information is usually hidden somewhere on the internet (and thus completely unreliable from an LLM), so please cite where you get the information for these two columns when you write the dataset's readme. [Here's](https://github.com/franklin-hiciano/RodrioData/blob/12fa4546c7346ae99f1ff2337ad0ed8069770529/datasets/simons_genome_diversity_project/README.md) an example. 
-
-
 #### SRA to S3
 used in `2026_Light_EE_NatComm`
 
@@ -36,6 +32,10 @@ used in `2026_Light_EE_NatComm`
 2. Search for a random SRR id from the dataset
 3. Click on run > data access
 4. See how the id fits into the path. In this case, I saw `https://sra-pub-run-odp.s3.amazonaws.com/sra/${ID}/${ID}/${FILE_BASENAME}` so I used this blueprint to [process](https://github.com/franklin-hiciano/RodrioData/blob/b76978ce4f23b960dad1b89ed98da21606a55ec7/src/datasets/setup_datasets.sh#L45) my index file.
+
+### Writing documentation
+`Biological source` and `Platform` can be even harder to make because their information is usually hidden somewhere on the internet (and thus completely unreliable from an LLM), so please cite where you get the information for these two columns when you write the dataset's readme. [Here's](https://github.com/franklin-hiciano/RodrioData/blob/12fa4546c7346ae99f1ff2337ad0ed8069770529/datasets/simons_genome_diversity_project/README.md) an example. 
+
 
 #### Documentation 2, and so on
 ### Adding your dataset to the `json` file
