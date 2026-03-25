@@ -13,13 +13,17 @@ The program requires each file to be in a `std.index` and contain the following 
 1. Sample name
 2. Assay type: DNA-seq, ATAC-seq, RNA-seq, Strand-seq, AIRR-seq, FLAIRR
 3. Biological source: LCL, PBMCs, Saliva
-4. Technology: Element, PacBio, Oxford Nanopore, Illumina
-5. File type: FASTQ, BAM
-6. Library: PAIRED, UNPAIRED
-7. Processed: Raw, Assembly, Alignment
-8. URLs; If there are multiple files, colon seperate them. This should only happen for paired end data. File name should end with _1 or _2.
+4. Platform: Sequel Ile, NovaSeq 6000, etc.
+5. Technology: Element, PacBio, Oxford Nanopore, Illumina
+6. File type: FASTQ, BAM
+7. Library: PAIRED, UNPAIRED
+8. Processed: Raw, Assembly, Alignment
+9. URLs; If there are multiple files, colon seperate them. This should only happen for paired end data. File name should end with _1 or _2.
 
 Adding a file takes time, so take inspiration from `src/datasets/setup_datasets.sh` and write your code in there to help the next person. Find the index file most similar to yours, see how it was standardized, and maybe steal some code.
+
+### Writing documentation
+Information for columns like `Biological source` and `Platform` are usually hard to find on the internet (and completely unreliable from an LLM), so please cite where you get the information for these two columns when you write the dataset's readme. [Here's](https://github.com/franklin-hiciano/RodrioData/blob/12fa4546c7346ae99f1ff2337ad0ed8069770529/datasets/simons_genome_diversity_project/README.md) an example.
 
 ### Making the `url` column
 The url column is often most difficult to make. One common problem is datasets that don't come with URLs, just sample IDs. In this case, figure out how to use the id in a url. Then write a script that loops through ids, makes urls from them, and fills the url column. Finally, add your process to the documentations below.
