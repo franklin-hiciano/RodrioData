@@ -9,32 +9,39 @@ echo "${PROJECT_ROOT}"
 function download_1000G_high_coverage() {
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_2504_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"
 	curl "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/1000G_698_related_high_coverage.sequence.index" -o "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index"
 	(tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_2504_high_coverage.sequence.index"; tail -n +25 "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_698_related_high_coverage.sequence.index.txt") | awk -F$'\t' -v OFS='\t' '{print $10, "DNA-seq", "NA", "Illumina", "NovaSeq 6000", "cram", "paired", "alignment", $1 }' - >> "${PROJECT_ROOT}/datasets/1000G_high_coverage/1000G_high_coverage.sequence.std.index" 
 }
 
 function download_1KG_ONT_VIENNA() {
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
-	tail -n +3 "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" | head -n -2 | awk -F$'\t' -v OFS='\t' '{split($1, parts_of_file_path, "[/.]"); url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/" $1; file_type = parts_of_file_path[length(parts_of_file_path)]; print parts_of_file_path[3], "DNA-seq", "LCL", "ONT" file_type, "unpaired", "alignment", url }' - >> "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
+	tail -n +3 "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" | head -n -2 | awk -F$'\t' -v OFS='\t' '{split($1, parts_of_file_path, "[/.]"); url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/" $1; file_type = parts_of_file_path[length(parts_of_file_path)]; print parts_of_file_path[3], "DNA-seq", "LCL", "Oxford Nanopore" file_type, "unpaired", "alignment", url }' - >> "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
 }
 
 function download_simons_genome_diversity_project() {
-	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,sample_accession,fastq_ftp" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -F$'\t' -v OFS='\t' '{print $2, "DNA-seq", "PBMC", "Illumina", "fastq", "paired", "raw", $3 }' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index" 
+	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB9586&result=read_run&fields=run_accession,sample_accession,fastq_ftp,sample_alias,submitted_aspera,submitted_ftp,submitted_bytes" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index"
+	curl -L "https://static-content.springer.com/esm/art%3A10.1038%2Fnature18964/MediaObjects/41586_2016_BFnature18964_MOESM205_ESM.xlsx" -o "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.xlsx"
+	python ${PROJECT_ROOT}/src/datasets/Dataset.py excel_to_tsv "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.xlsx" \
+	--sheet_name "Sheet1"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
+	
+	
+#	awk -v "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.Sheet1.tsv" 
+	tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -F$'\t' -v OFS='\t' '{print $2, "DNA-seq", "", "Illumina", "", "fastq", "paired", "raw", $3 }' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index" 
 }
 
 function download_ATAC_seq_LCL_100() {
 	curl -L "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB28318&result=analysis&fields=sample_accession,generated_ftp" -o "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.index"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.index" | awk -F$'\t' -v OFS='\t' '{num_links=split($2,file_paths,";"); for(i=1;i<=num_links;i++) {split(file_paths[i], parts, "."); file_type = parts[length(parts)]; print $1,"ATAC-seq","LCL","Illumina",file_type,"paired","alignment",file_paths[i]}}' >> "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.index" | awk -F$'\t' -v OFS='\t' '{num_links=split($2,file_paths,";"); for(i=1;i<=num_links;i++) {split(file_paths[i], parts, "."); file_type = parts[length(parts)]; print $1,"ATAC-seq","LCL","Illumina","HiSeq 2500",file_type,"paired","alignment",file_paths[i]}}' >> "${PROJECT_ROOT}/datasets/ATAC-seq_LCL_100/study_PRJEB28318.std.index"
+
 }
 
 function download_human_genome_diversity_project() { 
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/hgdp_wgs.sequence.index" -o "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index"
-	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index" 
-	tail -n +25 "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" | paste -d '\t' - - | awk -F$'\t' -v OFS='\t' '{urls = $1 ";" $23; print $10, "DNA-seq", "LCL", "Illumina", "fastq", "paired", "raw", urls }' - >> "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index"
+	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index" 
+	tail -n +25 "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.index" | paste -d '\t' - - | awk -F$'\t' -v OFS='\t' '{urls = $1 ";" $23; print $10, "DNA-seq", "LCL", "Illumina", "HiSeq X", "fastq", "paired", "raw", urls }' - >> "${PROJECT_ROOT}/datasets/human_genome_diversity_project/hgdp_wgs.sequence.std.index"
 }
 
 function download_2026_Light_EE_NatComm() {
@@ -51,9 +58,9 @@ function make_index_file_for_platinum_pedigree() {
     local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.std.index"
     local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
 
-    printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "file_type" "library" "processed" "url" | paste -s > "$output_file"
+    printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "$output_file"
 
-    tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do
+    tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do 
         for platform in "element" "hifi" "illumina" "ont" "strandseq"; do
             awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
                 BEGIN { FS="\t"; OFS="\t" }
@@ -63,7 +70,7 @@ function make_index_file_for_platinum_pedigree() {
                     if ($3 ~ /element/)       { tech = "Element" }
                     else if ($3 ~ /hifi/)     { tech = "PacBio" }
                     else if ($3 ~ /illumina/) { tech = "Illumina" }
-                    else if ($3 ~ /ont/)      { tech = "ONT"; biological_source = "LCL" }
+                    else if ($3 ~ /ont/)      { tech = "Oxford Nanopore"; biological_source = "LCL" }
                     else if ($3 ~ /strandseq/){ tech = "Strand-seq" }
 
                     ext = "NA"
