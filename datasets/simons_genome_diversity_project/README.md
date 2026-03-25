@@ -7,6 +7,7 @@
 1. DNA source: 297 rows of LCL, 82 of PBMC, 17 of Saliva. Keep in mind there are only 300 samples. [4]
 2. Platform: "The samples were sequenced using 100 base pair paired-end sequencing on
 HiSeq2000 sequencers" [3]
+3. File types: 281 `.fastq`, 113 `.bam`
 
 
 ## Sources
