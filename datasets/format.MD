@@ -1,8 +1,9 @@
 # Tasks
 - [x] Create an index file for each dataset. Include only the columns in the column section below. The column names should be the same across index files.
 - [x] Create a json/tsv file with dataset name, path and download method
-- [ ] Create a documention on going from SRR to url
-- [ ] In the README, write a description about each dataset. Add more specifics about each dataset. For e.g, is the PacBio Revio, Sequel, coverage stats, read length etc. Make sure this is easy to read.
+- [x] Create a documention on going from SRR to url
+- [x] In the README, write a description about each dataset. Add more specifics about each dataset. For e.g, is the PacBio Revio, Sequel, coverage stats, read length etc. Make sure this is easy to read.
+- [ ] Make sure it has standardized names and has descriptions in each readme
 
 # Columns
 1. Sample name
