@@ -1,398 +1,395 @@
 sample_name	assay_type	biological_source	technology	platform	file_type	library	processed	url
-SAMEA3302867	DNA-seq		Illumina		fastq	paired	raw	HGDP00749
-SAMEA3302892	DNA-seq		Illumina		fastq	paired	raw	HGDP00541
-SAMEA3302656	DNA-seq		Illumina		fastq	paired	raw	HGDP01402
-SAMEA3302728	DNA-seq		Illumina		fastq	paired	raw	HGDP01401
-SAMEA3302636	DNA-seq		Illumina		fastq	paired	raw	HGDP00656
-SAMEA3302677	DNA-seq		Illumina		fastq	paired	raw	HGDP00019
-SAMEA3302770	DNA-seq		Illumina		fastq	paired	raw	HGDP00783
-SAMEA3302771	DNA-seq		Illumina		fastq	paired	raw	HGDP00160
-SAMEA3302616	DNA-seq		Illumina		fastq	paired	raw	HGDP00157
-SAMEA3302777	DNA-seq		Illumina		fastq	paired	raw	HGDP01198
-SAMEA3302713	DNA-seq		Illumina		fastq	paired	raw	HGDP00796
-SAMEA3302674	DNA-seq		Illumina		fastq	paired	raw	HGDP00216
-SAMEA3302865	DNA-seq		Illumina		fastq	paired	raw	HGDP00846
-SAMEA3302830	DNA-seq		Illumina		fastq	paired	raw	HGDP00852
-SAMEA3302824	DNA-seq		Illumina		fastq	paired	raw	HGDP01355
-SAMEA3302906	DNA-seq		Illumina		fastq	paired	raw	HGDP00773
-SAMEA3302682	DNA-seq		Illumina		fastq	paired	raw	HGDP01032
-SAMEA3302753	DNA-seq		Illumina		fastq	paired	raw	altai363p
-SAMEA3302890	DNA-seq		Illumina		fastq	paired	raw	HGDP00090
-SAMEA3302855	DNA-seq		Illumina		fastq	paired	raw	HGDP01172
-SAMEA3302710	DNA-seq		Illumina		fastq	paired	raw	HGDP01414
-SAMEA3302716	DNA-seq		Illumina		fastq	paired	raw	HGDP00476
-SAMEA3302659	DNA-seq		Illumina		fastq	paired	raw	HGDP00449
-SAMEA3449877	DNA-seq		Illumina		fastq	paired	raw	HGDP00058
-SAMEA3449876	DNA-seq		Illumina		fastq	paired	raw	HGDP01153
-SAMEA3302745	DNA-seq		Illumina		fastq	paired	raw	NA13604
-SAMEA3302884	DNA-seq		Illumina		fastq	paired	raw	Ayodo_81S
-SAMEA3302779	DNA-seq		Illumina		fastq	paired	raw	HGDP01047
-SAMEA3302766	DNA-seq		Illumina		fastq	paired	raw	HGDP00903
-SAMEA3302693	DNA-seq		Illumina		fastq	paired	raw	abh100
-SAMEA3302823	DNA-seq		Illumina		fastq	paired	raw	HGDP00616
-SAMEA3302673	DNA-seq		Illumina		fastq	paired	raw	HGDP00461
-SAMEA3302791	DNA-seq		Illumina		fastq	paired	raw	HGDP00713
-SAMEA3302870	DNA-seq		Illumina		fastq	paired	raw	HGDP00597
-SAMEA3302707	DNA-seq		Illumina		fastq	paired	raw	HG00126
-SAMEA3302881	DNA-seq		Illumina		fastq	paired	raw	HG02943
-SAMEA3302838	DNA-seq		Illumina		fastq	paired	raw	mg31
-SAMEA3302749	DNA-seq		Illumina		fastq	paired	raw	HGDP00124
-SAMEA3302880	DNA-seq		Illumina		fastq	paired	raw	HGDP01240
-SAMEA3302776	DNA-seq		Illumina		fastq	paired	raw	HGDP01344
-SAMEA3302678	DNA-seq		Illumina		fastq	paired	raw	NA15203
-SAMEA3302869	DNA-seq		Illumina		fastq	paired	raw	HGDP01035
-SAMEA3302761	DNA-seq		Illumina		fastq	paired	raw	HGDP00286
-SAMEA3302903	DNA-seq		Illumina		fastq	paired	raw	HGDP01365
-SAMEA3302613	DNA-seq		Illumina		fastq	paired	raw	HG01600
-SAMEA3302904	DNA-seq		Illumina		fastq	paired	raw	HGDP00857
-SAMEA3302841	DNA-seq		Illumina		fastq	paired	raw	HGDP00660
-SAMEA3302653	DNA-seq		Illumina		fastq	paired	raw	HGDP01228
-SAMEA3302635	DNA-seq		Illumina		fastq	paired	raw	HGDP00530
-SAMEA3302893	DNA-seq		Illumina		fastq	paired	raw	HGDP01203
-SAMEA3302815	DNA-seq		Illumina		fastq	paired	raw	HGDP00208
-SAMEA3302804	DNA-seq		Illumina		fastq	paired	raw	HGDP00785
-SAMEA3302883	DNA-seq		Illumina		fastq	paired	raw	HG01503
-SAMEA3302667	DNA-seq		Illumina		fastq	paired	raw	HGDP00798
-SAMEA3302640	DNA-seq		Illumina		fastq	paired	raw	HG01504
-SAMEA3302711	DNA-seq		Illumina		fastq	paired	raw	HG00174
-SAMEA3302639	DNA-seq		Illumina		fastq	paired	raw	HGDP00232
-SAMEA3302789	DNA-seq		Illumina		fastq	paired	raw	HG02783
-SAMEA3302669	DNA-seq		Illumina		fastq	paired	raw	HGDP00706
-SAMEA3302822	DNA-seq		Illumina		fastq	paired	raw	HGDP01079
-SAMEA3302751	DNA-seq		Illumina		fastq	paired	raw	HG00190
-SAMEA3302620	DNA-seq		Illumina		fastq	paired	raw	HGDP01345
-SAMEA3302825	DNA-seq		Illumina		fastq	paired	raw	HGDP01253
-SAMEA3302810	DNA-seq		Illumina		fastq	paired	raw	Ayodo_502C
-SAMEA3302836	DNA-seq		Illumina		fastq	paired	raw	HGDP01274
-SAMEA3302732	DNA-seq		Illumina		fastq	paired	raw	NA17377
-SAMEA3302655	DNA-seq		Illumina		fastq	paired	raw	abh107
-SAMEA3302816	DNA-seq		Illumina		fastq	paired	raw	HGDP00457
-SAMEA3302793	DNA-seq		Illumina		fastq	paired	raw	HGDP01188
-SAMEA3302718	DNA-seq		Illumina		fastq	paired	raw	BulgarianB4
-SAMEA3302842	DNA-seq		Illumina		fastq	paired	raw	BulgarianC1
-SAMEA3302735	DNA-seq		Illumina		fastq	paired	raw	Est375
-SAMEA3302689	DNA-seq		Illumina		fastq	paired	raw	HGDP00717
-SAMEA3302628	DNA-seq		Illumina		fastq	paired	raw	HG03100
-SAMEA3302664	DNA-seq		Illumina		fastq	paired	raw	lez49
-SAMEA3302845	DNA-seq		Illumina		fastq	paired	raw	HGDP01242
-SAMEA3302874	DNA-seq		Illumina		fastq	paired	raw	iran17
-SAMEA3302774	DNA-seq		Illumina		fastq	paired	raw	HG03007
-SAMEA3302790	DNA-seq		Illumina		fastq	paired	raw	HGDP01012
-SAMEA3302802	DNA-seq		Illumina		fastq	paired	raw	HGDP00951
-SAMEA3302812	DNA-seq		Illumina		fastq	paired	raw	HG01846
-SAMEA3302866	DNA-seq		Illumina		fastq	paired	raw	HGDP00855
-SAMEA3302660	DNA-seq		Illumina		fastq	paired	raw	Esk29
-SAMEA3302743	DNA-seq		Illumina		fastq	paired	raw	HGDP01223
-SAMEA3302685	DNA-seq		Illumina		fastq	paired	raw	HGDP00195
-SAMEA3302806	DNA-seq		Illumina		fastq	paired	raw	Kor82
-SAMEA3302684	DNA-seq		Illumina		fastq	paired	raw	HGDP01168
-SAMEA3302611	DNA-seq		Illumina		fastq	paired	raw	HGDP01306
-SAMEA3302778	DNA-seq		Illumina		fastq	paired	raw	ND19394
-SAMEA3302755	DNA-seq		Illumina		fastq	paired	raw	HGDP01250
-SAMEA3302911	DNA-seq		Illumina		fastq	paired	raw	Kusunda15
-SAMEA3302854	DNA-seq		Illumina		fastq	paired	raw	NA19044
-SAMEA3302832	DNA-seq		Illumina		fastq	paired	raw	HGDP01320
-SAMEA3302706	DNA-seq		Illumina		fastq	paired	raw	HGDP00956
-SAMEA3302797	DNA-seq		Illumina		fastq	paired	raw	NorthOssetia12
-SAMEA3302676	DNA-seq		Illumina		fastq	paired	raw	HG00128
-SAMEA3302762	DNA-seq		Illumina		fastq	paired	raw	Mansi79
-SAMEA3302873	DNA-seq		Illumina		fastq	paired	raw	NA19023
-SAMEA3302814	DNA-seq		Illumina		fastq	paired	raw	NA21490
-SAMEA3302764	DNA-seq		Illumina		fastq	paired	raw	Tuba19
-SAMEA3302704	DNA-seq		Illumina		fastq	paired	raw	HGDP00548
-SAMEA3302615	DNA-seq		Illumina		fastq	paired	raw	HGDP01179
-SAMEA3302654	DNA-seq		Illumina		fastq	paired	raw	Mansi41
-SAMEA3302618	DNA-seq		Illumina		fastq	paired	raw	mixa0099
-SAMEA3302679	DNA-seq		Illumina		fastq	paired	raw	Est400
-SAMEA3302724	DNA-seq		Illumina		fastq	paired	raw	Igor20
-SAMEA3302843	DNA-seq		Illumina		fastq	paired	raw	lez42
-SAMEA3302725	DNA-seq		Illumina		fastq	paired	raw	Y8
-SAMEA3302741	DNA-seq		Illumina		fastq	paired	raw	HG03006
-SAMEA3302742	DNA-seq		Illumina		fastq	paired	raw	I3
-SAMEA3302861	DNA-seq		Illumina		fastq	paired	raw	KD4
-SAMEA3302862	DNA-seq		Illumina		fastq	paired	raw	Ul31
-SAMEA3302759	DNA-seq		Illumina		fastq	paired	raw	Dus16
-SAMEA3302709	DNA-seq		Illumina		fastq	paired	raw	Peru60
-SAMEA3302737	DNA-seq		Illumina		fastq	paired	raw	HGDP01417
-SAMEA3302799	DNA-seq		Illumina		fastq	paired	raw	HG02494
-SAMEA3302878	DNA-seq		Illumina		fastq	paired	raw	HGDP01095
-SAMEA3302652	DNA-seq		Illumina		fastq	paired	raw	HGDP00722
-SAMEA3302852	DNA-seq		Illumina		fastq	paired	raw	NA18940
-SAMEA3302763	DNA-seq		Illumina		fastq	paired	raw	NA17374
-SAMEA3302769	DNA-seq		Illumina		fastq	paired	raw	HGDP00474
-SAMEA3302663	DNA-seq		Illumina		fastq	paired	raw	CHI-007
-SAMEA3302827	DNA-seq		Illumina		fastq	paired	raw	HGDP01314
-SAMEA3302726	DNA-seq		Illumina		fastq	paired	raw	HGDP00549
-SAMEA3302715	DNA-seq		Illumina		fastq	paired	raw	Nlk1
-SAMEA3302744	DNA-seq		Illumina		fastq	paired	raw	zapo0098
-SAMEA3302694	DNA-seq		Illumina		fastq	paired	raw	SAH41
-SAMEA3302670	DNA-seq		Illumina		fastq	paired	raw	Sir26
-SAMEA3302768	DNA-seq		Illumina		fastq	paired	raw	Bishkek28439
-SAMEA3302720	DNA-seq		Illumina		fastq	paired	raw	Nlk3
-SAMEA3302780	DNA-seq		Illumina		fastq	paired	raw	ALB212
-SAMEA3302859	DNA-seq		Illumina		fastq	paired	raw	NA15763
-SAMEA3302772	DNA-seq		Illumina		fastq	paired	raw	HGDP00553
-SAMEA3302848	DNA-seq		Illumina		fastq	paired	raw	NA11200
-SAMEA3302736	DNA-seq		Illumina		fastq	paired	raw	HGDP01286
-SAMEA3302792	DNA-seq		Illumina		fastq	paired	raw	DNK11
-SAMEA3302876	DNA-seq		Illumina		fastq	paired	raw	HGDP01076
-SAMEA3302891	DNA-seq		Illumina		fastq	paired	raw	NA00726
-SAMEA3302681	DNA-seq		Illumina		fastq	paired	raw	IHW9193
-SAMEA3302697	DNA-seq		Illumina		fastq	paired	raw	mixe0007
-SAMEA3302671	DNA-seq		Illumina		fastq	paired	raw	HGDP00547
-SAMEA3302733	DNA-seq		Illumina		fastq	paired	raw	DNK07
-SAMEA3302889	DNA-seq		Illumina		fastq	paired	raw	Ale14
-SAMEA3302871	DNA-seq		Illumina		fastq	paired	raw	HGDP00540
-SAMEA3302853	DNA-seq		Illumina		fastq	paired	raw	Ale32
-SAMEA3302839	DNA-seq		Illumina		fastq	paired	raw	K4
-SAMEA3302687	DNA-seq		Illumina		fastq	paired	raw	NA21581
-SAMEA3302666	DNA-seq		Illumina		fastq	paired	raw	HGDP01308
-SAMEA3302807	DNA-seq		Illumina		fastq	paired	raw	YemeniteJew5433
-SAMEA3302626	DNA-seq		Illumina		fastq	paired	raw	HGDP00543
-SAMEA3302636	DNA-seq		Illumina		fastq	paired	raw	HGDP00656
-SAMEA3302746	DNA-seq		Illumina		fastq	paired	raw	HGDP00554
-SAMEA3302865	DNA-seq		Illumina		fastq	paired	raw	HGDP00846
-SAMEA3302669	DNA-seq		Illumina		fastq	paired	raw	HGDP00706
-SAMEA3302796	DNA-seq		Illumina		fastq	paired	raw	mixe0002
-SAMEA3302828	DNA-seq		Illumina		fastq	paired	raw	HGDP00526
-SAMEA3302849	DNA-seq		Illumina		fastq	paired	raw	HGDP01034
-SAMEA3302716	DNA-seq		Illumina		fastq	paired	raw	HGDP00476
-SAMEA3302831	DNA-seq		Illumina		fastq	paired	raw	Nesk_22
-SAMEA3302620	DNA-seq		Illumina		fastq	paired	raw	HGDP01345
-SAMEA3302738	DNA-seq		Illumina		fastq	paired	raw	HGDP00550
-SAMEA3302830	DNA-seq		Illumina		fastq	paired	raw	HGDP00852
-SAMEA3302721	DNA-seq		Illumina		fastq	paired	raw	HGDP00551
-SAMEA3302804	DNA-seq		Illumina		fastq	paired	raw	HGDP00785
-SAMEA3302723	DNA-seq		Illumina		fastq	paired	raw	mixe0042
-SAMEA3302867	DNA-seq		Illumina		fastq	paired	raw	HGDP00749
-SAMEA3302787	DNA-seq		Illumina		fastq	paired	raw	HGDP01335
-SAMEA3302822	DNA-seq		Illumina		fastq	paired	raw	HGDP01079
-SAMEA3302890	DNA-seq		Illumina		fastq	paired	raw	HGDP00090
-SAMEA3302623	DNA-seq		Illumina		fastq	paired	raw	NA13616
-SAMEA3302622	DNA-seq		Illumina		fastq	paired	raw	HGDP00556
-SAMEA3302616	DNA-seq		Illumina		fastq	paired	raw	HGDP00157
-SAMEA3302909	DNA-seq		Illumina		fastq	paired	raw	HGDP01350
-SAMEA3302798	DNA-seq		Illumina		fastq	paired	raw	HGDP00428
-SAMEA3302784	DNA-seq		Illumina		fastq	paired	raw	TGBS21
-SAMEA3302756	DNA-seq		Illumina		fastq	paired	raw	HGDP01199
-SAMEA3302869	DNA-seq		Illumina		fastq	paired	raw	HGDP01035
-SAMEA3302788	DNA-seq		Illumina		fastq	paired	raw	
-SAMEA3302749	DNA-seq		Illumina		fastq	paired	raw	HGDP00124
-SAMEA3302829	DNA-seq		Illumina		fastq	paired	raw	B11
-SAMEA3302834	DNA-seq		Illumina		fastq	paired	raw	M4
-SAMEA3302743	DNA-seq		Illumina		fastq	paired	raw	HGDP01223
-SAMEA3302645	DNA-seq		Illumina		fastq	paired	raw	B17
-SAMEA3302614	DNA-seq		Illumina		fastq	paired	raw	HGDP01211
-SAMEA3302803	DNA-seq		Illumina		fastq	paired	raw	
-SAMEA3302689	DNA-seq		Illumina		fastq	paired	raw	HGDP00717
-SAMEA3302747	DNA-seq		Illumina		fastq	paired	raw	IraqiJew1771
-SAMEA3302825	DNA-seq		Illumina		fastq	paired	raw	HGDP01253
-SAMEA3302809	DNA-seq		Illumina		fastq	paired	raw	Kayseri24424
-SAMEA3302646	DNA-seq		Illumina		fastq	paired	raw	HGDP00725
-SAMEA3302717	DNA-seq		Illumina		fastq	paired	raw	Bishkek28440
-SAMEA3302786	DNA-seq		Illumina		fastq	paired	raw	HGDP00887
-SAMEA3302750	DNA-seq		Illumina		fastq	paired	raw	Kayseri23827
-SAMEA3302815	DNA-seq		Illumina		fastq	paired	raw	HGDP00208
-SAMEA3302833	DNA-seq		Illumina		fastq	paired	raw	HGDP00982
-SAMEA3302662	DNA-seq		Illumina		fastq	paired	raw	HGDP01018
-SAMEA3302766	DNA-seq		Illumina		fastq	paired	raw	HGDP00903
-SAMEA3302902	DNA-seq		Illumina		fastq	paired	raw	HGDP01015
-SAMEA3302684	DNA-seq		Illumina		fastq	paired	raw	HGDP01168
-SAMEA3302844	DNA-seq		Illumina		fastq	paired	raw	NA15728
-SAMEA3302838	DNA-seq		Illumina		fastq	paired	raw	mg31
-SAMEA3302692	DNA-seq		Illumina		fastq	paired	raw	Bu5
-SAMEA3302649	DNA-seq		Illumina		fastq	paired	raw	NA15202
-SAMEA3302767	DNA-seq		Illumina		fastq	paired	raw	R6
-SAMEA3302842	DNA-seq		Illumina		fastq	paired	raw	BulgarianC1
-SAMEA3302895	DNA-seq		Illumina		fastq	paired	raw	Bu16
-SAMEA3302881	DNA-seq		Illumina		fastq	paired	raw	HG02943
-SAMEA3302740	DNA-seq		Illumina		fastq	paired	raw	Y4
-SAMEA3302851	DNA-seq		Illumina		fastq	paired	raw	Utsa22
-SAMEA3302885	DNA-seq		Illumina		fastq	paired	raw	HG02790
-SAMEA3302625	DNA-seq		Illumina		fastq	paired	raw	TZ-11
-SAMEA3302812	DNA-seq		Illumina		fastq	paired	raw	HG01846
-SAMEA3302712	DNA-seq		Illumina		fastq	paired	raw	HGDP00533
-SAMEA3302884	DNA-seq		Illumina		fastq	paired	raw	Ayodo_81S
-SAMEA3302705	DNA-seq		Illumina		fastq	paired	raw	IraqiJew4291
-SAMEA3302711	DNA-seq		Illumina		fastq	paired	raw	HG00174
-SAMEA3302757	DNA-seq		Illumina		fastq	paired	raw	zapo0099
-SAMEA3302765	DNA-seq		Illumina		fastq	paired	raw	AV-21
-SAMEA3302619	DNA-seq		Illumina		fastq	paired	raw	HGDP00702
-SAMEA3302751	DNA-seq		Illumina		fastq	paired	raw	HG00190
-SAMEA3302776	DNA-seq		Illumina		fastq	paired	raw	HGDP01344
-SAMEA3302855	DNA-seq		Illumina		fastq	paired	raw	HGDP01172
-SAMEA3302892	DNA-seq		Illumina		fastq	paired	raw	HGDP00541
-SAMEA3302867	DNA-seq		Illumina		fastq	paired	raw	HGDP00749
-SAMEA3302682	DNA-seq		Illumina		fastq	paired	raw	HGDP01032
-SAMEA3302728	DNA-seq		Illumina		fastq	paired	raw	HGDP01401
-SAMEA3302900	DNA-seq		Illumina		fastq	paired	raw	HGDP00987
-SAMEA3449877	DNA-seq		Illumina		fastq	paired	raw	HGDP00058
-SAMEA3302771	DNA-seq		Illumina		fastq	paired	raw	HGDP00160
-SAMEA3302667	DNA-seq		Illumina		fastq	paired	raw	HGDP00798
-SAMEA3302903	DNA-seq		Illumina		fastq	paired	raw	HGDP01365
-SAMEA3302782	DNA-seq		Illumina		fastq	paired	raw	HGDP00027
-SAMEA3302785	DNA-seq		Illumina		fastq	paired	raw	HGDP01315
-SAMEA3302639	DNA-seq		Illumina		fastq	paired	raw	HGDP00232
-SAMEA3302813	DNA-seq		Illumina		fastq	paired	raw	HGDP01078
-SAMEA3302824	DNA-seq		Illumina		fastq	paired	raw	HGDP01355
-SAMEA3302731	DNA-seq		Illumina		fastq	paired	raw	HGDP00125
-SAMEA3302893	DNA-seq		Illumina		fastq	paired	raw	HGDP01203
-SAMEA3302795	DNA-seq		Illumina		fastq	paired	raw	HGDP00338
-SAMEA3302850	DNA-seq		Illumina		fastq	paired	raw	HGDP00915
-SAMEA3302870	DNA-seq		Illumina		fastq	paired	raw	HGDP00597
-SAMEA3302880	DNA-seq		Illumina		fastq	paired	raw	HGDP01240
-SAMEA3302758	DNA-seq		Illumina		fastq	paired	raw	HGDP01163
-SAMEA3302791	DNA-seq		Illumina		fastq	paired	raw	HGDP00713
-SAMEA3302836	DNA-seq		Illumina		fastq	paired	raw	HGDP01274
-SAMEA3302897	DNA-seq		Illumina		fastq	paired	raw	HGDP00737
-SAMEA3302685	DNA-seq		Illumina		fastq	paired	raw	HGDP00195
-SAMEA3302632	DNA-seq		Illumina		fastq	paired	raw	HGDP00932
-SAMEA3302883	DNA-seq		Illumina		fastq	paired	raw	HG01503
-SAMEA3302611	DNA-seq		Illumina		fastq	paired	raw	HGDP01306
-SAMEA3302835	DNA-seq		Illumina		fastq	paired	raw	HGDP00928
-SAMEA3302808	DNA-seq		Illumina		fastq	paired	raw	mg27
-SAMEA3302655	DNA-seq		Illumina		fastq	paired	raw	abh107
-SAMEA3302722	DNA-seq		Illumina		fastq	paired	raw	NA13607
-SAMEA3302693	DNA-seq		Illumina		fastq	paired	raw	abh100
-SAMEA3302613	DNA-seq		Illumina		fastq	paired	raw	HG01600
-SAMEA3302707	DNA-seq		Illumina		fastq	paired	raw	HG00126
-SAMEA3302753	DNA-seq		Illumina		fastq	paired	raw	altai363p
-SAMEA3302840	DNA-seq		Illumina		fastq	paired	raw	HGDP01215
-SAMEA3302854	DNA-seq		Illumina		fastq	paired	raw	NA19044
-SAMEA3302621	DNA-seq		Illumina		fastq	paired	raw	HGDP01364
-SAMEA3302695	DNA-seq		Illumina		fastq	paired	raw	HGDP00650
-SAMEA3302782	DNA-seq		Illumina		fastq	paired	raw	HGDP00027
-SAMEA3302795	DNA-seq		Illumina		fastq	paired	raw	HGDP00338
-SAMEA3302828	DNA-seq		Illumina		fastq	paired	raw	HGDP00526
-SAMEA3302882	DNA-seq		Illumina		fastq	paired	raw	HGDP01323
-SAMEA3302846	DNA-seq		Illumina		fastq	paired	raw	HGDP01191
-SAMEA3302619	DNA-seq		Illumina		fastq	paired	raw	HGDP00702
-SAMEA3302813	DNA-seq		Illumina		fastq	paired	raw	HGDP01078
-SAMEA3302785	DNA-seq		Illumina		fastq	paired	raw	HGDP01315
-SAMEA3302900	DNA-seq		Illumina		fastq	paired	raw	HGDP00987
-SAMEA3302738	DNA-seq		Illumina		fastq	paired	raw	HGDP00550
-SAMEA3302820	DNA-seq		Illumina		fastq	paired	raw	ch113
-SAMEA3302627	DNA-seq		Illumina		fastq	paired	raw	HGDP01044
-SAMEA3302786	DNA-seq		Illumina		fastq	paired	raw	HGDP00887
-SAMEA3302897	DNA-seq		Illumina		fastq	paired	raw	HGDP00737
-SAMEA3302722	DNA-seq		Illumina		fastq	paired	raw	NA13607
-SAMEA3302798	DNA-seq		Illumina		fastq	paired	raw	HGDP00428
-SAMEA3302808	DNA-seq		Illumina		fastq	paired	raw	mg27
-SAMEA3302731	DNA-seq		Illumina		fastq	paired	raw	HGDP00125
-SAMEA3302649	DNA-seq		Illumina		fastq	paired	raw	NA15202
-SAMEA3302837	DNA-seq		Illumina		fastq	paired	raw	NA15761
-SAMEA3302754	DNA-seq		Illumina		fastq	paired	raw	HGDP00328
-SAMEA3302662	DNA-seq		Illumina		fastq	paired	raw	HGDP01018
-SAMEA3302756	DNA-seq		Illumina		fastq	paired	raw	HGDP01199
-SAMEA3302850	DNA-seq		Illumina		fastq	paired	raw	HGDP00915
-SAMEA3302614	DNA-seq		Illumina		fastq	paired	raw	HGDP01211
-SAMEA3302665	DNA-seq		Illumina		fastq	paired	raw	HGDP01098
-SAMEA3302758	DNA-seq		Illumina		fastq	paired	raw	HGDP01163
-SAMEA3302835	DNA-seq		Illumina		fastq	paired	raw	HGDP00928
-SAMEA3302632	DNA-seq		Illumina		fastq	paired	raw	HGDP00932
-SAMEA3302729	DNA-seq		Illumina		fastq	paired	raw	Jordan214
-SAMEA3302646	DNA-seq		Illumina		fastq	paired	raw	HGDP00725
-SAMEA3302885	DNA-seq		Illumina		fastq	paired	raw	HG02790
-SAMEA3302781	DNA-seq		Illumina		fastq	paired	raw	Tuba9
-SAMEA3302675	DNA-seq		Illumina		fastq	paired	raw	Jordan603
-SAMEA3302624	DNA-seq		Illumina		fastq	paired	raw	armenia293
-SAMEA3302631	DNA-seq		Illumina		fastq	paired	raw	HG02464
-SAMEA3302647	DNA-seq		Illumina		fastq	paired	raw	HG03078
-SAMEA3302703	DNA-seq		Illumina		fastq	paired	raw	Ul5
-SAMEA3302886	DNA-seq		Illumina		fastq	paired	raw	HG02574
-SAMEA3302748	DNA-seq		Illumina		fastq	paired	raw	HG03085
-SAMEA3302773	DNA-seq		Illumina		fastq	paired	raw	Ale22
-SAMEA3302864	DNA-seq		Illumina		fastq	paired	raw	HGDP01312
-SAMEA3302818	DNA-seq		Illumina		fastq	paired	raw	HGDP01297
-SAMEA3302826	DNA-seq		Illumina		fastq	paired	raw	CHI-034
-SAMEA3302612	DNA-seq		Illumina		fastq	paired	raw	iran11
-SAMEA3302648	DNA-seq		Illumina		fastq	paired	raw	HGDP01246
-SAMEA3302734	DNA-seq		Illumina		fastq	paired	raw	Sir19
-SAMEA3302752	DNA-seq		Illumina		fastq	paired	raw	Nlk18
-SAMEA3302643	DNA-seq		Illumina		fastq	paired	raw	HGDP00555
-SAMEA3302819	DNA-seq		Illumina		fastq	paired	raw	Kusunda02
-SAMEA3302739	DNA-seq		Illumina		fastq	paired	raw	HGDP00569
-SAMEA3302657	DNA-seq		Illumina		fastq	paired	raw	HGDP00545
-SAMEA3302700	DNA-seq		Illumina		fastq	paired	raw	HGDP00552
-SAMEA3302727	DNA-seq		Illumina		fastq	paired	raw	HGDP01028
-SAMEA3302888	DNA-seq		Illumina		fastq	paired	raw	HGDP01338
-SAMEA3302817	DNA-seq		Illumina		fastq	paired	raw	HGDP01333
-SAMEA3302698	DNA-seq		Illumina		fastq	paired	raw	NorthOssetia5
-SAMEA3302630	DNA-seq		Illumina		fastq	paired	raw	HGDP01030
-SAMEA3302856	DNA-seq		Illumina		fastq	paired	raw	Nesk_25
-SAMEA3302858	DNA-seq		Illumina		fastq	paired	raw	HGDP00991
-SAMEA3302642	DNA-seq		Illumina		fastq	paired	raw	Ale20
-SAMEA3302641	DNA-seq		Illumina		fastq	paired	raw	Sir40
-SAMEA3302610	DNA-seq		Illumina		fastq	paired	raw	I1
-SAMEA3302691	DNA-seq		Illumina		fastq	paired	raw	tdj430_shugnan
-SAMEA3302696	DNA-seq		Illumina		fastq	paired	raw	Igor21
-SAMEA3302821	DNA-seq		Illumina		fastq	paired	raw	
-SAMEA3302672	DNA-seq		Illumina		fastq	paired	raw	Armenian222
-SAMEA3302688	DNA-seq		Illumina		fastq	paired	raw	Dus22
-SAMEA3302651	DNA-seq		Illumina		fastq	paired	raw	HG00360
-SAMEA3449879	DNA-seq		Illumina		fastq	paired	raw	NOR111
-SAMEA3302905	DNA-seq		Illumina		fastq	paired	raw	NA17386
-SAMEA3302907	DNA-seq		Illumina		fastq	paired	raw	HG02724
-SAMEA3302875	DNA-seq		Illumina		fastq	paired	raw	Utsa21
-SAMEA3302800	DNA-seq		Illumina		fastq	paired	raw	SA0722
-SAMEA3302863	DNA-seq		Illumina		fastq	paired	raw	Sam02
-SAMEA3302699	DNA-seq		Illumina		fastq	paired	raw	ND15865
-SAMEA3302887	DNA-seq		Illumina		fastq	paired	raw	Jordan445
-SAMEA3302634	DNA-seq		Illumina		fastq	paired	raw	YemeniteJew4695
-SAMEA3302908	DNA-seq		Illumina		fastq	paired	raw	NA17385
-SAMEA3302857	DNA-seq		Illumina		fastq	paired	raw	SAH31
-SAMEA3302708	DNA-seq		Illumina		fastq	paired	raw	SA0342
-SAMEA3302896	DNA-seq		Illumina		fastq	paired	raw	NA11201
-SAMEA3302868	DNA-seq		Illumina		fastq	paired	raw	Ayodo_430C
-SAMEA3302877	DNA-seq		Illumina		fastq	paired	raw	HGDP00775
-SAMEA3302650	DNA-seq		Illumina		fastq	paired	raw	HGDP00546
-SAMEA3302894	DNA-seq		Illumina		fastq	paired	raw	HGDP01036
-SAMEA3302730	DNA-seq		Illumina		fastq	paired	raw	HGDP00936
-SAMEA3302719	DNA-seq		Illumina		fastq	paired	raw	IHW9118
-SAMEA3302668	DNA-seq		Illumina		fastq	paired	raw	DNK05
-SAMEA3302811	DNA-seq		Illumina		fastq	paired	raw	mixa0105
-SAMEA3302633	DNA-seq		Illumina		fastq	paired	raw	K1
-SAMEA3302714	DNA-seq		Illumina		fastq	paired	raw	R3
-SAMEA3302901	DNA-seq		Illumina		fastq	paired	raw	tdj409_shugnan
-SAMEA3302656	DNA-seq		Illumina		fastq	paired	raw	HGDP01402
-SAMEA3302635	DNA-seq		Illumina		fastq	paired	raw	HGDP00530
-SAMEA3449876	DNA-seq		Illumina		fastq	paired	raw	HGDP01153
-SAMEA3302659	DNA-seq		Illumina		fastq	paired	raw	HGDP00449
-SAMEA3302710	DNA-seq		Illumina		fastq	paired	raw	HGDP01414
-SAMEA3302841	DNA-seq		Illumina		fastq	paired	raw	HGDP00660
-SAMEA3302855	DNA-seq		Illumina		fastq	paired	raw	HGDP01172
-SAMEA3302882	DNA-seq		Illumina		fastq	paired	raw	HGDP01323
-SAMEA3302621	DNA-seq		Illumina		fastq	paired	raw	HGDP01364
-SAMEA3302677	DNA-seq		Illumina		fastq	paired	raw	HGDP00019
-SAMEA3302846	DNA-seq		Illumina		fastq	paired	raw	HGDP01191
-SAMEA3302674	DNA-seq		Illumina		fastq	paired	raw	HGDP00216
-SAMEA3302770	DNA-seq		Illumina		fastq	paired	raw	HGDP00783
-SAMEA3302906	DNA-seq		Illumina		fastq	paired	raw	HGDP00773
-SAMEA3302777	DNA-seq		Illumina		fastq	paired	raw	HGDP01198
-SAMEA3302713	DNA-seq		Illumina		fastq	paired	raw	HGDP00796
-SAMEA3302823	DNA-seq		Illumina		fastq	paired	raw	HGDP00616
-SAMEA3302754	DNA-seq		Illumina		fastq	paired	raw	HGDP00328
-SAMEA3302653	DNA-seq		Illumina		fastq	paired	raw	HGDP01228
-SAMEA3302779	DNA-seq		Illumina		fastq	paired	raw	HGDP01047
-SAMEA3302695	DNA-seq		Illumina		fastq	paired	raw	HGDP00650
-SAMEA3302761	DNA-seq		Illumina		fastq	paired	raw	HGDP00286
-SAMEA3302627	DNA-seq		Illumina		fastq	paired	raw	HGDP01044
-SAMEA3302665	DNA-seq		Illumina		fastq	paired	raw	HGDP01098
-SAMEA3302816	DNA-seq		Illumina		fastq	paired	raw	HGDP00457
-SAMEA3302790	DNA-seq		Illumina		fastq	paired	raw	HGDP01012
-SAMEA3302866	DNA-seq		Illumina		fastq	paired	raw	HGDP00855
-SAMEA3302673	DNA-seq		Illumina		fastq	paired	raw	HGDP00461
-SAMEA3302845	DNA-seq		Illumina		fastq	paired	raw	HGDP01242
-SAMEA3302904	DNA-seq		Illumina		fastq	paired	raw	HGDP00857
-SAMEA3302718	DNA-seq		Illumina		fastq	paired	raw	BulgarianB4
-SAMEA3302628	DNA-seq		Illumina		fastq	paired	raw	HG03100
-SAMEA3302789	DNA-seq		Illumina		fastq	paired	raw	HG02783
-SAMEA3302678	DNA-seq		Illumina		fastq	paired	raw	NA15203
-SAMEA3302640	DNA-seq		Illumina		fastq	paired	raw	HG01504
-SAMEA3302874	DNA-seq		Illumina		fastq	paired	raw	iran17
-SAMEA3302755	DNA-seq		Illumina		fastq	paired	raw	HGDP01250
-SAMEA3302820	DNA-seq		Illumina		fastq	paired	raw	ch113
-SAMEA3302837	DNA-seq		Illumina		fastq	paired	raw	NA15761
-SAMEA3302729	DNA-seq		Illumina		fastq	paired	raw	Jordan214
-SAMEA3302745	DNA-seq		Illumina		fastq	paired	raw	NA13604
-SAMEA3302840	DNA-seq		Illumina		fastq	paired	raw	HGDP01215
+SAMEA3302733 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw DNK07
+SAMEA3302894 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01036
+SAMEA3302736 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01286
+SAMEA3302833 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00982
+SAMEA3302730 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00936
+SAMEA3302902 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01015
+SAMEA3302697 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw mixe0007
+SAMEA3302666 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01308
+SAMEA3302877 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00775
+SAMEA3302719 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw IHW9118
+SAMEA3302681 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw IHW9193
+SAMEA3302650 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00546
+SAMEA3302765 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw AV-21
+SAMEA3302625 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw TZ-11
+SAMEA3302712 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00533
+SAMEA3302876 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01076
+SAMEA3302727 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01028
+SAMEA3302869 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01035
+SAMEA3302869 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01035
+SAMEA3302737 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01417
+SAMEA3302710 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01414
+SAMEA3302710 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01414
+SAMEA3302630 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01030
+SAMEA3302849 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01034
+SAMEA3302816 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00457
+SAMEA3302816 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00457
+SAMEA3302673 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00461
+SAMEA3302673 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00461
+SAMEA3302668 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw DNK05
+SAMEA3302792 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw DNK11
+SAMEA3302628 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG03100
+SAMEA3302628 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG03100
+SAMEA3302881 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02943
+SAMEA3302881 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02943
+SAMEA3302631 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02464
+SAMEA3302886 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02574
+SAMEA3302858 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00991
+SAMEA3302900 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00987
+SAMEA3302900 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00987
+SAMEA3302682 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01032
+SAMEA3302682 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01032
+SAMEA3302708 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw SA0342
+SAMEA3302800 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw SA0722
+SAMEA3302873 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA19023
+SAMEA3302854 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA19044
+SAMEA3302854 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA19044
+SAMEA3302868 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ayodo_430C
+SAMEA3302810 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ayodo_502C
+SAMEA3302756 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01199
+SAMEA3302756 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01199
+SAMEA3302850 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00915
+SAMEA3302850 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00915
+SAMEA3302814 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA21490
+SAMEA3302687 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA21581
+SAMEA3302769 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00474
+SAMEA3302716 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00476
+SAMEA3302716 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00476
+SAMEA3302659 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00449
+SAMEA3302659 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00449
+SAMEA3302647 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG03078
+SAMEA3302748 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG03085
+SAMEA3302825 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01253
+SAMEA3302825 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01253
+SAMEA3302836 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01274
+SAMEA3302836 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01274
+SAMEA3302857 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw SAH31
+SAMEA3302694 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw SAH41
+SAMEA3302884 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ayodo_81S
+SAMEA3302884 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ayodo_81S
+SAMEA3302835 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00928
+SAMEA3302835 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00928
+SAMEA3302632 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00932
+SAMEA3302632 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00932
+SAMEA3302784 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw TGBS21
+SAMEA3302790 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01012
+SAMEA3302790 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01012
+SAMEA3302662 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01018
+SAMEA3302662 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01018
+SAMEA3302866 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00855
+SAMEA3302866 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00855
+SAMEA3302904 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00857
+SAMEA3302904 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00857
+SAMEA3302796 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw mixe0002
+SAMEA3302723 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw mixe0042
+SAMEA3302618 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw mixa0099
+SAMEA3302811 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw mixa0105
+SAMEA3302619 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00702
+SAMEA3302619 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00702
+SAMEA3302669 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00706
+SAMEA3302669 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00706
+SAMEA3302779 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01047
+SAMEA3302779 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01047
+SAMEA3302627 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01044
+SAMEA3302627 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01044
+SAMEA3302896 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA11201
+SAMEA3302848 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA11200
+SAMEA3302709 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Peru60
+SAMEA3302865 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00846
+SAMEA3302865 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00846
+SAMEA3302830 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00852
+SAMEA3302830 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00852
+SAMEA3302744 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw zapo0098
+SAMEA3302757 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw zapo0099
+SAMEA3302773 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ale22
+SAMEA3302642 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ale20
+SAMEA3302753 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw altai363p
+SAMEA3302753 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw altai363p
+SAMEA3302734 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Sir19
+SAMEA3302660 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Esk29
+SAMEA3302831 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Nesk_22
+SAMEA3302856 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Nesk_25
+SAMEA3302670 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Sir26
+SAMEA3302641 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Sir40
+SAMEA3302715 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Nlk1
+SAMEA3302752 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Nlk18
+SAMEA3302720 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Nlk3
+SAMEA3302806 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Kor82
+SAMEA3302717 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Bishkek28440
+SAMEA3302768 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Bishkek28439
+SAMEA3302762 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Mansi79
+SAMEA3302654 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Mansi41
+SAMEA3302653 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01228
+SAMEA3302653 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01228
+SAMEA3302743 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01223
+SAMEA3302743 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01223
+SAMEA3302853 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ale32
+SAMEA3302889 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ale14
+SAMEA3302764 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Tuba19
+SAMEA3302781 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Tuba9
+SAMEA3302862 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ul31
+SAMEA3302703 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Ul5
+SAMEA3302706 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00956
+SAMEA3302802 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00951
+SAMEA3302722 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA13607
+SAMEA3302722 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA13607
+SAMEA3302623 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA13616
+SAMEA3302745 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA13604
+SAMEA3302745 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA13604
+SAMEA3302895 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Bu16
+SAMEA3302692 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Bu5
+SAMEA3302689 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00717
+SAMEA3302689 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00717
+SAMEA3302791 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00713
+SAMEA3302791 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00713
+SAMEA3302827 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01314
+SAMEA3302864 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01312
+SAMEA3302785 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01315
+SAMEA3302785 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01315
+SAMEA3302840 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01215
+SAMEA3302840 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01215
+SAMEA3302770 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00783
+SAMEA3302770 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00783
+SAMEA3302804 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00785
+SAMEA3302804 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00785
+SAMEA3302880 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01240
+SAMEA3302880 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01240
+SAMEA3302845 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01242
+SAMEA3302845 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01242
+SAMEA3302867 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00749
+SAMEA3302867 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00749
+SAMEA3302867 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00749
+SAMEA3302906 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00773
+SAMEA3302906 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00773
+SAMEA3302852 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA18940
+SAMEA3302613 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01600
+SAMEA3302613 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01600
+SAMEA3302812 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01846
+SAMEA3302812 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01846
+SAMEA3302778 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw ND19394
+SAMEA3302891 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA00726
+SAMEA3302882 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01323
+SAMEA3302882 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01323
+SAMEA3302832 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01320
+SAMEA3302846 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01191
+SAMEA3302846 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01191
+SAMEA3302777 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01198
+SAMEA3302777 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01198
+SAMEA3302888 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01338
+SAMEA3302776 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01344
+SAMEA3302776 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01344
+SAMEA3302620 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01345
+SAMEA3302620 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01345
+SAMEA3302893 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01203
+SAMEA3302893 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01203
+SAMEA3302614 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01211
+SAMEA3302614 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01211
+SAMEA3302787 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01335
+SAMEA3302817 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01333
+SAMEA3302663 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw CHI-007
+SAMEA3302826 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw CHI-034
+SAMEA3302909 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01350
+SAMEA3302824 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01355
+SAMEA3302824 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01355
+SAMEA3302878 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01095
+SAMEA3302665 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01098
+SAMEA3302665 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01098
+SAMEA3302611 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01306
+SAMEA3302611 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01306
+SAMEA3302818 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01297
+SAMEA3302755 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01250
+SAMEA3302755 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01250
+SAMEA3302648 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01246
+SAMEA3302615 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01179
+SAMEA3302793 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01188
+SAMEA3302664 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw lez49
+SAMEA3302841 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00660
+SAMEA3302841 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00660
+SAMEA3302636 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00656
+SAMEA3302636 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00656
+SAMEA3302688 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Dus22
+SAMEA3302759 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Dus16
+SAMEA3302908 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA17385
+SAMEA3302724 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Igor20
+SAMEA3302696 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Igor21
+SAMEA3302905 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA17386
+SAMEA3302738 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00550
+SAMEA3302738 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00550
+SAMEA3302772 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00553
+SAMEA3302643 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00555
+SAMEA3302622 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00556
+SAMEA3302700 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00552
+SAMEA3302746 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00554
+SAMEA3302871 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00540
+SAMEA3302892 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00541
+SAMEA3302892 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00541
+SAMEA3302626 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00543
+SAMEA3302657 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00545
+SAMEA3302671 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00547
+SAMEA3302704 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00548
+SAMEA3302726 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00549
+SAMEA3302721 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00551
+SAMEA3302890 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00090
+SAMEA3302890 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00090
+SAMEA3449877 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00058
+SAMEA3449877 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00058
+SAMEA3302741 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG03006
+SAMEA3302774 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG03007
+SAMEA3302829 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw B11
+SAMEA3302645 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw B17
+SAMEA3302782 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00027
+SAMEA3302782 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00027
+SAMEA3302677 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00019
+SAMEA3302677 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00019
+SAMEA3302798 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00428
+SAMEA3302798 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00428
+SAMEA3302795 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00338
+SAMEA3302795 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00338
+SAMEA3302749 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00124
+SAMEA3302749 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00124
+SAMEA3302731 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00125
+SAMEA3302731 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00125
+SAMEA3302610 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw I1
+SAMEA3302742 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw I3
+SAMEA3302754 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00328
+SAMEA3302754 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00328
+SAMEA3302761 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00286
+SAMEA3302761 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00286
+SAMEA3302633 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw K1
+SAMEA3302839 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw K4
+SAMEA3302861 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw KD4
+SAMEA3302819 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Kusunda02
+SAMEA3302911 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Kusunda15
+SAMEA3302834 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw M4
+SAMEA3302771 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00160
+SAMEA3302771 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00160
+SAMEA3302616 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00157
+SAMEA3302616 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00157
+SAMEA3302674 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00216
+SAMEA3302674 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00216
+SAMEA3302639 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00232
+SAMEA3302639 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00232
+SAMEA3302907 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02724
+SAMEA3302789 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02783
+SAMEA3302789 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02783
+SAMEA3302885 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02790
+SAMEA3302885 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02790
+SAMEA3302799 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG02494
+SAMEA3302714 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw R3
+SAMEA3302767 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw R6
+SAMEA3302815 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00208
+SAMEA3302815 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00208
+SAMEA3302685 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00195
+SAMEA3302685 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00195
+SAMEA3302740 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Y4
+SAMEA3302725 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Y8
+SAMEA3302655 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw abh107
+SAMEA3302655 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw abh107
+SAMEA3302693 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw abh100
+SAMEA3302693 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw abh100
+SAMEA3302656 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01402
+SAMEA3302656 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01402
+SAMEA3302728 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01401
+SAMEA3302728 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01401
+SAMEA3302780 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw ALB212
+SAMEA3302624 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw armenia293
+SAMEA3302672 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Armenian222
+SAMEA3302621 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01364
+SAMEA3302621 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01364
+SAMEA3302903 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01365
+SAMEA3302903 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01365
+SAMEA3302823 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00616
+SAMEA3302823 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00616
+SAMEA3302695 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00650
+SAMEA3302695 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00650
+SAMEA3449876 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01153
+SAMEA3449876 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01153
+SAMEA3302855 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01172
+SAMEA3302855 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01172
+SAMEA3302855 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01172
+SAMEA3302718 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw BulgarianB4
+SAMEA3302718 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw BulgarianB4
+SAMEA3302842 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw BulgarianC1
+SAMEA3302842 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw BulgarianC1
+SAMEA3302820 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw ch113
+SAMEA3302820 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw ch113
+SAMEA3302844 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15728
+SAMEA3302739 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00569
+SAMEA3302870 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00597
+SAMEA3302870 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00597
+SAMEA3302707 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00126
+SAMEA3302707 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00126
+SAMEA3302676 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00128
+SAMEA3302735 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Est375
+SAMEA3302679 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Est400
+SAMEA3302711 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00174
+SAMEA3302711 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00174
+SAMEA3302751 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00190
+SAMEA3302751 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00190
+SAMEA3302651 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG00360
+SAMEA3302635 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00530
+SAMEA3302635 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00530
+SAMEA3302828 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00526
+SAMEA3302828 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00526
+SAMEA3302808 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw mg27
+SAMEA3302808 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw mg27
+SAMEA3302838 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw mg31
+SAMEA3302838 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw mg31
+SAMEA3302732 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA17377
+SAMEA3302763 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA17374
+SAMEA3302678 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15203
+SAMEA3302678 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15203
+SAMEA3302649 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15202
+SAMEA3302649 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15202
+SAMEA3302837 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15761
+SAMEA3302837 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15761
+SAMEA3302859 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw NA15763
+SAMEA3302874 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw iran17
+SAMEA3302874 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw iran17
+SAMEA3302612 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw iran11
+SAMEA3302747 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw IraqiJew1771
+SAMEA3302705 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw IraqiJew4291
+SAMEA3302887 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Jordan445
+SAMEA3302675 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Jordan603
+SAMEA3302729 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Jordan214
+SAMEA3302729 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Jordan214
+SAMEA3302843 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw lez42
+SAMEA3302797 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw NorthOssetia12
+SAMEA3302698 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw NorthOssetia5
+SAMEA3449879 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw NOR111
+SAMEA3302667 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00798
+SAMEA3302667 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00798
+SAMEA3302713 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00796
+SAMEA3302713 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00796
+SAMEA3302652 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00722
+SAMEA3302646 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00725
+SAMEA3302646 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00725
+SAMEA3302897 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00737
+SAMEA3302897 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00737
+SAMEA3302699 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw ND15865
+SAMEA3302786 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00887
+SAMEA3302786 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00887
+SAMEA3302766 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00903
+SAMEA3302766 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP00903
+SAMEA3302875 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Utsa21
+SAMEA3302851 DNA-seq Genomic_from_saliva Illumina HiSeq 2000 fastq paired raw Utsa22
+SAMEA3302863 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Sam02
+SAMEA3302822 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01079
+SAMEA3302822 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01079
+SAMEA3302813 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01078
+SAMEA3302813 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01078
+SAMEA3302883 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01503
+SAMEA3302883 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01503
+SAMEA3302640 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01504
+SAMEA3302640 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HG01504
+SAMEA3302901 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw tdj409_shugnan
+SAMEA3302691 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw tdj430_shugnan
+SAMEA3302750 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Kayseri23827
+SAMEA3302809 DNA-seq PBMC Illumina HiSeq 2000 fastq paired raw Kayseri24424
+SAMEA3302684 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01168
+SAMEA3302684 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01168
+SAMEA3302758 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01163
+SAMEA3302758 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw HGDP01163
+SAMEA3302634 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw YemeniteJew4695
+SAMEA3302807 DNA-seq LCL Illumina HiSeq 2000 fastq paired raw YemeniteJew5433
