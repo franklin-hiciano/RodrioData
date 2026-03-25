@@ -16,7 +16,7 @@ function download_1000G_high_coverage() {
 function download_1KG_ONT_VIENNA() {
 	curl -L "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" -o "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
-	tail -n +3 "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" | head -n -2 | awk -F$'\t' -v OFS='\t' '{split($1, parts_of_file_path, "[/.]"); url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/" $1; file_type = parts_of_file_path[length(parts_of_file_path)]; print parts_of_file_path[3], "DNA-seq", "LCL", "Oxford Nanopore" file_type, "unpaired", "alignment", url }' - >> "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
+	tail -n +3 "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.tsv" | head -n -2 | awk -F$'\t' -v OFS='\t' '{split($1, parts_of_file_path, "[/.]"); url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/" $1; file_type = parts_of_file_path[length(parts_of_file_path)]; print parts_of_file_path[3], "DNA-seq", "LCL", "Oxford Nanopore", "R9.4.1", file_type, "unpaired", "alignment", url }' - >> "${PROJECT_ROOT}/datasets/1KG_ONT_VIENNA/1KG_ONT_VIENNA_manifest.std.index"
 }
 
 function download_simons_genome_diversity_project() {
@@ -48,7 +48,7 @@ function download_2026_Light_EE_NatComm() {
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
 	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "DNA-seq", "PBMC", Illumina, "NextSeq", "bam" "paired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "DNA-seq", "PBMC", "llumina", "NextSeq", "bam", "paired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "AIRR_seq", "Illumina", "NextSeq", "fastq", "paired", "raw", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
 
