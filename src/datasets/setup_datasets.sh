@@ -26,7 +26,7 @@ function download_simons_genome_diversity_project() {
 	--sheet_name "Sheet1"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
 	while IFS=$'\t' read -r sample_alias dna_source; do
-		tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -v sample="${sample_alias}" -v source="${dna_source}" '$3 == sample {print $2, "DNA-seq", source, "Illumina", "HiSeq 2000", "fastq", "paired", "raw", $4 }' - | sed 's/Genomic_from_cell_lines/LCL/' | sed 's/Genomic_from_blood/PBMC/' | sed 's/Genomic_from_saliva/Saliva/' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
+		tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.index" | awk -v sample="${sample_alias}" -v source="${dna_source}" '$3 == sample {ext = (match($4, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"; print $2, "DNA-seq", source, "Illumina", "HiSeq 2000", ext, "paired", "raw", $4 }' - | sed 's/Genomic_from_cell_lines/LCL/' | sed 's/Genomic_from_blood/PBMC/' | sed 's/Genomic_from_saliva/Saliva/' - >> "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/study_PRJEB9586.std.index"
 	done < <(tail -n +2 "${PROJECT_ROOT}/datasets/simons_genome_diversity_project/41586_2016_BFnature18964_MOESM205_ESM.Sheet1.tsv" | cut -f4,6)
 }
 
@@ -48,55 +48,22 @@ function download_2026_Light_EE_NatComm() {
 	    --drive_id '1YdkUEmPeVWY2I7iT7n7bmZSqlzvIcofb' \
 	    --out_path "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv"
 	printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "DNA-seq", "PBMC", "llumina", "NextSeq", "bam", "paired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
-	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "AIRR_seq", "Illumina", "NextSeq", "fastq", "paired", "raw", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +2 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | head -n 193 | awk -F$'\t' -v OFS='\t' '{ext = (match($3, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"; url = "s3://sra-pub-src-13/" $1 "/" $17 ".1"; print $1, "DNA-seq", "PBMC", "llumina", "NextSeq", ext, "paired", "alignment", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
+	tail -n +195 "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/metadata-15346978-processed-ok (2).tsv" | awk -F$'\t' -v OFS='\t' '{ext = (match($3, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"; url = "s3://sra-pub-src-13/" $1 "/" $17 ".1;" "s3://sra-pub-src-13/" $1 "/" $18 ".1"; print $1, "AIRR_seq", "Illumina", "NextSeq", ext, "paired", "raw", url }' >> "${PROJECT_ROOT}/datasets/2026-Light_EE_NatComm/2026-Light_EE_NatComm.std.index"
 }
 
 function make_index_file_for_platinum_pedigree() {
     local list_file="${PROJECT_ROOT}/datasets/platinum_pedigree/list_all_files_in_platinum_pedigree.tsv"
     local output_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_for_platinum_pedigree.std.index"
     local index_file="${PROJECT_ROOT}/datasets/platinum_pedigree/make_index_file_with_basic_sample_information_for_platinum_pedigree.index.tsv"
-
     printf "%s\n" "sample_name" "assay_type" "biological_source" "technology" "platform" "file_type" "library" "processed" "url" | paste -s > "$output_file"
-
-    tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do 
+    tail -n +2 "$index_file" | cut -f2,7 | while read -r id primary_id; do
         for platform in "element" "hifi" "illumina" "ont" "strandseq"; do
-            awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" '
-                BEGIN { FS="\t"; OFS="\t" }
-                $3 ~ "data/"plat && ($3 ~ id || $3 ~ p_id) {
-                    tech = "NA"
-		    biological_source = "PBMC"
-                    if ($3 ~ /element/)       { tech = "Element" }
-                    else if ($3 ~ /hifi/)     { tech = "PacBio" }
-                    else if ($3 ~ /illumina/) { tech = "Illumina" }
-                    else if ($3 ~ /ont/)      { tech = "Oxford Nanopore"; biological_source = "LCL" }
-                    else if ($3 ~ /strandseq/){ tech = "Strand-seq" }
-
-                    ext = "NA"
-                    supported = "(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)"
-		    if (match($3, "\\." supported "($|\\.)")) {
-                        temp_ext = substr($3, RSTART + 1)
-                        split(temp_ext, parts, ".")
-                        ext = parts[1]
-                    }
-		    
-		    processed = "raw"
-		    if ($3 ~ /mapped/) { processed = "alignment" }
-
-                    print p_id, "DNA-seq", biological_source, tech, ext, "unpaired", processed, $3
-                }
-            ' "$list_file" >> "$output_file"
+            awk -v id="${id}" -v p_id="${primary_id}" -v plat="${platform}" 'BEGIN { FS="\t"; OFS="\t" } $3 ~ "data/"plat && ($3 ~ id || $3 ~ p_id) { bio = ($3 ~ /ont/) ? "LCL" : "PBMC"; tech = (match($3, /(element|hifi|illumina|ont|strandseq)/, arr)) ? arr[1] : "NA"; ext = (match($3, /.*\.(bam|fastq|fasta|vcf|gvcf|cram|tbi|fai|bai|crai)(\.|$)/, arr)) ? arr[1] : "NA"; proc = ($3 ~ /mapped/) ? "alignment" : "raw"; print p_id, "DNA-seq", bio, tech, ext, "unpaired", proc, $3 }' "$list_file" >> "$output_file"
         done
-
-        awk -v id="${id}" -v p_id="${primary_id}" '
-            BEGIN { FS="\t"; OFS="\t" }
-            $3 ~ "assemblies/" && ($3 ~ id || $3 ~ p_id) {
-                print p_id, "NA", "NA", "NA", "fasta", "NA", "assembly", $3
-            }
-        ' "$list_file" >> "$output_file"
+        awk -v id="${id}" -v p_id="${primary_id}" 'BEGIN { FS="\t"; OFS="\t" } $3 ~ "assemblies/" && ($3 ~ id || $3 ~ p_id) { print p_id, "NA", "NA", "NA", "fasta", "NA", "assembly", $3 }' "$list_file" >> "$output_file"
     done
 }
-
 # --- Execution ---
 download_1000G_high_coverage
 download_1KG_ONT_VIENNA
