@@ -4,6 +4,7 @@
 - [x] Create a documention on going from SRR to url
 - [x] In the README, write a description about each dataset. Add more specifics about each dataset. For e.g, is the PacBio Revio, Sequel, coverage stats, read length etc. Make sure this is easy to read.
 - [x] Make sure it has standardized names and has descriptions in each readme
+- [ ] Create a run.sh in datasets to output the different column values, eg sort | uniq -c, and other checks, like same column count
 
 # Columns
 1. Sample name
